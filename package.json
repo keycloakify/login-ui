@@ -7,13 +7,11 @@
         "url": "git://github.com/keycloakify/login.git"
     },
     "scripts": {
-        "build": "tsc",
+        "build": "tsx scripts/build.ts",
         "_format": "prettier '**/*.{ts,tsx,json,md}'",
         "format": "npm run _format -- --write",
         "format:check": "npm run _format -- --list-different"
     },
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
     "lint-staged": {
         "*.{ts,tsx,json,md}": [
             "prettier --write"
@@ -24,13 +22,8 @@
             "pre-commit": "lint-staged -v"
         }
     },
-    "author": "u/keycloakify",
+    "author": "u/garronej",
     "license": "MIT",
-    "files": [
-        "src/",
-        "dist/",
-        "!dist/tsconfig.tsbuildinfo"
-    ],
     "keywords": [],
     "homepage": "https://github.com/keycloakify/login",
     "dependencies": {
@@ -48,7 +41,8 @@
         "tsx": "^4.19.4",
         "react": "^18.3.1",
         "@types/react": "^19.1.4",
-        "keycloakify": "^11.8.27"
+        "keycloakify": "^11.8.27",
+        "zod": "^3.24.4"
     },
     "publishConfig": {
         "access": "public"
