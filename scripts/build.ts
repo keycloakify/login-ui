@@ -13,6 +13,8 @@ fs.rmSync(distDirPath, { recursive: true, force: true });
 
 child_process.execSync("npx tsc");
 
+fs.rmSync(pathJoin(distDirPath, "tsconfig.tsbuildinfo"));
+
 for (const dirBasename of ["src", "keycloak-theme"]) {
     transformCodebase({
         srcDirPath: pathJoin(getThisCodebaseRootDirPath(), dirBasename),
