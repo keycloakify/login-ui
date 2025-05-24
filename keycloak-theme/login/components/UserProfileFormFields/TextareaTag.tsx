@@ -1,6 +1,6 @@
 import { assert } from "keycloakify/tools/assert";
 import type { InputFieldByTypeProps } from "./InputFieldByType";
-import { useKcClsx } from "@keycloakify/login/useKcClsx";
+import { useKcClsx } from "../../_internals/useKcClsx";
 
 export function TextareaTag(props: InputFieldByTypeProps) {
     const { attribute, dispatchFormAction, displayableErrors, valueOrValues } = props;

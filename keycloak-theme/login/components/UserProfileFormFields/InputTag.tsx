@@ -3,7 +3,7 @@ import { FieldErrors } from "./FieldErrors";
 import type { InputFieldByTypeProps } from "./InputFieldByType";
 import { AddRemoveButtonsMultiValuedAttribute } from "./AddRemoveButtonsMultiValuedAttribute";
 import { useI18n } from "../../i18n";
-import { useKcClsx } from "@keycloakify/login/useKcClsx";
+import { useKcClsx } from "../../_internals/useKcClsx";
 
 export function InputTag(props: InputFieldByTypeProps & { fieldIndex: number | undefined }) {
     const { attribute, fieldIndex, dispatchFormAction, valueOrValues, displayableErrors } = props;

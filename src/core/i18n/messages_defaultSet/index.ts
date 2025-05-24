@@ -66,7 +66,7 @@ export async function fetchMessages_defaultSet(currentLanguageTag: string) {
             case "zh-TW":
                 return import("./zh-TW");
             default:
-                return { "default": {} };
+                return { default: {} };
         }
     })();
     return messages_defaultSet;

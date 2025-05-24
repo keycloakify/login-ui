@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useInsertScriptTags } from "keycloakify/tools/useInsertScriptTags";
 import { useInsertLinkTags } from "keycloakify/tools/useInsertLinkTags";
 import { useKcContext } from "../../KcContext";
-import { useKcClsx } from "@keycloakify/login/useKcClsx";
+import { useKcClsx } from "../../_internals/useKcClsx";
 
 export function useInitializeTemplate() {
     const { kcContext } = useKcContext();

@@ -3,8 +3,8 @@ import { SelectTag } from "./SelectTag";
 import { InputTagSelects } from "./InputTagSelects";
 import { InputTag } from "./InputTag";
 import { PasswordWrapper } from "../PasswordWrapper";
-import type { FormAction, FormFieldError } from "@keycloakify/login/useUserProfileForm";
-import type { Attribute } from "@keycloakify/login/KcContext";
+import type { FormAction, FormFieldError } from "../../_internals/useUserProfileForm";
+import type { Attribute } from "../../_internals/KcContext";
 
 export type InputFieldByTypeProps = {
     attribute: Attribute;

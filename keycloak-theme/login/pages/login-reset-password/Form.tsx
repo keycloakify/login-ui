@@ -3,8 +3,8 @@ import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
 import { useKcClsx } from "@keycloakify/login/useKcClsx";
 
-export function Form(props: { kcContext: KcContext }) {
-    const { kcContext } = useKcContext("...");
+export function Form() {
+    const { kcContext } = useKcContext("login-reset-password.ftl");
 
     const { kcClsx } = useKcClsx();
 

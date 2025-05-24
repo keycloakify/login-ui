@@ -1,26 +1,20 @@
-import { useKcClsx } from "@keycloakify/login/useKcClsx";
-import { useScript } from "./WebauthnRegister.useScript";
-
+import { useScript } from "./useScript";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
 import { Template } from "../../components/Template";
+import { LogoutOtherSessions } from "../../components/LogoutOtherSessions";
+import { useKcClsx } from "@keycloakify/login/useKcClsx";
 
 export function Page() {
     const { kcContext } = useKcContext("webauthn-register.ftl");
 
-    const { kcClsx } = getKcClsx({ doUseDefaultCss, classes });
-
-    const { url, isSetRetry, isAppInitiatedAction } = kcContext;
+    const { kcClsx } = useKcClsx();
 
     const { msg, msgStr } = useI18n();
 
     const authButtonId = "authenticateWebAuthnButton";
 
-    useScript({
-        authButtonId,
-        kcContext,
-        i18n
-    });
+    useScript({ authButtonId });
 
     return (
         <Template
@@ -31,7 +25,12 @@ export function Page() {
                 </>
             }
         >
-            <form id="register" className={kcClsx("kcFormClass")} action={url.loginAction} method="post">
+            <form
+                id="register"
+                className={kcClsx("kcFormClass")}
+                action={kcContext.url.loginAction}
+                method="post"
+            >
                 <div className={kcClsx("kcFormGroupClass")}>
                     <input type="hidden" id="clientDataJSON" name="clientDataJSON" />
                     <input type="hidden" id="attestationObject" name="attestationObject" />
@@ -39,7 +38,7 @@ export function Page() {
                     <input type="hidden" id="authenticatorLabel" name="authenticatorLabel" />
                     <input type="hidden" id="transports" name="transports" />
                     <input type="hidden" id="error" name="error" />
-                    <LogoutOtherSessions kcClsx={kcClsx} i18n={i18n} />
+                    <LogoutOtherSessions />
                 </div>
             </form>
             <input
@@ -54,9 +53,9 @@ export function Page() {
                 value={msgStr("doRegisterSecurityKey")}
             />
 
-            {!isSetRetry && isAppInitiatedAction && (
+            {!kcContext.isSetRetry && kcContext.isAppInitiatedAction && (
                 <form
-                    action={url.loginAction}
+                    action={kcContext.url.loginAction}
                     className={kcClsx("kcFormClass")}
                     id="kc-webauthn-settings-form"
                     method="post"
@@ -78,30 +77,5 @@ export function Page() {
                 </form>
             )}
         </Template>
-    );
-}
-
-function LogoutOtherSessions(props: { kcClsx: KcClsx; i18n: I18n }) {
-    const { kcClsx, i18n } = props;
-
-    const { msg } = useI18n();
-
-    return (
-        <div id="kc-form-options" className={kcClsx("kcFormOptionsClass")}>
-            <div className={kcClsx("kcFormOptionsWrapperClass")}>
-                <div className="checkbox">
-                    <label>
-                        <input
-                            type="checkbox"
-                            id="logout-sessions"
-                            name="logout-sessions"
-                            value="on"
-                            defaultChecked={true}
-                        />
-                        {msg("logoutOtherSessions")}
-                    </label>
-                </div>
-            </div>
-        </div>
     );
 }

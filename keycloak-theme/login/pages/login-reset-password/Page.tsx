@@ -19,7 +19,7 @@ export function Page() {
             }
             headerNode={msg("emailForgotTitle")}
         >
-            <Form kcContext={kcContext} />
+            <Form />
         </Template>
     );
 }
