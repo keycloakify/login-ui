@@ -1,7 +1,7 @@
 import { Suspense, lazy } from "react";
 import { KcContext, KcContextProvider, useKcContext } from "./KcContext";
 import { I18nProvider } from "./i18n";
-import { KcClsxProvider, type ClassKey } from "@keycloakify/login/useKcClsx";
+import { KcClsxProvider, type ClassKey } from "@keycloakify/keycloak-login-ui/useKcClsx";
 import { assert, type Equals } from "tsafe/assert";
 
 const classes = {} satisfies { [key in ClassKey]?: string };

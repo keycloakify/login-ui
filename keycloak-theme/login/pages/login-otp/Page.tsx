@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react";
-import { useKcClsx } from "@keycloakify/login/useKcClsx";
+import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
 import { kcSanitize } from "keycloakify/lib/kcSanitize";
 
 import { useKcContext } from "../../KcContext";

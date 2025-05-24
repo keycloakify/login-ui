@@ -3,7 +3,7 @@
 import { Fragment } from "react";
 import { clsx } from "keycloakify/tools/clsx";
 
-import { useKcClsx } from "@keycloakify/login/useKcClsx";
+import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
 import { useScript } from "./useScript";
 
 import { useKcContext } from "../../KcContext";

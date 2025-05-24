@@ -1,6 +1,6 @@
 import { clsx } from "keycloakify/tools/clsx";
 import { useI18n } from "../../i18n";
-import { useKcClsx } from "@keycloakify/login/useKcClsx";
+import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
 import { kcSanitize } from "keycloakify/lib/kcSanitize";
 import { useKcContext } from "../../KcContext";
 import { assert } from "tsafe/assert";

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { PasswordWrapper } from "../../components/PasswordWrapper";
 import { useI18n } from "../../i18n";
 import { useKcContext } from "../../KcContext";
-import { useKcClsx } from "@keycloakify/login/useKcClsx";
+import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
 import { kcSanitize } from "keycloakify/lib/kcSanitize";
 
 export function Form() {
