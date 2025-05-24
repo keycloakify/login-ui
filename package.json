@@ -7,7 +7,7 @@
         "url": "git://github.com/keycloakify/login.git"
     },
     "scripts": {
-        "postinstall": "tsx scripts/generate-i18n-messages.ts",
+        "prepare": "tsx scripts/prepare/main.ts",
         "build": "tsx scripts/build.ts",
         "_format": "prettier '**/*.{ts,tsx,json,md}'",
         "format": "npm run _format -- --write",

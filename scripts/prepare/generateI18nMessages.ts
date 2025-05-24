@@ -7,19 +7,15 @@ import {
 } from "path";
 import { assert } from "tsafe/assert";
 import { same } from "evt/tools/inDepth";
-import { crawl } from "../node_modules/keycloakify/src/bin/tools/crawl";
-import { downloadKeycloakDefaultTheme } from "./shared/downloadKeycloakDefaultTheme";
-import { getThisCodebaseRootDirPath } from "./tools/getThisCodebaseRootDirPath";
-import { deepAssign } from "../node_modules/keycloakify/src/tools/deepAssign";
+import { crawl } from "keycloakify/src/bin/tools/crawl";
+import { downloadKeycloakDefaultTheme } from "../shared/downloadKeycloakDefaultTheme";
+import { getThisCodebaseRootDirPath } from "../tools/getThisCodebaseRootDirPath";
+import { deepAssign } from "keycloakify/src/tools/deepAssign";
 import propertiesParser from "properties-parser";
-import { keycloakifyExtraMessages } from "./generate-i18n-messages.login";
-import { runPrettier } from "../node_modules/keycloakify/src/bin/tools/runPrettier";
+import { keycloakifyExtraMessages } from "./generateI18nMessages.login";
+import { runPrettier } from "keycloakify/src/bin/tools/runPrettier";
 
-if (require.main === module) {
-    generateI18nMessages();
-}
-
-async function generateI18nMessages() {
+export async function generateI18nMessages() {
     type Dictionary = { [idiomId: string]: string };
 
     const messages: { [language: string]: Dictionary } = {};
@@ -82,11 +78,10 @@ async function generateI18nMessages() {
         "messages_defaultSet"
     );
 
-    if (fs.existsSync(messagesDirPath)) {
-        fs.rmSync(messagesDirPath, {
-            recursive: true
-        });
-    }
+    fs.rmSync(messagesDirPath, {
+        recursive: true,
+        force: true
+    });
 
     fs.mkdirSync(messagesDirPath, { recursive: true });
 

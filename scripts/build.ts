@@ -1,11 +1,11 @@
 import * as child_process from "child_process";
 import * as fs from "fs";
 import { join as pathJoin } from "path";
-import { getThisCodebaseRootDirPath } from "keycloakify/bin/tools/getThisCodebaseRootDirPath";
+import { getThisCodebaseRootDirPath } from "./tools/getThisCodebaseRootDirPath";
 import { z } from "zod";
 import { assert, type Equals } from "tsafe/assert";
 import { id } from "tsafe/id";
-import { transformCodebase } from "keycloakify/bin/tools/transformCodebase";
+import { transformCodebase } from "../node_modules/keycloakify/src/bin/tools/transformCodebase";
 
 const distDirPath = pathJoin(getThisCodebaseRootDirPath(), "dist");
 
@@ -15,7 +15,7 @@ child_process.execSync("npx tsc");
 
 fs.rmSync(pathJoin(distDirPath, "tsconfig.tsbuildinfo"));
 
-for (const dirBasename of ["src", "keycloak-theme"]) {
+for (const dirBasename of ["src", "keycloak-theme", "keycloak-theme-resources"]) {
     transformCodebase({
         srcDirPath: pathJoin(getThisCodebaseRootDirPath(), dirBasename),
         destDirPath: pathJoin(distDirPath, dirBasename)

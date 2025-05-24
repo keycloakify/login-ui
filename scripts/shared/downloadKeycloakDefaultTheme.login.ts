@@ -1,5 +1,5 @@
 import { relative as pathRelative } from "path";
-import { downloadAndExtractArchive } from "keycloakify/bin/tools/downloadAndExtractArchive";
+import { downloadAndExtractArchive } from "../../node_modules/keycloakify/bin/tools/downloadAndExtractArchive";
 import { join as pathJoin } from "path";
 import type { Param0 } from "tsafe";
 
