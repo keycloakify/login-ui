@@ -8,5 +8,5 @@ It is meant to be used within a Keycloakify project.
 ## Installation
 
 ```bash
-npm install @keycloakify/login-react
+npm install @keycloakify/keycloak-login-ui
 ```
