@@ -1,5 +1,5 @@
 {
-    "name": "login",
+    "name": "login-react",
     "version": "0.0.0",
     "description": "React implementation of Keycloak Login v2 for Keycloakify",
     "repository": {
