@@ -1,7 +1,7 @@
 import { join as pathJoin } from "path";
 import { downloadAndExtractArchive } from "../../node_modules/keycloakify/src/bin/tools/downloadAndExtractArchive";
-import { getProxyFetchOptions } from "../../node_modules/keycloakify/bin/tools/fetchProxyOptions";
-import { getThisCodebaseRootDirPath } from "../../node_modules/keycloakify/bin/tools/getThisCodebaseRootDirPath";
+import { getProxyFetchOptions } from "../../node_modules/keycloakify/src/bin/tools/fetchProxyOptions";
+import { getThisCodebaseRootDirPath } from "../tools/getThisCodebaseRootDirPath";
 import { KEYCLOAK_VERSION, createOnArchiveFile } from "./downloadKeycloakDefaultTheme.login";
 
 const cacheDirPath = pathJoin(getThisCodebaseRootDirPath(), "node_modules", ".cache", "scripts");

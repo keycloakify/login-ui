@@ -1,7 +1,6 @@
 import { relative as pathRelative } from "path";
 import { downloadAndExtractArchive } from "keycloakify/bin/tools/downloadAndExtractArchive";
 import { join as pathJoin } from "path";
-import { getThisCodebaseRootDirPath } from "keycloakify/bin/tools/getThisCodebaseRootDirPath";
 import type { Param0 } from "tsafe";
 
 export const KEYCLOAK_VERSION = "25.0.4";
