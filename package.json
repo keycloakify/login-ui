@@ -7,6 +7,7 @@
         "url": "git://github.com/keycloakify/login.git"
     },
     "scripts": {
+        "postinstall": "tsx scripts/generate-i18n-messages.ts",
         "build": "tsx scripts/build.ts",
         "_format": "prettier '**/*.{ts,tsx,json,md}'",
         "format": "npm run _format -- --write",
@@ -34,14 +35,17 @@
     },
     "devDependencies": {
         "@types/node": "^22.15.18",
-        "typescript": "^5.8.3",
+        "@types/properties-parser": "^0.3.3",
+        "@types/react": "^19.1.4",
+        "evt": "^2.5.9",
         "husky": "^4.3.8",
+        "keycloakify": "^11.8.27",
         "lint-staged": "^11.1.1",
         "prettier": "^3.3.2",
-        "tsx": "^4.19.4",
+        "properties-parser": "^0.6.0",
         "react": "^18.3.1",
-        "@types/react": "^19.1.4",
-        "keycloakify": "^11.8.27",
+        "tsx": "^4.19.4",
+        "typescript": "^5.8.3",
         "zod": "^3.24.4"
     },
     "publishConfig": {

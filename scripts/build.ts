@@ -1,11 +1,11 @@
 import * as child_process from "child_process";
 import * as fs from "fs";
 import { join as pathJoin } from "path";
-import { getThisCodebaseRootDirPath } from "./tools/getThisCodebaseRootDirPath";
+import { getThisCodebaseRootDirPath } from "keycloakify/bin/tools/getThisCodebaseRootDirPath";
 import { z } from "zod";
 import { assert, type Equals } from "tsafe/assert";
 import { id } from "tsafe/id";
-import { transformCodebase } from "./tools/transformCodebase";
+import { transformCodebase } from "keycloakify/bin/tools/transformCodebase";
 
 const distDirPath = pathJoin(getThisCodebaseRootDirPath(), "dist");
 
