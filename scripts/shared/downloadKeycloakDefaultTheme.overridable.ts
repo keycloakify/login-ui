@@ -15,7 +15,7 @@ export function createOnArchiveFile() {
             return;
         }
 
-        const { readFile, writeFile } = params;
+        const { writeFile } = params;
 
         if (!fileRelativePath.startsWith("base") && !fileRelativePath.startsWith("keycloak")) {
             return;

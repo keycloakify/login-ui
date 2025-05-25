@@ -2,14 +2,14 @@ import { downloadAndExtractArchive } from "../../node_modules/keycloakify/src/bi
 import { getProxyFetchOptions } from "../../node_modules/keycloakify/src/bin/tools/fetchProxyOptions";
 import { getThisCodebaseRootDirPath } from "../tools/getThisCodebaseRootDirPath";
 import { KEYCLOAK_VERSION, createOnArchiveFile } from "./downloadKeycloakDefaultTheme.overridable";
-import { cacheDirPath } from "./cacheDirPath";
+import { join as pathJoin } from "path";
 
 export async function downloadKeycloakDefaultTheme() {
     const { onArchiveFile } = createOnArchiveFile();
 
     const { extractedDirPath } = await downloadAndExtractArchive({
         url: `https://repo1.maven.org/maven2/org/keycloak/keycloak-themes/${KEYCLOAK_VERSION}/keycloak-themes-${KEYCLOAK_VERSION}.jar`,
-        cacheDirPath,
+        cacheDirPath: pathJoin(getThisCodebaseRootDirPath(), "node_modules", ".cache", "scripts"),
         fetchOptions: getProxyFetchOptions({
             npmConfigGetCwd: getThisCodebaseRootDirPath()
         }),
