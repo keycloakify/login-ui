@@ -4,7 +4,7 @@
     "description": "React implementation of Keycloak Login v2 for Keycloakify",
     "repository": {
         "type": "git",
-        "url": "git://github.com/keycloakify/login.git"
+        "url": "git://github.com/keycloakify/keycloak-login-ui.git"
     },
     "scripts": {
         "prepare": "tsx scripts/prepare/main.ts",
