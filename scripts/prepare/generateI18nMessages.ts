@@ -9,7 +9,7 @@ import { assert } from "tsafe/assert";
 import { same } from "evt/tools/inDepth";
 import { crawl } from "keycloakify/src/bin/tools/crawl";
 import { downloadKeycloakDefaultTheme } from "../shared/downloadKeycloakDefaultTheme";
-import { getThisCodebaseRootDirPath } from "../tools/getThisCodebaseRootDirPath";
+import { getThisCodebaseRootDirPath } from "../tools/getThisCodebaseRootDirPath.overridable";
 import { deepAssign } from "keycloakify/src/tools/deepAssign";
 import propertiesParser from "properties-parser";
 import { keycloakifyExtraMessages, THEME_NAME } from "./generateI18nMessages.overridable";
