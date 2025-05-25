@@ -1,5 +1,5 @@
 import type { JSX } from "keycloakify/tools/JSX";
-import type { PasswordPolicies, Attribute, Validators } from "keycloakify/login/KcContext";
+import type { PasswordPolicies, Attribute, Validators } from "./core/KcContext/KcContext";
 import { useEffect, useState, useMemo, Fragment } from "react";
 import { assert, type Equals } from "tsafe/assert";
 export { getButtonToDisplayForMultivaluedAttributeField } from "./core/userProfileApi/index";
