@@ -1,10 +1,9 @@
-import "keycloakify/tools/Object.fromEntries";
+import "../tools/Object.fromEntries";
 import { assert, is } from "tsafe/assert";
-import { extractLastParenthesisContent } from "keycloakify/tools/extractLastParenthesisContent";
+import { extractLastParenthesisContent } from "../tools/extractLastParenthesisContent";
 import messages_defaultSet_fallbackLanguage from "./messages_defaultSet/en";
 import { fetchMessages_defaultSet } from "./messages_defaultSet";
 import type { KcContext } from "../KcContext/KcContext";
-import { FALLBACK_LANGUAGE_TAG } from "keycloakify/bin/shared/constants";
 import { id } from "tsafe/id";
 import { Reflect } from "tsafe/Reflect";
 import {
@@ -113,7 +112,7 @@ export function createGetI18n<
             : undefined;
 
         {
-            const currentLanguageTag = kcContextLocale?.currentLanguageTag ?? FALLBACK_LANGUAGE_TAG;
+            const currentLanguageTag = kcContextLocale?.currentLanguageTag ?? "en";
             const html = document.querySelector("html");
             assert(html !== null);
             html.lang = currentLanguageTag;
@@ -201,9 +200,7 @@ export function createGetI18n<
         };
 
         const currentLanguage: I18n["currentLanguage"] = (() => {
-            const languageTag = id<string>(
-                kcContextLocale?.currentLanguageTag ?? FALLBACK_LANGUAGE_TAG
-            ) as LanguageTag;
+            const languageTag = id<string>(kcContextLocale?.currentLanguageTag ?? "en") as LanguageTag;
 
             return {
                 languageTag,
@@ -246,9 +243,7 @@ export function createGetI18n<
                 themeName: kcContext.themeName,
                 messages_themeDefined:
                     messagesByLanguageTag_themeDefined[currentLanguage.languageTag] ??
-                    messagesByLanguageTag_themeDefined[
-                        id<string>(FALLBACK_LANGUAGE_TAG) as LanguageTag
-                    ] ??
+                    messagesByLanguageTag_themeDefined[id<string>("en") as LanguageTag] ??
                     (() => {
                         const firstLanguageTag = Object.keys(messagesByLanguageTag_themeDefined)[0];
                         if (firstLanguageTag === undefined) {
@@ -259,7 +254,7 @@ export function createGetI18n<
                 messages_fromKcServer: kcContext["x-keycloakify"].messages
             });
 
-        const isCurrentLanguageFallbackLanguage = currentLanguage.languageTag === FALLBACK_LANGUAGE_TAG;
+        const isCurrentLanguageFallbackLanguage = currentLanguage.languageTag === "en";
 
         const result: Result = {
             i18n: {

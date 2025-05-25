@@ -1,8 +1,8 @@
 import type { ExtendKcContext, KcContext as KcContextBase } from "./KcContext";
-import type { LoginThemePageId } from "keycloakify/bin/shared/constants";
-import type { DeepPartial } from "keycloakify/tools/DeepPartial";
-import { deepAssign } from "keycloakify/tools/deepAssign";
-import { structuredCloneButFunctions } from "keycloakify/tools/structuredCloneButFunctions";
+import type { PageId_builtin } from "./PAGE_IDS";
+import type { DeepPartial } from "../tools/DeepPartial";
+import { deepAssign } from "../tools/deepAssign";
+import { structuredCloneButFunctions } from "../tools/structuredCloneButFunctions";
 import { kcContextMocks, kcContextCommonMock } from "./kcContextMocks";
 import { exclude } from "tsafe/exclude";
 
@@ -14,7 +14,7 @@ export function createGetKcContextMock<
     kcContextExtensionPerPage: KcContextExtensionPerPage;
     overrides?: DeepPartial<KcContextExtension & KcContextBase.Common>;
     overridesPerPage?: {
-        [PageId in LoginThemePageId | keyof KcContextExtensionPerPage]?: DeepPartial<
+        [PageId in PageId_builtin | keyof KcContextExtensionPerPage]?: DeepPartial<
             Extract<ExtendKcContext<KcContextExtension, KcContextExtensionPerPage>, { pageId: PageId }>
         >;
     };
@@ -28,9 +28,7 @@ export function createGetKcContextMock<
 
     type KcContext = ExtendKcContext<KcContextExtension, KcContextExtensionPerPage>;
 
-    function getKcContextMock<
-        PageId extends LoginThemePageId | keyof KcContextExtensionPerPage
-    >(params: {
+    function getKcContextMock<PageId extends PageId_builtin | keyof KcContextExtensionPerPage>(params: {
         pageId: PageId;
         overrides?: DeepPartial<Extract<KcContext, { pageId: PageId }>>;
     }): Extract<KcContext, { pageId: PageId }> {

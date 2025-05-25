@@ -1,5 +1,5 @@
-import type { ThemeType, LoginThemePageId } from "keycloakify/bin/shared/constants";
-import type { ValueOf } from "keycloakify/tools/ValueOf";
+import type { PageId_builtin } from "./PAGE_IDS";
+import type { ValueOf } from "../tools/ValueOf";
 import { assert } from "tsafe/assert";
 import type { Equals } from "tsafe";
 import type { ClassKey } from "../kcClsx";
@@ -62,8 +62,6 @@ export type KcContext =
     | KcContext.WebauthnError
     | KcContext.LoginPasskeysConditionalAuthenticate
     | KcContext.LoginIdpLinkConfirmOverride;
-
-assert<KcContext["themeType"] extends ThemeType ? true : false>();
 
 export declare namespace KcContext {
     export type Common = {
@@ -751,7 +749,7 @@ export declare namespace Validators {
 
 {
     type Got = KcContext["pageId"];
-    type Expected = LoginThemePageId;
+    type Expected = PageId_builtin;
 
     type OnlyInGot = Exclude<Got, Expected>;
     type OnlyInExpected = Exclude<Expected, Got>;

@@ -1,4 +1,4 @@
-import type { JSX } from "keycloakify/tools/JSX";
+import type { JSX } from "./core/tools/JSX";
 import type { PasswordPolicies, Attribute, Validators } from "./core/KcContext/KcContext";
 import { useEffect, useState, useMemo, Fragment } from "react";
 import { assert, type Equals } from "tsafe/assert";

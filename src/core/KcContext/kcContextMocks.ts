@@ -1,9 +1,8 @@
-import "keycloakify/tools/Object.fromEntries";
+import "../tools/Object.fromEntries";
 import type { KcContext, Attribute } from "./KcContext";
-import { WELL_KNOWN_DIRECTORY_BASE_NAME, type LoginThemePageId } from "keycloakify/bin/shared/constants";
+import type { PageId_builtin } from "./PAGE_IDS";
 import { id } from "tsafe/id";
 import { assert, type Equals } from "tsafe/assert";
-import { BASE_URL } from "keycloakify/lib/BASE_URL";
 import type { LanguageTag } from "../i18n/messages_defaultSet/types";
 
 const attributesByName = Object.fromEntries(
@@ -73,7 +72,48 @@ const attributesByName = Object.fromEntries(
     ]).map(attribute => [attribute.name, attribute])
 );
 
-const resourcesPath = `${BASE_URL}${WELL_KNOWN_DIRECTORY_BASE_NAME.KEYCLOAKIFY_DEV_RESOURCES}/login`;
+/**
+ * This is just a way to know what's the base url that works
+ * both in webpack and vite.
+ * You can see this as a polyfill that return `import.meta.env.BASE_URL` when in Vite
+ * and when in Webpack returns the base url in the same format as vite does meaning
+ * "/" if hosted at root or "/foo/" when hosted under a subpath (always start and ends with a "/").
+ */
+const BASE_URL = (() => {
+    vite: {
+        let BASE_URL: string;
+
+        try {
+            // @ts-expect-error
+            BASE_URL = import.meta.env.BASE_URL;
+
+            assert(typeof BASE_URL === "string");
+        } catch {
+            break vite;
+        }
+
+        return BASE_URL;
+    }
+
+    webpack: {
+        let BASE_URL: string;
+
+        try {
+            // @ts-expect-error
+            BASE_URL = process.env.PUBLIC_URL;
+
+            assert(typeof BASE_URL === "string");
+        } catch {
+            break webpack;
+        }
+
+        return BASE_URL === "" ? "/" : `${BASE_URL}/`;
+    }
+
+    return "/";
+})();
+
+const resourcesPath = `${BASE_URL}keycloakify-dev-resources/login`;
 
 export const kcContextCommonMock: KcContext.Common = {
     themeVersion: "0.0.0",
@@ -83,7 +123,7 @@ export const kcContextCommonMock: KcContext.Common = {
     url: {
         loginAction: "#",
         resourcesPath,
-        resourcesCommonPath: `${resourcesPath}/${WELL_KNOWN_DIRECTORY_BASE_NAME.RESOURCES_COMMON}`,
+        resourcesCommonPath: `${resourcesPath}/resources-common`,
         loginRestartFlowUrl: "#",
         loginUrl: "#",
         ssoLoginInOtherTabsUrl: "#"
@@ -619,7 +659,7 @@ export const kcContextMocks = [
 
 {
     type Got = (typeof kcContextMocks)[number]["pageId"];
-    type Expected = LoginThemePageId;
+    type Expected = PageId_builtin;
 
     type OnlyInGot = Exclude<Got, Expected>;
     type OnlyInExpected = Exclude<Expected, Got>;

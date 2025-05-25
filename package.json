@@ -27,19 +27,12 @@
     "license": "MIT",
     "keywords": [],
     "homepage": "https://github.com/keycloakify/login",
-    "dependencies": {
-        "tsafe": "^1.8.5"
-    },
-    "peerDependencies": {
-        "keycloakify": "^11.8.30"
-    },
     "devDependencies": {
         "@types/node": "^22.15.18",
         "@types/properties-parser": "^0.3.3",
         "@types/react": "^19.1.4",
         "evt": "^2.5.9",
         "husky": "^4.3.8",
-        "keycloakify": "^11.8.30",
         "lint-staged": "^11.1.1",
         "make-fetch-happen": "^11.0.3",
         "yauzl": "^2.10.0",
