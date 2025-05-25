@@ -1,3 +1,5 @@
+export const THEME_NAME = "login";
+
 export const keycloakifyExtraMessages: Record<
     | "en"
     | "ar"

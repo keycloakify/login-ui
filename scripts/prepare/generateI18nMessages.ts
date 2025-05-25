@@ -12,7 +12,7 @@ import { downloadKeycloakDefaultTheme } from "../shared/downloadKeycloakDefaultT
 import { getThisCodebaseRootDirPath } from "../tools/getThisCodebaseRootDirPath";
 import { deepAssign } from "keycloakify/src/tools/deepAssign";
 import propertiesParser from "properties-parser";
-import { keycloakifyExtraMessages } from "./generateI18nMessages.login";
+import { keycloakifyExtraMessages, THEME_NAME } from "./generateI18nMessages.overridable";
 import { runPrettier } from "keycloakify/src/bin/tools/runPrettier";
 
 export async function generateI18nMessages() {
@@ -40,7 +40,7 @@ export async function generateI18nMessages() {
 
             const [, themeType_here, language] = match;
 
-            if (themeType_here !== "login") {
+            if (themeType_here !== THEME_NAME) {
                 return;
             }
 
