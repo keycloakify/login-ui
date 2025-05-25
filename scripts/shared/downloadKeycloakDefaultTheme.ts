@@ -2,7 +2,6 @@ import { downloadAndExtractArchive } from "../../node_modules/keycloakify/src/bi
 import { getProxyFetchOptions } from "../../node_modules/keycloakify/src/bin/tools/fetchProxyOptions";
 import { getThisCodebaseRootDirPath } from "../tools/getThisCodebaseRootDirPath.overridable";
 import { KEYCLOAK_VERSION, createOnArchiveFile } from "./downloadKeycloakDefaultTheme.overridable";
-import { join as pathJoin } from "path";
 import { cacheDirPath } from "./cacheDirPath.overridable";
 
 export async function downloadKeycloakDefaultTheme() {

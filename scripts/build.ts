@@ -6,75 +6,82 @@ import { z } from "zod";
 import { assert, type Equals } from "tsafe/assert";
 import { id } from "tsafe/id";
 import { transformCodebase } from "../node_modules/keycloakify/src/bin/tools/transformCodebase";
+import { extraSteps } from "./build.overridable";
 
-const distDirPath = pathJoin(getThisCodebaseRootDirPath(), "dist");
+(async () => {
+    const distDirPath = pathJoin(getThisCodebaseRootDirPath(), "dist");
 
-fs.rmSync(distDirPath, { recursive: true, force: true });
+    fs.rmSync(distDirPath, { recursive: true, force: true });
 
-child_process.execSync("npx tsc");
+    child_process.execSync("npx tsc");
 
-fs.rmSync(pathJoin(distDirPath, "tsconfig.tsbuildinfo"));
+    fs.rmSync(pathJoin(distDirPath, "tsconfig.tsbuildinfo"));
 
-for (const dirBasename of ["src", "keycloak-theme", "keycloak-theme-resources"]) {
-    transformCodebase({
-        srcDirPath: pathJoin(getThisCodebaseRootDirPath(), dirBasename),
-        destDirPath: pathJoin(distDirPath, dirBasename)
-    });
-}
+    for (const dirBasename of ["src", "keycloak-theme", "keycloak-theme-resources"]) {
+        transformCodebase({
+            srcDirPath: pathJoin(getThisCodebaseRootDirPath(), dirBasename),
+            destDirPath: pathJoin(distDirPath, dirBasename)
+        });
+    }
 
-type ParsedPackageJson = {
-    name: string;
-    version: string;
-    description: string;
-    repository: Record<string, string>;
-    author: string;
-    license: string;
-    keywords: string[];
-    homepage: string;
-    dependencies: Record<string, string>;
-    peerDependencies: Record<string, string>;
-};
+    type ParsedPackageJson = {
+        name: string;
+        version: string;
+        description: string;
+        repository: Record<string, string>;
+        author: string;
+        license: string;
+        keywords: string[];
+        homepage: string;
+        dependencies: Record<string, string>;
+        peerDependencies: Record<string, string>;
+    };
 
-const zParsedPackageJson = (() => {
-    type TargetType = ParsedPackageJson;
+    const zParsedPackageJson = (() => {
+        type TargetType = ParsedPackageJson;
 
-    const zTargetType = z.object({
-        name: z.string(),
-        version: z.string(),
-        description: z.string(),
-        repository: z.record(z.string(), z.string()),
-        author: z.string(),
-        license: z.string(),
-        keywords: z.array(z.string()),
-        homepage: z.string(),
-        dependencies: z.record(z.string(), z.string()),
-        peerDependencies: z.record(z.string(), z.string())
-    });
+        const zTargetType = z.object({
+            name: z.string(),
+            version: z.string(),
+            description: z.string(),
+            repository: z.record(z.string(), z.string()),
+            author: z.string(),
+            license: z.string(),
+            keywords: z.array(z.string()),
+            homepage: z.string(),
+            dependencies: z.record(z.string(), z.string()),
+            peerDependencies: z.record(z.string(), z.string())
+        });
 
-    type InferredType = z.infer<typeof zTargetType>;
+        type InferredType = z.infer<typeof zTargetType>;
 
-    assert<Equals<ParsedPackageJson, InferredType>>;
+        assert<Equals<ParsedPackageJson, InferredType>>;
 
-    return id<z.ZodType<TargetType>>(zTargetType);
+        return id<z.ZodType<TargetType>>(zTargetType);
+    })();
+
+    const parsedPackageJson_root = zParsedPackageJson.parse(
+        JSON.parse(
+            fs.readFileSync(pathJoin(getThisCodebaseRootDirPath(), "package.json")).toString("utf8")
+        )
+    );
+
+    fs.writeFileSync(
+        pathJoin(distDirPath, "package.json"),
+        Buffer.from(
+            JSON.stringify(
+                {
+                    ...parsedPackageJson_root,
+                    publishConfig: {
+                        access: "public"
+                    }
+                },
+                null,
+                2
+            ),
+            "utf8"
+        )
+    );
+
+    await extraSteps();
 })();
-
-const parsedPackageJson_root = zParsedPackageJson.parse(
-    JSON.parse(fs.readFileSync(pathJoin(getThisCodebaseRootDirPath(), "package.json")).toString("utf8"))
-);
-
-fs.writeFileSync(
-    pathJoin(distDirPath, "package.json"),
-    Buffer.from(
-        JSON.stringify(
-            {
-                ...parsedPackageJson_root,
-                publishConfig: {
-                    access: "public"
-                }
-            },
-            null,
-            2
-        ),
-        "utf8"
-    )
-);
