@@ -4,7 +4,7 @@ import { clsx } from "@keycloakify/keycloak-login-ui/tools/clsx";
 import { kcSanitize } from "keycloakify/lib/kcSanitize";
 import { useSetClassName } from "@keycloakify/keycloak-login-ui/tools/useSetClassName";
 import { useInitializeTemplate } from "./useInitializeTemplate";
-import { useKcClsx } from "../@keycloakify/keycloak-login-ui/useKcClsx";
+import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
 import { useI18n } from "../../i18n";
 import { useKcContext } from "../../KcContext";
 

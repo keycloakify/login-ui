@@ -1,7 +1,7 @@
 import { Fragment } from "react";
-import type { FormFieldError } from "../@keycloakify/keycloak-login-ui/useUserProfileForm";
-import type { Attribute } from "../@keycloakify/keycloak-login-ui/KcContext";
-import { useKcClsx } from "../@keycloakify/keycloak-login-ui/useKcClsx";
+import type { FormFieldError } from "@keycloakify/keycloak-login-ui/useUserProfileForm";
+import type { Attribute } from "@keycloakify/keycloak-login-ui/KcContext";
+import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
 
 export function FieldErrors(props: {
     attribute: Attribute;

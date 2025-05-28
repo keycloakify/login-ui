@@ -1,8 +1,8 @@
 import {
     getButtonToDisplayForMultivaluedAttributeField,
     type FormAction
-} from "../@keycloakify/keycloak-login-ui/useUserProfileForm";
-import type { Attribute } from "../@keycloakify/keycloak-login-ui/KcContext";
+} from "@keycloakify/keycloak-login-ui/useUserProfileForm";
+import type { Attribute } from "@keycloakify/keycloak-login-ui/KcContext";
 import { useI18n } from "../../i18n";
 
 export function AddRemoveButtonsMultiValuedAttribute(props: {
