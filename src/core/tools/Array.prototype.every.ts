@@ -1,4 +1,5 @@
 if (!Array.prototype.every) {
+    // @ts-expect-error
     Array.prototype.every = function (callbackfn: any, thisArg: any) {
         "use strict";
         var T, k;

@@ -53,6 +53,9 @@ const errorMessage = "Wrong usage of the `is` function refer to https://docs.tsa
 
 /** https://docs.tsafe.dev/is */
 export function is<T>(value: any): value is T {
+    // NOTE: Just to make typescript happy
+    value;
+
     const ref = {};
 
     if (refOfIs !== undefined) {

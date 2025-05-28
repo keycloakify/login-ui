@@ -7,6 +7,7 @@ import { assert, type Equals } from "tsafe/assert";
 import { id } from "tsafe/id";
 import { transformCodebase } from "keycloakify/src/bin/tools/transformCodebase";
 import { extraSteps } from "./build.overridable";
+import { vendorFrontendDependencies } from "./vendorFrontendDependencies";
 
 (async () => {
     const distDirPath = pathJoin(getThisCodebaseRootDirPath(), "dist");
@@ -33,8 +34,6 @@ import { extraSteps } from "./build.overridable";
         license: string;
         keywords: string[];
         homepage: string;
-        dependencies: Record<string, string>;
-        peerDependencies: Record<string, string>;
     };
 
     const zParsedPackageJson = (() => {
@@ -48,9 +47,7 @@ import { extraSteps } from "./build.overridable";
             author: z.string(),
             license: z.string(),
             keywords: z.array(z.string()),
-            homepage: z.string(),
-            dependencies: z.record(z.string(), z.string()),
-            peerDependencies: z.record(z.string(), z.string())
+            homepage: z.string()
         });
 
         type InferredType = z.infer<typeof zTargetType>;
@@ -82,6 +79,8 @@ import { extraSteps } from "./build.overridable";
             "utf8"
         )
     );
+
+    vendorFrontendDependencies();
 
     await extraSteps();
 })();

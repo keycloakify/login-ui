@@ -1,9 +1,9 @@
 import * as fs from "fs";
 import { join as pathJoin, basename as pathBasename, dirname as pathDirname } from "path";
 import { assert } from "tsafe/assert";
-import { run } from "../shared/run";
-import { cacheDirPath as cacheDirPath_base } from "../shared/cacheDirPath.overridable";
-import { getThisCodebaseRootDirPath } from "../tools/getThisCodebaseRootDirPath.overridable";
+import { run } from "./shared/run";
+import { cacheDirPath as cacheDirPath_base } from "./shared/cacheDirPath.overridable";
+import { getThisCodebaseRootDirPath } from "./tools/getThisCodebaseRootDirPath.overridable";
 
 export function vendorFrontendDependencies() {
     const vendorDirPath = pathJoin(getThisCodebaseRootDirPath(), "dist", "core", "tools", "vendor");
