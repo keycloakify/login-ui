@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import "../tools/Array.prototype.every";
+import "../../tools/Array.prototype.every";
 import { assert, type Equals } from "tsafe/assert";
 import type { KcContext, PasswordPolicies, Attribute, Validators } from "../KcContext/KcContext";
 import type { KcContextLike as KcContextLike_i18n } from "../i18n/getI18n";
 import type { MessageKey as MessageKey_defaultSet } from "../i18n/messages_defaultSet/types";
-import { emailRegexp } from "../tools/emailRegExp";
+import { emailRegexp } from "../../tools/emailRegExp";
 import { formatNumber, unFormatNumberOnSubmit } from "./kcNumberUnFormat";
-import { structuredCloneButFunctions } from "../tools/structuredCloneButFunctions";
+import { structuredCloneButFunctions } from "../../tools/structuredCloneButFunctions";
 import { id } from "tsafe/id";
 
 export type FormFieldError = {

@@ -1,5 +1,5 @@
 import type { PageId_builtin } from "./PAGE_IDS";
-import type { ValueOf } from "../tools/ValueOf";
+import type { ValueOf } from "../../tools/ValueOf";
 import { assert } from "tsafe/assert";
 import type { Equals } from "tsafe";
 import type { ClassKey } from "../kcClsx";

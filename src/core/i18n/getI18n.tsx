@@ -1,6 +1,6 @@
-import "../tools/Object.fromEntries";
+import "../../tools/Object.fromEntries";
 import { assert, is } from "tsafe/assert";
-import { extractLastParenthesisContent } from "../tools/extractLastParenthesisContent";
+import { extractLastParenthesisContent } from "../../tools/extractLastParenthesisContent";
 import messages_defaultSet_fallbackLanguage from "./messages_defaultSet/en";
 import { fetchMessages_defaultSet } from "./messages_defaultSet";
 import type { KcContext } from "../KcContext/KcContext";

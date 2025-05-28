@@ -1,4 +1,4 @@
-import "../tools/Object.fromEntries";
+import "../../tools/Object.fromEntries";
 import type { KcContext, Attribute } from "./KcContext";
 import type { PageId_builtin } from "./PAGE_IDS";
 import { id } from "tsafe/id";

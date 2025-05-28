@@ -1,4 +1,4 @@
-import type { JSX } from "../core/tools/JSX";
+import type { JSX } from "../tools/JSX";
 import { useEffect, useState, createContext, useContext } from "react";
 import { kcSanitize } from "../core/kcSanitize";
 import { createGetI18n, type KcContextLike } from "../core/i18n/getI18n";

@@ -1,5 +1,5 @@
 import { HtmlPolicyBuilder } from "./HtmlPolicyBuilder";
-import type { DOMPurify as ofTypeDomPurify } from "../tools/vendor/dompurify";
+import type { DOMPurify as ofTypeDomPurify } from "../../tools/vendor/dompurify";
 
 //implementation of java Sanitizer policy ( KeycloakSanitizerPolicy )
 // All regex directly copied from the keycloak source but some of them changed slightly to work with typescript(ONSITE_URL and OFFSITE_URL)

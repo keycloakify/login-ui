@@ -1,5 +1,5 @@
 import { KcSanitizerPolicy } from "./KcSanitizerPolicy";
-import type { DOMPurify as ofTypeDomPurify } from "../tools/vendor/dompurify";
+import type { DOMPurify as ofTypeDomPurify } from "../../tools/vendor/dompurify";
 
 // implementation of keycloak java sanitize method ( KeycloakSanitizerMethod )
 // https://github.com/keycloak/keycloak/blob/8ce8a4ba089eef25a0e01f58e09890399477b9ef/services/src/main/java/org/keycloak/theme/KeycloakSanitizerMethod.java#L33

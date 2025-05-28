@@ -1,4 +1,4 @@
-import { DOMPurify } from "../tools/vendor/dompurify";
+import { DOMPurify } from "../../tools/vendor/dompurify";
 
 type TagType = {
     name: string;
