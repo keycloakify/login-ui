@@ -1,6 +1,6 @@
 import { assert } from "@keycloakify/keycloak-login-ui/tools/assert";
 import type { InputFieldByTypeProps } from "./InputFieldByType";
-import { useKcClsx } from "../../_internals/useKcClsx";
+import { useKcClsx } from "../@keycloakify/keycloak-login-ui/useKcClsx";
 import { InputLabel } from "./InputLabel";
 
 export function InputTagSelects(props: InputFieldByTypeProps) {

@@ -8,6 +8,7 @@ export type KcContextExtension = {
     // See: https://docs.keycloakify.dev/faq-and-help/some-values-you-need-are-missing-from-in-kccontext
 };
 
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export type KcContextExtensionPerPage = {};
 
 export type KcContext = ExtendKcContext<KcContextExtension, KcContextExtensionPerPage>;

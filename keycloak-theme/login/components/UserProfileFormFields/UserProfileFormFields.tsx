@@ -4,14 +4,14 @@ import {
     useUserProfileForm,
     type FormAction,
     type FormFieldError
-} from "../../_internals/useUserProfileForm";
+} from "../@keycloakify/keycloak-login-ui/useUserProfileForm";
 import { GroupLabel } from "./GroupLabel";
 import { FieldErrors } from "./FieldErrors";
 import { InputFieldByType } from "./InputFieldByType";
-import type { Attribute } from "../../_internals/KcContext";
+import type { Attribute } from "../@keycloakify/keycloak-login-ui/KcContext";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
-import { useKcClsx } from "../../_internals/useKcClsx";
+import { useKcClsx } from "../@keycloakify/keycloak-login-ui/useKcClsx";
 import { DO_MAKE_USER_CONFIRM_PASSWORD } from "./DO_MAKE_USER_CONFIRM_PASSWORD";
 import { assert } from "tsafe/assert";
 
