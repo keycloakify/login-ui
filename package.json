@@ -41,7 +41,13 @@
         "react": "^18.3.1",
         "tsx": "^4.19.4",
         "typescript": "^5.8.3",
-        "zod": "^3.24.4"
+        "zod": "^3.24.4",
+        "keycloakify": "^11.8.30",
+        "webpack": "5.93.0",
+        "webpack-cli": "5.1.4",
+        "dompurify": "^3.1.6",
+        "@types/dompurify": "^2.0.0",
+        "tsafe": "^1.8.5"
     },
     "publishConfig": {
         "access": "public"

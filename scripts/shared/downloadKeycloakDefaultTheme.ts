@@ -1,5 +1,5 @@
-import { downloadAndExtractArchive } from "../../node_modules/keycloakify/src/bin/tools/downloadAndExtractArchive";
-import { getProxyFetchOptions } from "../../node_modules/keycloakify/src/bin/tools/fetchProxyOptions";
+import { downloadAndExtractArchive } from "keycloakify/src/bin/tools/downloadAndExtractArchive";
+import { getProxyFetchOptions } from "keycloakify/src/bin/tools/fetchProxyOptions";
 import { getThisCodebaseRootDirPath } from "../tools/getThisCodebaseRootDirPath.overridable";
 import { KEYCLOAK_VERSION, createOnArchiveFile } from "./downloadKeycloakDefaultTheme.overridable";
 import { cacheDirPath } from "./cacheDirPath.overridable";

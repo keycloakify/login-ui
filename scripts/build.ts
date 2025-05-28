@@ -5,7 +5,7 @@ import { getThisCodebaseRootDirPath } from "./tools/getThisCodebaseRootDirPath.o
 import { z } from "zod";
 import { assert, type Equals } from "tsafe/assert";
 import { id } from "tsafe/id";
-import { transformCodebase } from "../node_modules/keycloakify/src/bin/tools/transformCodebase";
+import { transformCodebase } from "keycloakify/src/bin/tools/transformCodebase";
 import { extraSteps } from "./build.overridable";
 
 (async () => {

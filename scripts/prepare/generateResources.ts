@@ -1,9 +1,9 @@
 import { join as pathJoin } from "path";
 import { downloadKeycloakDefaultTheme } from "../shared/downloadKeycloakDefaultTheme";
-import { transformCodebase } from "../../node_modules/keycloakify/src/bin/tools/transformCodebase";
-import { existsAsync } from "../../node_modules/keycloakify/src/bin/tools/fs.existsAsync";
+import { transformCodebase } from "keycloakify/src/bin/tools/transformCodebase";
+import { existsAsync } from "keycloakify/src/bin/tools/fs.existsAsync";
 import { getThisCodebaseRootDirPath } from "../tools/getThisCodebaseRootDirPath.overridable";
-import { WELL_KNOWN_DIRECTORY_BASE_NAME } from "../../node_modules/keycloakify/src/bin/shared/constants";
+import { WELL_KNOWN_DIRECTORY_BASE_NAME } from "keycloakify/src/bin/shared/constants";
 import { THEME_NAME } from "./generateResources.overridable";
 import * as fsPr from "fs/promises";
 
