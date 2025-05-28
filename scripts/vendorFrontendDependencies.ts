@@ -6,7 +6,7 @@ import { cacheDirPath as cacheDirPath_base } from "./shared/cacheDirPath.overrid
 import { getThisCodebaseRootDirPath } from "./tools/getThisCodebaseRootDirPath.overridable";
 
 export function vendorFrontendDependencies() {
-    const vendorDirPath = pathJoin(getThisCodebaseRootDirPath(), "dist", "core", "tools", "vendor");
+    const vendorDirPath = pathJoin(getThisCodebaseRootDirPath(), "dist", "tools", "vendor");
     const cacheDirPath = pathJoin(cacheDirPath_base, "vendorFrontendDependencies");
 
     const extraBundleFileBasenames = new Set<string>();
