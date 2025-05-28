@@ -1,7 +1,7 @@
 import type { JSX } from "./core/tools/JSX";
 import type { PasswordPolicies, Attribute, Validators } from "./core/KcContext/KcContext";
 import { useEffect, useState, useMemo, Fragment } from "react";
-import { assert, type Equals } from "./core/tools/tsafe/assert";
+import { assert, type Equals } from "tsafe/assert";
 export { getButtonToDisplayForMultivaluedAttributeField } from "./core/userProfileApi/index";
 import type { MessageKey_defaultSet } from "./i18n";
 import type { GenericI18n } from "./i18n/GenericI18n";

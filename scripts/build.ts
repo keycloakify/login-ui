@@ -34,6 +34,8 @@ import { vendorFrontendDependencies } from "./vendorFrontendDependencies";
         license: string;
         keywords: string[];
         homepage: string;
+        dependencies: Record<string, string>;
+        peerDependencies: Record<string, string>;
     };
 
     const zParsedPackageJson = (() => {
@@ -47,7 +49,9 @@ import { vendorFrontendDependencies } from "./vendorFrontendDependencies";
             author: z.string(),
             license: z.string(),
             keywords: z.array(z.string()),
-            homepage: z.string()
+            homepage: z.string(),
+            dependencies: z.record(z.string(), z.string()),
+            peerDependencies: z.record(z.string(), z.string())
         });
 
         type InferredType = z.infer<typeof zTargetType>;

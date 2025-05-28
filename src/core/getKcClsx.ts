@@ -1,7 +1,7 @@
-import type { Param0 } from "./tools/tsafe";
+import type { Param0 } from "tsafe";
 import { type CxArg, clsx_withTransform } from "./tools/clsx_withTransform";
 import { clsx } from "./tools/clsx";
-import { assert, is } from "./tools/tsafe/assert";
+import { assert, is } from "tsafe/assert";
 
 export function createGetKcClsx<ClassKey extends string>(params: {
     defaultClasses: Record<ClassKey, string | undefined>;
