@@ -1,4 +1,4 @@
-import { clsx } from "keycloakify/tools/clsx";
+import { clsx } from "@keycloakify/keycloak-login-ui/tools/clsx";
 import { useI18n } from "../../i18n";
 import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
 import { kcSanitize } from "keycloakify/lib/kcSanitize";

@@ -1,4 +1,4 @@
-import type { JSX } from "@keycloakify/keycloak-login-ui/core/tools/JSX";
+import type { JSX } from "@keycloakify/keycloak-login-ui/tools/JSX";
 import { useEffect, Fragment } from "react";
 import {
     useUserProfileForm,

@@ -1,5 +1,5 @@
-import type { JSX } from "@keycloakify/keycloak-login-ui/core/tools/JSX";
-import { useIsPasswordRevealed } from "keycloakify/tools/useIsPasswordRevealed";
+import type { JSX } from "@keycloakify/keycloak-login-ui/tools/JSX";
+import { useIsPasswordRevealed } from "@keycloakify/keycloak-login-ui/tools/useIsPasswordRevealed";
 import { useKcClsx } from "../_internals/useKcClsx";
 import { useI18n } from "../i18n";
 

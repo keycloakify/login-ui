@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { useInsertScriptTags } from "keycloakify/tools/useInsertScriptTags";
-import { waitForElementMountedOnDom } from "keycloakify/tools/waitForElementMountedOnDom";
+import { useInsertScriptTags } from "@keycloakify/keycloak-login-ui/tools/useInsertScriptTags";
+import { waitForElementMountedOnDom } from "@keycloakify/keycloak-login-ui/tools/waitForElementMountedOnDom";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
 

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-empty */
 import { Fragment } from "react";
-import { clsx } from "keycloakify/tools/clsx";
+import { clsx } from "@keycloakify/keycloak-login-ui/tools/clsx";
 
 import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
 import { useScript } from "./useScript";

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { kcSanitize } from "keycloakify/lib/kcSanitize";
-import { clsx } from "keycloakify/tools/clsx";
+import { clsx } from "@keycloakify/keycloak-login-ui/tools/clsx";
 import { PasswordWrapper } from "../../components/PasswordWrapper";
 import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
 import { useKcContext } from "../../KcContext";

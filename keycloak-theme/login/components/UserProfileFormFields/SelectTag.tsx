@@ -1,4 +1,4 @@
-import { assert } from "keycloakify/tools/assert";
+import { assert } from "@keycloakify/keycloak-login-ui/tools/assert";
 import type { InputFieldByTypeProps } from "./InputFieldByType";
 import { InputLabel } from "./InputLabel";
 import { useKcClsx } from "../../_internals/useKcClsx";

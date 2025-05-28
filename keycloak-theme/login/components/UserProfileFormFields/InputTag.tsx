@@ -1,4 +1,4 @@
-import { assert } from "keycloakify/tools/assert";
+import { assert } from "@keycloakify/keycloak-login-ui/tools/assert";
 import { FieldErrors } from "./FieldErrors";
 import type { InputFieldByTypeProps } from "./InputFieldByType";
 import { AddRemoveButtonsMultiValuedAttribute } from "./AddRemoveButtonsMultiValuedAttribute";

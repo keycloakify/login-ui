@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import { useInsertScriptTags } from "keycloakify/tools/useInsertScriptTags";
-import { useInsertLinkTags } from "keycloakify/tools/useInsertLinkTags";
+import { useInsertScriptTags } from "@keycloakify/keycloak-login-ui/tools/useInsertScriptTags";
+import { useInsertLinkTags } from "@keycloakify/keycloak-login-ui/tools/useInsertLinkTags";
+import { useKcClsx } from "@keycloakify/keycloakify-login-ui/useKcClsx";
 import { useKcContext } from "../../KcContext";
-import { useKcClsx } from "../../_internals/useKcClsx";
 
 export function useInitializeTemplate() {
     const { kcContext } = useKcContext();
