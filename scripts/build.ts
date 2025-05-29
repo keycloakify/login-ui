@@ -34,8 +34,8 @@ import { vendorFrontendDependencies } from "./vendorFrontendDependencies";
         license: string;
         keywords: string[];
         homepage: string;
-        dependencies: Record<string, string>;
-        peerDependencies: Record<string, string>;
+        dependencies?: Record<string, string>;
+        peerDependencies?: Record<string, string>;
     };
 
     const zParsedPackageJson = (() => {
@@ -50,8 +50,8 @@ import { vendorFrontendDependencies } from "./vendorFrontendDependencies";
             license: z.string(),
             keywords: z.array(z.string()),
             homepage: z.string(),
-            dependencies: z.record(z.string(), z.string()),
-            peerDependencies: z.record(z.string(), z.string())
+            dependencies: z.record(z.string(), z.string()).optional(),
+            peerDependencies: z.record(z.string(), z.string()).optional()
         });
 
         type InferredType = z.infer<typeof zTargetType>;
