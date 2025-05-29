@@ -1,10 +1,11 @@
 import type { ExtendKcContext, KcContext as KcContextBase } from "./KcContext";
-import type { PageId_builtin } from "./PAGE_IDS";
 import type { DeepPartial } from "../../tools/DeepPartial";
 import { deepAssign } from "../../tools/deepAssign";
 import { structuredCloneButFunctions } from "../../tools/structuredCloneButFunctions";
 import { kcContextMocks, kcContextCommonMock } from "./kcContextMocks";
 import { exclude } from "tsafe/exclude";
+
+type PageId_builtin = import("./KcContext").KcContext["pageId"];
 
 export function createGetKcContextMock<
     KcContextExtension extends { properties?: Record<string, string | undefined> },

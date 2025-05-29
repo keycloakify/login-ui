@@ -1,7 +1,4 @@
-import type { PageId_builtin } from "./PAGE_IDS";
 import type { ValueOf } from "../../tools/ValueOf";
-import { assert } from "tsafe/assert";
-import type { Equals } from "tsafe";
 import type { ClassKey } from "../kcClsx";
 
 export type ExtendKcContext<
@@ -745,17 +742,6 @@ export declare namespace Validators {
     export type Options = {
         options: string[];
     };
-}
-
-{
-    type Got = KcContext["pageId"];
-    type Expected = PageId_builtin;
-
-    type OnlyInGot = Exclude<Got, Expected>;
-    type OnlyInExpected = Exclude<Expected, Got>;
-
-    assert<Equals<OnlyInGot, never>>();
-    assert<Equals<OnlyInExpected, never>>();
 }
 
 /**

@@ -1,6 +1,5 @@
 import "../../tools/Object.fromEntries";
 import type { KcContext, Attribute } from "./KcContext";
-import type { PageId_builtin } from "./PAGE_IDS";
 import { id } from "tsafe/id";
 import { assert, type Equals } from "tsafe/assert";
 import type { LanguageTag } from "../i18n/messages_defaultSet/types";
@@ -659,7 +658,7 @@ export const kcContextMocks = [
 
 {
     type Got = (typeof kcContextMocks)[number]["pageId"];
-    type Expected = PageId_builtin;
+    type Expected = KcContext["pageId"];
 
     type OnlyInGot = Exclude<Got, Expected>;
     type OnlyInExpected = Exclude<Expected, Got>;
