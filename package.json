@@ -27,9 +27,6 @@
     "license": "MIT",
     "keywords": [],
     "homepage": "https://github.com/keycloakify/login",
-    "dependencies": {
-        "tsafe": "^1.8.5"
-    },
     "peerDependencies": {
         "tsafe": "^1.8.5"
     },
@@ -48,7 +45,8 @@
         "tsx": "^4.19.4",
         "typescript": "^5.8.3",
         "zod": "^3.24.4",
-        "keycloakify": "^11.8.30",
+        "keycloakify": "^11.8.35",
+        "tsafe": "^1.8.5",
         "webpack": "5.93.0",
         "webpack-cli": "5.1.4",
         "dompurify": "^3.1.6",
