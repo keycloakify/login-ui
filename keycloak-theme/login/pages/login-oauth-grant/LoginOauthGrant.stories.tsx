@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { createKcPageStory } from "../../KcPageStory";
+import { createKcPageStory } from "../../mocks/KcPageStory";
 
 // Mock kcContext to simulate real environment
 const mockKcContext = {
