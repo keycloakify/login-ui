@@ -147,5 +147,5 @@ function Page() {
             return <Page_login_idp_link_confirm_override />;
     }
 
-    assert<Equals<typeof kcContext, never>>(false);
+    assert<Equals<typeof kcContext, never>>;
 }
