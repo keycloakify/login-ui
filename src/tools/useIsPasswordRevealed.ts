@@ -1,5 +1,5 @@
 import { useEffect, useReducer } from "react";
-import { assert } from "keycloakify/tools/assert";
+import { assert } from "tsafe/assert";
 
 /**
  * Initially false, state that enables to dynamically control if

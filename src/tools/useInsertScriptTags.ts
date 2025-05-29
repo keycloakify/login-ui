@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import { assert } from "tsafe/assert";
-import { useOnFistMount } from "keycloakify/tools/useOnFirstMount";
+import { useOnFistMount } from "./useOnFirstMount";
 
 export type ScriptTag = ScriptTag.TextContent | ScriptTag.Src;
 
