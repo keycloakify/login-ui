@@ -45,7 +45,6 @@ export type ClassKey =
     | "kcAuthenticatorWebAuthnPasswordlessClass"
     | "kcSelectAuthListItemHeadingClass"
     | "kcInfoAreaClass"
-    | "kcLogoLink"
     | "kcContainerClass"
     | "kcSelectAuthListItemTitle"
     | "kcHtmlClass"
@@ -174,7 +173,6 @@ export const { getKcClsx } = createGetKcClsx<ClassKey>({
         kcAuthenticatorWebAuthnPasswordlessClass: "fa fa-key list-view-pf-icon-lg",
         kcSelectAuthListItemHeadingClass: "pf-l-stack__item select-auth-box-headline pf-c-title",
         kcInfoAreaClass: "col-xs-12 col-sm-4 col-md-4 col-lg-5 details",
-        kcLogoLink: "http://www.keycloak.org",
         kcContainerClass: "container-fluid",
         kcSelectAuthListItemTitle: "select-auth-box-paragraph",
         kcLoginOTPListItemTitleClass: "pf-c-tile__title",
