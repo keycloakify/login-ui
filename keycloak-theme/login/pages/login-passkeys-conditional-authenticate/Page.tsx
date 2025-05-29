@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable no-empty */
 import { Fragment } from "react";
 import { clsx } from "@keycloakify/keycloak-login-ui/tools/clsx";
 
