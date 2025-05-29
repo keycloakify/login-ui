@@ -1,9 +1,9 @@
-import { Info } from "./Info";
 import { Template } from "../../components/Template";
-import { Form } from "./Form";
-import { SocialProviders } from "./SocialProviders";
 import { useI18n } from "../../i18n";
 import { useKcContext } from "../../KcContext";
+import { Info } from "./Info";
+import { Form } from "./Form";
+import { SocialProviders } from "./SocialProviders";
 
 export function Page() {
     const { kcContext } = useKcContext("login.ftl");
