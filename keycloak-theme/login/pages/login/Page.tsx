@@ -1,3 +1,4 @@
+import { assert } from "tsafe/assert";
 import { Template } from "../../components/Template";
 import { useI18n } from "../../i18n";
 import { useKcContext } from "../../KcContext";
@@ -6,7 +7,8 @@ import { Form } from "./Form";
 import { SocialProviders } from "./SocialProviders";
 
 export function Page() {
-    const { kcContext } = useKcContext("login.ftl");
+    const { kcContext } = useKcContext();
+    assert(kcContext.pageId === "login.ftl");
 
     const { msg } = useI18n();
 

@@ -1,3 +1,4 @@
+import { assert } from "tsafe/assert";
 import { clsx } from "@keycloakify/keycloak-login-ui/tools/clsx";
 import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
 import { useScript } from "./useScript";
@@ -7,7 +8,8 @@ import { Template } from "../../components/Template";
 import { LogoutOtherSessions } from "../../components/LogoutOtherSessions";
 
 export function Page() {
-    const { kcContext } = useKcContext("login-recovery-authn-code-config.ftl");
+    const { kcContext } = useKcContext();
+    assert(kcContext.pageId === "login-recovery-authn-code-config.ftl");
 
     const { kcClsx } = useKcClsx();
 

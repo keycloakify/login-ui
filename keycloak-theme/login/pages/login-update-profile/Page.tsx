@@ -1,3 +1,4 @@
+import { assert } from "tsafe/assert";
 import { useState } from "react";
 import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
 import { useKcContext } from "../../KcContext";
@@ -6,7 +7,8 @@ import { Template } from "../../components/Template";
 import { UserProfileFormFields } from "../../components/UserProfileFormFields";
 
 export function Page() {
-    const { kcContext } = useKcContext("login-update-profile.ftl");
+    const { kcContext } = useKcContext();
+    assert(kcContext.pageId === "login-update-profile.ftl");
 
     const { kcClsx } = useKcClsx();
 

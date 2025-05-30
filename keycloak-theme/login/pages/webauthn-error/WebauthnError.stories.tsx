@@ -2,6 +2,8 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { createKcPageStory } from "../../mocks/KcPageStory";
 
 const { KcPageStory } = createKcPageStory({ pageId: "webauthn-error.ftl" });
+const { kcContext } = useKcContext();
+assert(kcContext.pageId === "");
 
 const meta = {
     title: "login/webauthn-error.ftl",

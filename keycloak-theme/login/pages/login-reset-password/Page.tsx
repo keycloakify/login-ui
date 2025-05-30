@@ -1,10 +1,12 @@
+import { assert } from "tsafe/assert";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
 import { Template } from "../../components/Template";
 import { Form } from "./Form";
 
 export function Page() {
-    const { kcContext } = useKcContext("login-reset-password.ftl");
+    const { kcContext } = useKcContext();
+    assert(kcContext.pageId === "login-reset-password.ftl");
 
     const { msg } = useI18n();
 

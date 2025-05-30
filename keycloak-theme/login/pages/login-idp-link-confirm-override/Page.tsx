@@ -1,10 +1,12 @@
+import { assert } from "tsafe/assert";
 import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
 import { useI18n } from "../../i18n";
 import { Template } from "../../components/Template";
 import { useKcContext } from "../../KcContext";
 
 export function Page() {
-    const { kcContext } = useKcContext("login-idp-link-confirm-override.ftl");
+    const { kcContext } = useKcContext();
+    assert(kcContext.pageId === "login-idp-link-confirm-override.ftl");
 
     const { kcClsx } = useKcClsx();
 

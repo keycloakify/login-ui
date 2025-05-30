@@ -2,7 +2,9 @@ import { useI18n } from "../../i18n";
 import { useKcContext } from "../../KcContext";
 
 export function Info() {
-    const { kcContext } = useKcContext("login.ftl");
+    const { kcContext } = useKcContext({ assertPage: "login.ftl" });
+    const { kcContext } = useKcContext();
+    assert(kcContext.pageId === "");
 
     const { url } = kcContext;
 

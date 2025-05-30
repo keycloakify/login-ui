@@ -7,7 +7,9 @@ import { useI18n } from "../../i18n";
 export function useScript(params: { authButtonId: string }) {
     const { authButtonId } = params;
 
-    const { kcContext } = useKcContext("webauthn-authenticate.ftl");
+    const { kcContext } = useKcContext({ assertPage: "webauthn-authenticate.ftl" });
+    const { kcContext } = useKcContext();
+    assert(kcContext.pageId === "");
 
     const { msgStr, isFetchingTranslations } = useI18n();
 

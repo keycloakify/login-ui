@@ -1,3 +1,4 @@
+import { assert } from "tsafe/assert";
 import { useState } from "react";
 import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
 import { useKcContext } from "../../KcContext";
@@ -7,7 +8,8 @@ import { UserProfileFormFields } from "../../components/UserProfileFormFields";
 import { LogoutOtherSessions } from "../../components/LogoutOtherSessions";
 
 export function Page() {
-    const { kcContext } = useKcContext("update-email.ftl");
+    const { kcContext } = useKcContext();
+    assert(kcContext.pageId === "update-email.ftl");
 
     const { kcClsx } = useKcClsx();
 

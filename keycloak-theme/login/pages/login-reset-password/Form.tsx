@@ -4,7 +4,9 @@ import { useI18n } from "../../i18n";
 import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
 
 export function Form() {
-    const { kcContext } = useKcContext("login-reset-password.ftl");
+    const { kcContext } = useKcContext({ assertPage: "login-reset-password.ftl" });
+    const { kcContext } = useKcContext();
+    assert(kcContext.pageId === "");
 
     const { kcClsx } = useKcClsx();
 

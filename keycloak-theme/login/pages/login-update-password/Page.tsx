@@ -1,3 +1,4 @@
+import { assert } from "tsafe/assert";
 import { kcSanitize } from "keycloakify/lib/kcSanitize";
 import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
 import { useKcContext } from "../../KcContext";
@@ -7,7 +8,8 @@ import { PasswordWrapper } from "../../components/PasswordWrapper";
 import { LogoutOtherSessions } from "../../components/LogoutOtherSessions";
 
 export function Page() {
-    const { kcContext } = useKcContext("login-update-password.ftl");
+    const { kcContext } = useKcContext();
+    assert(kcContext.pageId === "login-update-password.ftl");
 
     const { kcClsx } = useKcClsx();
 

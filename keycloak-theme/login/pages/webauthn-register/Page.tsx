@@ -1,3 +1,4 @@
+import { assert } from "tsafe/assert";
 import { useScript } from "./useScript";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
@@ -6,7 +7,8 @@ import { LogoutOtherSessions } from "../../components/LogoutOtherSessions";
 import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
 
 export function Page() {
-    const { kcContext } = useKcContext("webauthn-register.ftl");
+    const { kcContext } = useKcContext();
+    assert(kcContext.pageId === "webauthn-register.ftl");
 
     const { kcClsx } = useKcClsx();
 

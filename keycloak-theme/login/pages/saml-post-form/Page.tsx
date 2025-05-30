@@ -1,10 +1,12 @@
+import { assert } from "tsafe/assert";
 import { useEffect, useState } from "react";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
 import { Template } from "../../components/Template";
 
 export function Page() {
-    const { kcContext } = useKcContext("saml-post-form.ftl");
+    const { kcContext } = useKcContext();
+    assert(kcContext.pageId === "saml-post-form.ftl");
 
     const { msgStr, msg } = useI18n();
 

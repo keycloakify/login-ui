@@ -1,27 +1,14 @@
 import { createContext, useContext, type ReactNode } from "react";
-import { assert, is } from "tsafe/assert";
 
-export function createUseKcContext<KcContext extends { pageId: string }>() {
+export function createUseKcContext<KcContext extends {}>() {
     const context = createContext<KcContext | undefined>(undefined);
 
-    function useKcContext<PageId extends KcContext["pageId"] = string>(
-        assertPageId?: PageId | PageId[]
-    ): {
-        kcContext: Extract<KcContext, { pageId: PageId }>;
-    } {
+    function useKcContext(): { kcContext: KcContext } {
         const kcContext = useContext(context);
 
         if (kcContext === undefined) {
             throw new Error("useKcContext must be used within a KcContextProvider");
         }
-
-        if (assertPageId !== undefined && kcContext.pageId !== assertPageId) {
-            throw new Error(
-                `useKcContext: expected pageId "${assertPageId}", but got "${kcContext.pageId}"`
-            );
-        }
-
-        assert(is<Extract<KcContext, { pageId: PageId }>>(kcContext));
 
         return { kcContext };
     }

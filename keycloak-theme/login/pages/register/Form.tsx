@@ -7,7 +7,9 @@ import { UserProfileFormFields } from "../../components/UserProfileFormFields";
 import { TermsAcceptance } from "./TermsAcceptance";
 
 export function Form() {
-    const { kcContext } = useKcContext("register.ftl");
+    const { kcContext } = useKcContext({ assertPage: "register.ftl" });
+    const { kcContext } = useKcContext();
+    assert(kcContext.pageId === "");
     const { kcClsx } = useKcClsx();
     const { msg, msgStr } = useI18n();
 

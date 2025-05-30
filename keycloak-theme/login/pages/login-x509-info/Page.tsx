@@ -1,10 +1,12 @@
+import { assert } from "tsafe/assert";
 import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
 import { Template } from "../../components/Template";
 
 export function Page() {
-    const { kcContext } = useKcContext("login-x509-info.ftl");
+    const { kcContext } = useKcContext();
+    assert(kcContext.pageId === "login-x509-info.ftl");
 
     const { kcClsx } = useKcClsx();
 

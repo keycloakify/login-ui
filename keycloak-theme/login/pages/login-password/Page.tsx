@@ -8,7 +8,8 @@ import { useI18n } from "../../i18n";
 import { Template } from "../../components/Template";
 
 export function Page() {
-    const { kcContext } = useKcContext("login-password.ftl");
+    const { kcContext } = useKcContext();
+    assert(kcContext.pageId === "login-password.ftl");
 
     const { kcClsx } = useKcClsx();
 

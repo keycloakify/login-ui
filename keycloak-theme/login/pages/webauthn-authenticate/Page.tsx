@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import { assert } from "tsafe/assert";
 import { clsx } from "@keycloakify/keycloak-login-ui/tools/clsx";
 import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
 import { useScript } from "./useScript";
@@ -7,7 +8,9 @@ import { useI18n } from "../../i18n";
 import { Template } from "../../components/Template";
 
 export function Page() {
-    const { kcContext } = useKcContext("webauthn-authenticate.ftl");
+    const { kcContext } = useKcContext();
+    assert(kcContext.pageId === "webauthn-authenticate.ftl");
+
     const { kcClsx } = useKcClsx();
 
     const { url, realm, registrationDisabled, authenticators, shouldDisplayAuthenticators } = kcContext;

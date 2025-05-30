@@ -1,10 +1,12 @@
+import { assert } from "tsafe/assert";
 import { useEffect } from "react";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
 import { Template } from "../../components/Template";
 
 export function Page() {
-    const { kcContext } = useKcContext("frontchannel-logout.ftl");
+    const { kcContext } = useKcContext();
+    assert(kcContext.pageId === "frontchannel-logout.ftl");
 
     const { msg, msgStr } = useI18n();
 

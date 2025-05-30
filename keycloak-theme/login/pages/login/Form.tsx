@@ -6,7 +6,9 @@ import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
 import { kcSanitize } from "keycloakify/lib/kcSanitize";
 
 export function Form() {
-    const { kcContext } = useKcContext("login.ftl");
+    const { kcContext } = useKcContext({ assertPage: "login.ftl" });
+    const { kcContext } = useKcContext();
+    assert(kcContext.pageId === "");
 
     const { msg, msgStr } = useI18n();
 

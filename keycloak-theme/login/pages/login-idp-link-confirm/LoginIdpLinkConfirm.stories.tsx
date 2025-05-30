@@ -10,6 +10,8 @@ const mockKcContext = {
 };
 
 const { KcPageStory } = createKcPageStory({ pageId: "login-idp-link-confirm.ftl" });
+const { kcContext } = useKcContext();
+assert(kcContext.pageId === "");
 
 const meta = {
     title: "login/login-idp-link-confirm.ftl",

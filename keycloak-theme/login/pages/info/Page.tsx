@@ -1,10 +1,12 @@
+import { assert } from "tsafe/assert";
 import { kcSanitize } from "keycloakify/lib/kcSanitize";
 import { useI18n } from "../../i18n";
 import { useKcContext } from "../../KcContext";
 import { Template } from "../../components/Template";
 
 export function Page() {
-    const { kcContext } = useKcContext("info.ftl");
+    const { kcContext } = useKcContext();
+    assert(kcContext.pageId === "info.ftl");
 
     const { advancedMsgStr, msg } = useI18n();
 

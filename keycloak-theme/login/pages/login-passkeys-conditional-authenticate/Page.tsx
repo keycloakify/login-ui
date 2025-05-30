@@ -1,15 +1,15 @@
+import { assert } from "tsafe/assert";
 import { Fragment } from "react";
 import { clsx } from "@keycloakify/keycloak-login-ui/tools/clsx";
-
 import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
 import { useScript } from "./useScript";
-
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
 import { Template } from "../../components/Template";
 
 export function Page() {
-    const { kcContext } = useKcContext("login-passkeys-conditional-authenticate.ftl");
+    const { kcContext } = useKcContext();
+    assert(kcContext.pageId === "login-passkeys-conditional-authenticate.ftl");
 
     const {
         messagesPerField,

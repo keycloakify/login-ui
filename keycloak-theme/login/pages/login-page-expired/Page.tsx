@@ -1,9 +1,11 @@
+import { assert } from "tsafe/assert";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
 import { Template } from "../../components/Template";
 
 export function Page() {
-    const { kcContext } = useKcContext("login-page-expired.ftl");
+    const { kcContext } = useKcContext();
+    assert(kcContext.pageId === "login-page-expired.ftl");
 
     const { msg } = useI18n();
 

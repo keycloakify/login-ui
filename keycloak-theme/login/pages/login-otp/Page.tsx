@@ -1,3 +1,4 @@
+import { assert } from "tsafe/assert";
 import { Fragment, useState } from "react";
 import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
 import { kcSanitize } from "keycloakify/lib/kcSanitize";
@@ -7,7 +8,8 @@ import { useI18n } from "../../i18n";
 import { Template } from "../../components/Template";
 
 export function Page() {
-    const { kcContext } = useKcContext("login-otp.ftl");
+    const { kcContext } = useKcContext();
+    assert(kcContext.pageId === "login-otp.ftl");
 
     const { kcClsx } = useKcClsx();
 

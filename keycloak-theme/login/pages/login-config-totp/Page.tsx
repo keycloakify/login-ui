@@ -1,3 +1,4 @@
+import { assert } from "tsafe/assert";
 import { kcSanitize } from "keycloakify/lib/kcSanitize";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
@@ -6,7 +7,8 @@ import { Template } from "../../components/Template";
 import { LogoutOtherSessions } from "../../components/LogoutOtherSessions";
 
 export function Page() {
-    const { kcContext } = useKcContext("login-config-totp.ftl");
+    const { kcContext } = useKcContext();
+    assert(kcContext.pageId === "login-config-totp.ftl");
 
     const { msg, msgStr, advancedMsg } = useI18n();
 

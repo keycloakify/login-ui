@@ -7,7 +7,9 @@ import { useKcContext } from "../../KcContext";
 export function useScript(params: { authButtonId: string }) {
     const { authButtonId } = params;
 
-    const { kcContext } = useKcContext("login-passkeys-conditional-authenticate.ftl");
+    const { kcContext } = useKcContext({ assertPage: "login-passkeys-conditional-authenticate.ftl" });
+    const { kcContext } = useKcContext();
+    assert(kcContext.pageId === "");
 
     const { msgStr, isFetchingTranslations } = useI18n();
 
