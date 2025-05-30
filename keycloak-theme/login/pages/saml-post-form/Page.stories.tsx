@@ -2,8 +2,6 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { createKcPageStory } from "../../mocks/KcPageStory";
 
 const { KcPageStory } = createKcPageStory({ pageId: "saml-post-form.ftl" });
-const { kcContext } = useKcContext();
-assert(kcContext.pageId === "");
 
 const meta = {
     title: "login/saml-post-form.ftl",

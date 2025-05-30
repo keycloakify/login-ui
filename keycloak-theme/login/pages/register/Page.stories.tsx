@@ -3,8 +3,6 @@ import { createKcPageStory } from "../../mocks/KcPageStory";
 import type { Attribute } from "@keycloakify/keycloak-login-ui/KcContext";
 
 const { KcPageStory } = createKcPageStory({ pageId: "register.ftl" });
-const { kcContext } = useKcContext();
-assert(kcContext.pageId === "");
 
 const meta = {
     title: "login/register.ftl",
