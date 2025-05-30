@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { assert } from "tsafe/assert";
 import { useInsertScriptTags } from "@keycloakify/keycloak-login-ui/tools/useInsertScriptTags";
 import { waitForElementMountedOnDom } from "@keycloakify/keycloak-login-ui/tools/waitForElementMountedOnDom";
 import { useI18n } from "../../i18n";
@@ -7,9 +8,8 @@ import { useKcContext } from "../../KcContext";
 export function useScript(params: { authButtonId: string }) {
     const { authButtonId } = params;
 
-    const { kcContext } = useKcContext({ assertPage: "login-passkeys-conditional-authenticate.ftl" });
     const { kcContext } = useKcContext();
-    assert(kcContext.pageId === "");
+    assert(kcContext.pageId === "login-passkeys-conditional-authenticate.ftl");
 
     const { msgStr, isFetchingTranslations } = useI18n();
 

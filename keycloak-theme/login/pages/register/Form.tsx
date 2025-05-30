@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { assert } from "tsafe/assert";
 import { clsx } from "@keycloakify/keycloak-login-ui/tools/clsx";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
@@ -7,9 +8,8 @@ import { UserProfileFormFields } from "../../components/UserProfileFormFields";
 import { TermsAcceptance } from "./TermsAcceptance";
 
 export function Form() {
-    const { kcContext } = useKcContext({ assertPage: "register.ftl" });
     const { kcContext } = useKcContext();
-    assert(kcContext.pageId === "");
+    assert(kcContext.pageId === "register.ftl");
     const { kcClsx } = useKcClsx();
     const { msg, msgStr } = useI18n();
 
