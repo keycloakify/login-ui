@@ -64,7 +64,40 @@ export function createOnArchiveFile() {
                     pathJoin("patternfly", "dist", "fonts", "OpenSans-SemiboldItalic-webfont.ttf"),
                     pathJoin("patternfly", "dist", "img", "bg-login.jpg"),
                     pathJoin("jquery", "dist", "jquery.min.js"),
-                    pathJoin("rfc4648", "lib", "rfc4648.js")
+                    pathJoin("rfc4648", "lib", "rfc4648.js"),
+                    pathJoin("rfc4648", "lib", "rfc4648.js"),
+                    pathJoin(
+                        "@patternfly",
+                        "patternfly",
+                        "assets",
+                        "fonts",
+                        "RedHatDisplay",
+                        "RedHatDisplay-Bold.woff2"
+                    ),
+                    pathJoin(
+                        "@patternfly",
+                        "patternfly",
+                        "assets",
+                        "fonts",
+                        "RedHatDisplay",
+                        "RedHatDisplay-Bold.woff"
+                    ),
+                    pathJoin(
+                        "@patternfly",
+                        "patternfly",
+                        "assets",
+                        "fonts",
+                        "overpass-webfont",
+                        "overpass-bold.woff2"
+                    ),
+                    pathJoin(
+                        "@patternfly",
+                        "patternfly",
+                        "assets",
+                        "fonts",
+                        "overpass-webfont",
+                        "overpass-bold.woff"
+                    )
                 ]);
             }
 
