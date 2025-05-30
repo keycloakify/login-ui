@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { assert } from "tsafe/assert";
 import { kcSanitize } from "keycloakify/lib/kcSanitize";
 import { clsx } from "@keycloakify/keycloak-login-ui/tools/clsx";
 import { PasswordWrapper } from "../../components/PasswordWrapper";
