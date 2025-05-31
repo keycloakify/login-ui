@@ -71,9 +71,6 @@ export type KcContextLike = KcContextLike_i18n &
         };
         passwordRequired?: boolean;
         realm: { registrationEmailAsUsername: boolean };
-        url: {
-            resourcesPath: string;
-        };
     };
 
 type KcContextLike_useGetErrors = KcContextLike_i18n & {

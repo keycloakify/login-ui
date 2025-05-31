@@ -18,12 +18,14 @@ import { vendorFrontendDependencies } from "./vendorFrontendDependencies";
 
     fs.rmSync(pathJoin(distDirPath, "tsconfig.tsbuildinfo"));
 
-    for (const dirBasename of ["src", "keycloak-theme", "keycloak-theme-resources"]) {
+    for (const dirBasename of ["src", "keycloak-theme"]) {
         transformCodebase({
             srcDirPath: pathJoin(getThisCodebaseRootDirPath(), dirBasename),
             destDirPath: pathJoin(distDirPath, dirBasename)
         });
     }
+
+    fs.cpSync(pathJoin(getThisCodebaseRootDirPath(), "README.md"), pathJoin(distDirPath, "README.md"));
 
     type ParsedPackageJson = {
         name: string;

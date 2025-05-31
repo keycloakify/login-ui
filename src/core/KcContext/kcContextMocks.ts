@@ -71,49 +71,6 @@ const attributesByName = Object.fromEntries(
     ]).map(attribute => [attribute.name, attribute])
 );
 
-/**
- * This is just a way to know what's the base url that works
- * both in webpack and vite.
- * You can see this as a polyfill that return `import.meta.env.BASE_URL` when in Vite
- * and when in Webpack returns the base url in the same format as vite does meaning
- * "/" if hosted at root or "/foo/" when hosted under a subpath (always start and ends with a "/").
- */
-const BASE_URL = (() => {
-    vite: {
-        let BASE_URL: string;
-
-        try {
-            // @ts-expect-error
-            BASE_URL = import.meta.env.BASE_URL;
-
-            assert(typeof BASE_URL === "string");
-        } catch {
-            break vite;
-        }
-
-        return BASE_URL;
-    }
-
-    webpack: {
-        let BASE_URL: string;
-
-        try {
-            // @ts-expect-error
-            BASE_URL = process.env.PUBLIC_URL;
-
-            assert(typeof BASE_URL === "string");
-        } catch {
-            break webpack;
-        }
-
-        return BASE_URL === "" ? "/" : `${BASE_URL}/`;
-    }
-
-    return "/";
-})();
-
-const resourcesPath = `${BASE_URL}keycloakify-dev-resources/login`;
-
 export const kcContextCommonMock: KcContext.Common = {
     themeVersion: "0.0.0",
     keycloakifyVersion: "0.0.0",
@@ -121,8 +78,6 @@ export const kcContextCommonMock: KcContext.Common = {
     themeName: "my-theme-name",
     url: {
         loginAction: "#",
-        resourcesPath,
-        resourcesCommonPath: `${resourcesPath}/resources-common`,
         loginRestartFlowUrl: "#",
         loginUrl: "#",
         ssoLoginInOtherTabsUrl: "#"

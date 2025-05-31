@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { assert } from "tsafe/assert";
 import { useInsertScriptTags } from "@keycloakify/keycloak-login-ui/tools/useInsertScriptTags";
 import { waitForElementMountedOnDom } from "@keycloakify/keycloak-login-ui/tools/waitForElementMountedOnDom";
+import { BASE_URL } from "@keycloakify/keycloak-login-ui/import.meta.env.BASE_URL";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
 
@@ -20,7 +21,7 @@ export function useScript(params: { authButtonId: string }) {
                 type: "module",
                 textContent: () => `
 
-                    import { authenticateByWebAuthn } from "${kcContext.url.resourcesPath}/js/webauthnAuthenticate.js";
+                    import { authenticateByWebAuthn } from "${BASE_URL}keycloak-login-ui/js/webauthnAuthenticate.js";
                     const authButton = document.getElementById('${authButtonId}');
                     authButton.addEventListener("click", function() {
                         const input = {

@@ -68,8 +68,6 @@ export declare namespace KcContext {
         themeName: string;
         url: {
             loginAction: string;
-            resourcesPath: string;
-            resourcesCommonPath: string;
             loginRestartFlowUrl: string;
             loginUrl: string;
             ssoLoginInOtherTabsUrl: string;
