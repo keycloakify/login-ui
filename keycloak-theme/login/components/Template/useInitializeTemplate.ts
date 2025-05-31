@@ -15,11 +15,11 @@ export function useInitializeTemplate() {
         hrefs: !doUseDefaultCss
             ? []
             : [
-                  `${BASE_URL}keycloak-login-ui/resources-common/node_modules/@patternfly/patternfly/patternfly.min.css`,
-                  `${BASE_URL}keycloak-login-ui/resources-common/node_modules/patternfly/dist/css/patternfly.min.css`,
-                  `${BASE_URL}keycloak-login-ui/resources-common/node_modules/patternfly/dist/css/patternfly-additions.min.css`,
-                  `${BASE_URL}keycloak-login-ui/resources-common/lib/pficon/pficon.css`,
-                  `${BASE_URL}keycloak-login-ui/css/login.css`
+                  `${BASE_URL}keycloak-theme/login/resources-common/node_modules/@patternfly/patternfly/patternfly.min.css`,
+                  `${BASE_URL}keycloak-theme/login/resources-common/node_modules/patternfly/dist/css/patternfly.min.css`,
+                  `${BASE_URL}keycloak-theme/login/resources-common/node_modules/patternfly/dist/css/patternfly-additions.min.css`,
+                  `${BASE_URL}keycloak-theme/login/resources-common/lib/pficon/pficon.css`,
+                  `${BASE_URL}keycloak-theme/login/css/login.css`
               ]
     });
 
@@ -29,7 +29,7 @@ export function useInitializeTemplate() {
             // NOTE: The importmap is added in by the FTL script because it's too late to add it here.
             {
                 type: "module",
-                src: `${BASE_URL}keycloak-login-ui/js/menu-button-links.js`
+                src: `${BASE_URL}keycloak-theme/login/js/menu-button-links.js`
             },
             ...(kcContext.scripts === undefined
                 ? []
@@ -40,7 +40,7 @@ export function useInitializeTemplate() {
             {
                 type: "module",
                 textContent: `
-                    import { checkCookiesAndSetTimer } from "${BASE_URL}keycloak-login-ui/js/authChecker.js";
+                    import { checkCookiesAndSetTimer } from "${BASE_URL}keycloak-theme/login/js/authChecker.js";
 
                     checkCookiesAndSetTimer("${kcContext.url.ssoLoginInOtherTabsUrl}");
                 `

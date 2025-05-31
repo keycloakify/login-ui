@@ -21,7 +21,7 @@ export function useScript(params: { authButtonId: string }) {
                 type: "module",
                 textContent: () => `
 
-                    import { authenticateByWebAuthn } from "${BASE_URL}keycloak-login-ui/js/webauthnAuthenticate.js";
+                    import { authenticateByWebAuthn } from "${BASE_URL}keycloak-theme/login/js/webauthnAuthenticate.js";
                     const authButton = document.getElementById('${authButtonId}');
                     authButton.addEventListener("click", function() {
                         const input = {

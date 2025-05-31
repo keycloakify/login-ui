@@ -3,18 +3,13 @@ import { downloadKeycloakDefaultTheme } from "../shared/downloadKeycloakDefaultT
 import { transformCodebase } from "keycloakify/src/bin/tools/transformCodebase";
 import { existsAsync } from "keycloakify/src/bin/tools/fs.existsAsync";
 import { getThisCodebaseRootDirPath } from "../tools/getThisCodebaseRootDirPath.overridable";
-import { RESERVED_PUBLIC_DIRECTORY_BASENAME, THEME_TYPE } from "./generateResources.overridable";
+import { THEME_TYPE } from "./generateResources.overridable";
 import * as fsPr from "fs/promises";
 
 export async function generateResources() {
     const { extractedDirPath } = await downloadKeycloakDefaultTheme();
 
-    const destDirPath = pathJoin(
-        getThisCodebaseRootDirPath(),
-        "keycloak-theme",
-        "public",
-        RESERVED_PUBLIC_DIRECTORY_BASENAME
-    );
+    const destDirPath = pathJoin(getThisCodebaseRootDirPath(), "keycloak-theme", "public", THEME_TYPE);
 
     await fsPr.rm(destDirPath, { recursive: true, force: true });
 

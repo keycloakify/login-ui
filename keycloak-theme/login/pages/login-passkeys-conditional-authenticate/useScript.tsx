@@ -20,8 +20,8 @@ export function useScript(params: { authButtonId: string }) {
             {
                 type: "module",
                 textContent: () => `
-                    import { authenticateByWebAuthn } from "${BASE_URL}keycloak-login-ui/js/webauthnAuthenticate.js";
-                    import { initAuthenticate } from "${BASE_URL}keycloak-login-ui/js/passkeysConditionalAuth.js";
+                    import { authenticateByWebAuthn } from "${BASE_URL}keycloak-theme/login/js/webauthnAuthenticate.js";
+                    import { initAuthenticate } from "${BASE_URL}keycloak-theme/login/js/passkeysConditionalAuth.js";
 
                     const authButton = document.getElementById("${authButtonId}");
                     const input = {

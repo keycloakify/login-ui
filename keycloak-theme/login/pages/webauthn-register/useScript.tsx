@@ -20,7 +20,7 @@ export function useScript(params: { authButtonId: string }) {
             {
                 type: "module",
                 textContent: () => `
-                    import { registerByWebAuthn } from "${BASE_URL}keycloak-login-ui/js/webauthnRegister.js";
+                    import { registerByWebAuthn } from "${BASE_URL}keycloak-theme/login/js/webauthnRegister.js";
                     const registerButton = document.getElementById('${authButtonId}');
                     registerButton.addEventListener("click", function() {
                         const input = {
