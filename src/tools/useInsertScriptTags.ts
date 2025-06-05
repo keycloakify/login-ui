@@ -17,7 +17,25 @@ export namespace ScriptTag {
     };
 }
 
-const alreadyMountedComponentOrHookNames = new Set<string>();
+// NOTE: This context has to be shared in storybook between the login
+// and potential multi page account theme.
+const GLOBAL_CONTEXT_KEY = "__keycloakify.useInsertScriptTags.globalContext";
+
+declare global {
+    interface Window {
+        [GLOBAL_CONTEXT_KEY]: {
+            alreadyMountedComponentOrHookNames: Set<string>;
+        };
+    }
+}
+
+window[GLOBAL_CONTEXT_KEY] ??= {
+    alreadyMountedComponentOrHookNames: new Set()
+};
+
+const globalContext = window[GLOBAL_CONTEXT_KEY];
+
+const { alreadyMountedComponentOrHookNames } = globalContext;
 
 /**
  * NOTE: The component that use this hook can only be mounded once!
