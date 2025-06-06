@@ -2,7 +2,8 @@ import { useEffect } from "react";
 import { assert } from "tsafe/assert";
 import { useInsertScriptTags } from "@keycloakify/keycloak-login-ui/tools/useInsertScriptTags";
 import { waitForElementMountedOnDom } from "@keycloakify/keycloak-login-ui/tools/waitForElementMountedOnDom";
-import { BASE_URL } from "@keycloakify/keycloak-login-ui/import.meta.env.BASE_URL";
+// NOTE: If you are in a Vite project you can use `import.meta.env.BASE_URL` directly, this is a shim to support Webpack.
+import { BASE_URL } from "@keycloakify/keycloak-login-ui/BASE_URL";
 import { useI18n } from "../../i18n";
 import { useKcContext } from "../../KcContext";
 
