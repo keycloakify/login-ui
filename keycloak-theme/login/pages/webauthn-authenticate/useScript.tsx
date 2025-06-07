@@ -16,7 +16,7 @@ export function useScript(params: { authButtonId: string }) {
     const { msgStr, isFetchingTranslations } = useI18n();
 
     const { insertScriptTags } = useInsertScriptTags({
-        componentOrHookName: "WebauthnAuthenticate",
+        effectId: "WebauthnAuthenticate",
         scriptTags: [
             {
                 type: "module",
