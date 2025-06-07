@@ -5,7 +5,7 @@ import { assert } from "tsafe/assert";
 import { KcClsxProvider } from "@keycloakify/keycloak-login-ui/useKcClsx";
 import { type KcContext, KcContextProvider } from "./KcContext";
 import { I18nProvider } from "./i18n";
-import { useExclusiveAppInstanceEffect } from "../tools/useExclusiveAppInstanceEffect";
+import { useExclusiveAppInstanceEffect } from "@keycloakify/keycloak-login-ui/tools/useExclusiveAppInstanceEffect";
 import { useStyleLevelCustomization } from "./styleLevelCustomization";
 import { PageIndex } from "./pages/PageIndex";
 
