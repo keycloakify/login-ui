@@ -618,6 +618,6 @@ export const kcContextMocks = [
     type OnlyInGot = Exclude<Got, Expected>;
     type OnlyInExpected = Exclude<Expected, Got>;
 
-    assert<Equals<OnlyInGot, never>>();
-    assert<Equals<OnlyInExpected, never>>();
+    assert<Equals<OnlyInGot, never>>;
+    assert<Equals<OnlyInExpected, never>>;
 }

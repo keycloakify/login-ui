@@ -1,5 +1,6 @@
 import type { ValueOf } from "../../tools/ValueOf";
 import type { ClassKey } from "../kcClsx";
+import { assert, type Equals } from "tsafe/assert";
 
 export type ExtendKcContext<
     KcContextExtension extends { properties?: Record<string, string | undefined> },
@@ -596,6 +597,58 @@ export declare namespace KcContext {
         };
         idpDisplayName: string;
     };
+}
+
+export type PageId = KcContext["pageId"];
+
+export const pageIds = [
+    "login.ftl",
+    "register.ftl",
+    "info.ftl",
+    "error.ftl",
+    "login-reset-password.ftl",
+    "login-verify-email.ftl",
+    "terms.ftl",
+    "login-oauth2-device-verify-user-code.ftl",
+    "webauthn-error.ftl",
+    "login-passkeys-conditional-authenticate.ftl",
+    "login-idp-link-confirm-override.ftl",
+    "saml-post-form.ftl",
+    "login-oauth-grant.ftl",
+    "login-otp.ftl",
+    "login-username.ftl",
+    "login-password.ftl",
+    "webauthn-authenticate.ftl",
+    "webauthn-register.ftl",
+    "login-update-password.ftl",
+    "login-x509-info.ftl",
+    "login-idp-link-confirm.ftl",
+    "login-idp-link-email.ftl",
+    "login-page-expired.ftl",
+    "login-config-totp.ftl",
+    "logout-confirm.ftl",
+    "login-update-profile.ftl",
+    "idp-review-user-profile.ftl",
+    "update-email.ftl",
+    "select-authenticator.ftl",
+    "delete-credential.ftl",
+    "code.ftl",
+    "delete-account-confirm.ftl",
+    "frontchannel-logout.ftl",
+    "login-recovery-authn-code-config.ftl",
+    "login-recovery-authn-code-input.ftl",
+    "login-reset-otp.ftl"
+] as const;
+
+{
+    type Actual = (typeof pageIds)[number];
+    type Expected = PageId;
+
+    type InActualNotInExpected = Exclude<Actual, Expected>;
+    type InExpectedNotInActual = Exclude<Expected, Actual>;
+
+    assert<Equals<InActualNotInExpected, never>>;
+    assert<Equals<InExpectedNotInActual, never>>;
 }
 
 export type UserProfile = {
