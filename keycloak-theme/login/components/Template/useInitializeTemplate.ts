@@ -4,8 +4,7 @@ import { useEffect } from "react";
 import { useInsertScriptTags } from "@keycloakify/keycloak-login-ui/tools/useInsertScriptTags";
 import { useInsertLinkTags } from "@keycloakify/keycloak-login-ui/tools/useInsertLinkTags";
 import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
-// NOTE: If you are in a Vite project you can use `import.meta.env.BASE_URL` directly, this is a shim to support Webpack.
-import { BASE_URL } from "@keycloakify/keycloak-login-ui/BASE_URL";
+import { BASE_URL } from "../../../kc.gen";
 import { useKcContext } from "../../KcContext";
 
 export function useInitializeTemplate() {
