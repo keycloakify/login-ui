@@ -1,6 +1,6 @@
 {
     "name": "@keycloakify/login-ui",
-    "version": "250004.0.32",
+    "version": "250004.0.33",
     "description": "React implementation of Keycloak Login v2 for Keycloakify",
     "repository": {
         "type": "git",
