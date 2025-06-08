@@ -3,8 +3,8 @@ import { assert } from "tsafe/assert";
 import { PasswordWrapper } from "../../components/PasswordWrapper";
 import { useI18n } from "../../i18n";
 import { useKcContext } from "../../KcContext";
-import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
-import { kcSanitize } from "@keycloakify/keycloak-login-ui/kcSanitize";
+import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
+import { kcSanitize } from "@keycloakify/login-ui/kcSanitize";
 
 export function Form() {
     const { kcContext } = useKcContext();

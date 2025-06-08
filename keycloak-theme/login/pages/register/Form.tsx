@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { assert } from "tsafe/assert";
-import { clsx } from "@keycloakify/keycloak-login-ui/tools/clsx";
+import { clsx } from "@keycloakify/login-ui/tools/clsx";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
-import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
+import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
 import { UserProfileFormFields } from "../../components/UserProfileFormFields";
 import { TermsAcceptance } from "./TermsAcceptance";
 

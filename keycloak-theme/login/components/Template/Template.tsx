@@ -1,10 +1,10 @@
 import type { ReactNode } from "react";
 import { useEffect } from "react";
-import { clsx } from "@keycloakify/keycloak-login-ui/tools/clsx";
-import { kcSanitize } from "@keycloakify/keycloak-login-ui/kcSanitize";
-import { useSetClassName } from "@keycloakify/keycloak-login-ui/tools/useSetClassName";
+import { clsx } from "@keycloakify/login-ui/tools/clsx";
+import { kcSanitize } from "@keycloakify/login-ui/kcSanitize";
+import { useSetClassName } from "@keycloakify/login-ui/tools/useSetClassName";
 import { useInitializeTemplate } from "./useInitializeTemplate";
-import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
+import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
 import { useI18n } from "../../i18n";
 import { useKcContext } from "../../KcContext";
 

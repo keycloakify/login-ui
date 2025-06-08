@@ -1,10 +1,10 @@
 {
-    "name": "@keycloakify/keycloak-login-ui",
+    "name": "@keycloakify/login-ui",
     "version": "250004.0.32",
     "description": "React implementation of Keycloak Login v2 for Keycloakify",
     "repository": {
         "type": "git",
-        "url": "git://github.com/keycloakify/keycloak-login-ui.git"
+        "url": "git://github.com/keycloakify/login-ui.git"
     },
     "scripts": {
         "prepare": "tsx scripts/prepare/main.ts",

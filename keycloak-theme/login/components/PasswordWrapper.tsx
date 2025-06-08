@@ -1,6 +1,6 @@
-import type { JSX } from "@keycloakify/keycloak-login-ui/tools/JSX";
-import { useIsPasswordRevealed } from "@keycloakify/keycloak-login-ui/tools/useIsPasswordRevealed";
-import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
+import type { JSX } from "@keycloakify/login-ui/tools/JSX";
+import { useIsPasswordRevealed } from "@keycloakify/login-ui/tools/useIsPasswordRevealed";
+import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
 import { useI18n } from "../i18n";
 
 export function PasswordWrapper(props: { passwordInputId: string; children: JSX.Element }) {

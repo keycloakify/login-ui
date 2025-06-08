@@ -1,5 +1,5 @@
 import { assert } from "tsafe/assert";
-import { kcSanitize } from "@keycloakify/keycloak-login-ui/kcSanitize";
+import { kcSanitize } from "@keycloakify/login-ui/kcSanitize";
 import { useI18n } from "../../i18n";
 import { useKcContext } from "../../KcContext";
 import { Template } from "../../components/Template";

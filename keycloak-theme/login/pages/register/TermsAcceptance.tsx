@@ -1,7 +1,7 @@
-import { kcSanitize } from "@keycloakify/keycloak-login-ui/kcSanitize";
+import { kcSanitize } from "@keycloakify/login-ui/kcSanitize";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
-import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
+import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
 
 export function TermsAcceptance(props: {
     areTermsAccepted: boolean;

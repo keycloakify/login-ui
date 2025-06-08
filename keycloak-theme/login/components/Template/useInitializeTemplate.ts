@@ -1,9 +1,9 @@
 /* eslint-disable */
 
 import { useEffect } from "react";
-import { useInsertScriptTags } from "@keycloakify/keycloak-login-ui/tools/useInsertScriptTags";
-import { useInsertLinkTags } from "@keycloakify/keycloak-login-ui/tools/useInsertLinkTags";
-import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
+import { useInsertScriptTags } from "@keycloakify/login-ui/tools/useInsertScriptTags";
+import { useInsertLinkTags } from "@keycloakify/login-ui/tools/useInsertLinkTags";
+import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
 import { BASE_URL } from "../../../kc.gen";
 import { useKcContext } from "../../KcContext";
 

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
 import { Template } from "../../components/Template";
-import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
+import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
 import { UserProfileFormFields } from "../../components/UserProfileFormFields";
 
 export function Page() {

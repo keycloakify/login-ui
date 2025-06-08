@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { assert } from "tsafe/assert";
-import { kcSanitize } from "@keycloakify/keycloak-login-ui/kcSanitize";
-import { clsx } from "@keycloakify/keycloak-login-ui/tools/clsx";
+import { kcSanitize } from "@keycloakify/login-ui/kcSanitize";
+import { clsx } from "@keycloakify/login-ui/tools/clsx";
 import { PasswordWrapper } from "../../components/PasswordWrapper";
-import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
+import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
 import { Template } from "../../components/Template";

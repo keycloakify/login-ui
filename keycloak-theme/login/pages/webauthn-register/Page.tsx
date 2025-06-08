@@ -4,7 +4,7 @@ import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
 import { Template } from "../../components/Template";
 import { LogoutOtherSessions } from "../../components/LogoutOtherSessions";
-import { useKcClsx } from "@keycloakify/keycloak-login-ui/useKcClsx";
+import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
 
 export function Page() {
     const { kcContext } = useKcContext();
