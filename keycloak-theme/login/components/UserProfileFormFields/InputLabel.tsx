@@ -15,5 +15,5 @@ export function InputLabel(props: { attribute: Attribute; option: string }) {
         return advancedMsg(`${attribute.annotations.inputOptionLabelsI18nPrefix}.${option}`);
     }
 
-    return option;
+    return <>{option}</>;
 }
