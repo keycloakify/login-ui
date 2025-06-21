@@ -7,7 +7,7 @@ type StyleLevelCustomization = {
     doUseDefaultCss: boolean;
     classes?: Classes;
     loadCustomStylesheet?: () => void;
-    globalStyleNode?: ReactNode;
+    Provider?: (props: { children: ReactNode }) => ReactNode;
 };
 
 export function useStyleLevelCustomization(): StyleLevelCustomization {
