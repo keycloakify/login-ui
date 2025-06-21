@@ -26,8 +26,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
 function StyleLevelCustomization(props: { children: ReactNode }) {
     const { children } = props;
 
-    const { doUseDefaultCss, classes, loadCustomStylesheet, globalStyleNode } =
-        useStyleLevelCustomization();
+    const { doUseDefaultCss, classes, loadCustomStylesheet, Provider } = useStyleLevelCustomization();
 
     useExclusiveAppInstanceEffect({
         effectId: "loadCustomStylesheet",
@@ -40,8 +39,7 @@ function StyleLevelCustomization(props: { children: ReactNode }) {
 
     return (
         <KcClsxProvider doUseDefaultCss={doUseDefaultCss} classes={classes}>
-            {globalStyleNode !== undefined && globalStyleNode}
-            {children}
+            {Provider === undefined ? children : <Provider>{children}</Provider>}
         </KcClsxProvider>
     );
 }
