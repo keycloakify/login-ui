@@ -28,7 +28,11 @@ export function useExclusiveAppInstanceEffect(params: {
     const { effectId, effect, isEnabled = true } = params;
 
     useOnFistMount({
-        isEnabled,
+        // NOTE: Why `|| alreadyRanEffectId.has(effectId)`?
+        // Because if we had already an effect with the same id it means that an effect has been ran
+        // and it must be cleared, we might have some stylesheet present on the document for example.
+        // it happen when one Template need to load CSS or Scripts and the other does not.
+        isEnabled: isEnabled || alreadyRanEffectId.has(effectId),
         effect: () => {
             const isAlreadyRan = alreadyRanEffectId.has(effectId);
 
