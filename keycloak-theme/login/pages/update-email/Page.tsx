@@ -46,7 +46,7 @@ export function Page() {
                             className={kcClsx(
                                 "kcButtonClass",
                                 "kcButtonPrimaryClass",
-                                isAppInitiatedAction && "kcButtonBlockClass",
+                                !isAppInitiatedAction && "kcButtonBlockClass",
                                 "kcButtonLargeClass"
                             )}
                             type="submit"
