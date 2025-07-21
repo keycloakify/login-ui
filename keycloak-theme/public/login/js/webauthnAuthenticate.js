@@ -1,4 +1,19 @@
-import { base64url } from "rfc4648";
+import { base64url } from "./rfc4648.js";
+
+// singleton
+let abortController = undefined;
+
+export function signal() {
+    if (abortController) {
+        // abort the previous call
+        const abortError = new Error("Cancelling pending WebAuthn call");
+        abortError.name = "AbortError";
+        abortController.abort(abortError);
+    }
+
+    abortController = new AbortController();
+    return abortController.signal;
+}
 
 export async function authenticateByWebAuthn(input) {
     if (!input.isUserIdentified) {
@@ -62,7 +77,10 @@ function doAuthenticate(allowCredentials, challenge, userVerification, rpId, cre
         publicKey.userVerification = userVerification;
     }
 
-    return navigator.credentials.get({publicKey});
+    return navigator.credentials.get({
+        publicKey: publicKey,
+        signal: signal()
+    });
 }
 
 export function returnSuccess(result) {
@@ -73,10 +91,10 @@ export function returnSuccess(result) {
     if (result.response.userHandle) {
         document.getElementById("userHandle").value = base64url.stringify(new Uint8Array(result.response.userHandle), { pad: false });
     }
-    document.getElementById("webauth").submit();
+    document.getElementById("webauth").requestSubmit();
 }
 
 export function returnFailure(err) {
     document.getElementById("error").value = err;
-    document.getElementById("webauth").submit();
+    document.getElementById("webauth").requestSubmit();
 }

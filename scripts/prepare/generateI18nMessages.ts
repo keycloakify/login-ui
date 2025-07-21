@@ -8,7 +8,7 @@ import {
 import { assert } from "tsafe/assert";
 import { same } from "evt/tools/inDepth";
 import { crawl } from "keycloakify/src/bin/tools/crawl";
-import { downloadKeycloakDefaultTheme } from "../shared/downloadKeycloakDefaultTheme";
+import { downloadKeycloakDefaultTheme } from "../shared/downloadKeycloakDefaultTheme.overridable";
 import { getThisCodebaseRootDirPath } from "../tools/getThisCodebaseRootDirPath.overridable";
 import { deepAssign } from "keycloakify/src/tools/deepAssign";
 import propertiesParser from "properties-parser";

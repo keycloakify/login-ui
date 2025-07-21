@@ -12,6 +12,7 @@ export const keycloakifyExtraMessages: Record<
     | "fa"
     | "fi"
     | "fr"
+    | "hr"
     | "hu"
     | "it"
     | "ja"
@@ -22,13 +23,17 @@ export const keycloakifyExtraMessages: Record<
     | "pl"
     | "pt"
     | "pt-BR"
+    | "ro"
     | "ru"
     | "sk"
+    | "sl"
     | "sv"
     | "th"
     | "tr"
     | "uk"
     | "ka"
+    | "ko"
+    | "ky"
     | "zh-CN"
     | "zh-TW",
     Record<
@@ -166,6 +171,17 @@ export const keycloakifyExtraMessages: Record<
         addValue: "Ajouter une valeur",
         languages: "Langues"
     },
+    hr: {
+        shouldBeEqual: "{0} treba biti jednako {1}",
+        shouldBeDifferent: "{0} treba biti različito od {1}",
+        shouldMatchPattern: "Uzorak treba odgovarati: `/{0}/`",
+        mustBeAnInteger: "Mora biti cijeli broj",
+        notAValidOption: "Nije valjana opcija",
+        selectAnOption: "Odaberite opciju",
+        remove: "Ukloni",
+        addValue: "Dodaj vrijednost",
+        languages: "Jezici"
+    },
     hu: {
         shouldBeEqual: "{0} egyenlő kell legyen {1}-vel",
         shouldBeDifferent: "{0} különbözőnek kell lennie, mint {1}",
@@ -276,6 +292,17 @@ export const keycloakifyExtraMessages: Record<
         addValue: "Adicionar valor",
         languages: "Idiomas"
     },
+    ro: {
+        shouldBeEqual: "{0} trebuie să fie egal cu {1}",
+        shouldBeDifferent: "{0} trebuie să fie diferit de {1}",
+        shouldMatchPattern: "Modelul trebuie să se potrivească: `/{0}/`",
+        mustBeAnInteger: "Trebuie să fie un număr întreg",
+        notAValidOption: "Opțiune nevalidă",
+        selectAnOption: "Selectează o opțiune",
+        remove: "Șterge",
+        addValue: "Adaugă valoare",
+        languages: "Limbi"
+    },
     ru: {
         shouldBeEqual: "{0} должно быть равно {1}",
         shouldBeDifferent: "{0} должно отличаться от {1}",
@@ -297,6 +324,17 @@ export const keycloakifyExtraMessages: Record<
         remove: "Odstrániť",
         addValue: "Pridať hodnotu",
         languages: "Jazyky"
+    },
+    sl: {
+        shouldBeEqual: "{0} mora biti enako {1}",
+        shouldBeDifferent: "{0} mora biti različno od {1}",
+        shouldMatchPattern: "Vzorec se mora ujemati: `/{0}/`",
+        mustBeAnInteger: "Mora biti celo število",
+        notAValidOption: "Ni veljavna možnost",
+        selectAnOption: "Izberite možnost",
+        remove: "Odstrani",
+        addValue: "Dodaj vrednost",
+        languages: "Jeziki"
     },
     sv: {
         shouldBeEqual: "{0} bör vara lika med {1}",
@@ -352,6 +390,28 @@ export const keycloakifyExtraMessages: Record<
         remove: "წაშალეთ",
         addValue: "დაამატეთ მნიშვნელობა",
         languages: "ენები"
+    },
+    ko: {
+        shouldBeEqual: "{0}은(는) {1}과 같아야 합니다",
+        shouldBeDifferent: "{0}은(는) {1}과 달라야 합니다",
+        shouldMatchPattern: "패턴이 일치해야 합니다: `/{0}/`",
+        mustBeAnInteger: "정수여야 합니다",
+        notAValidOption: "유효한 옵션이 아닙니다",
+        selectAnOption: "옵션을 선택하세요",
+        remove: "제거",
+        addValue: "값 추가",
+        languages: "언어"
+    },
+    ky: {
+        shouldBeEqual: "{0} {1} менен барабар болушу керек",
+        shouldBeDifferent: "{0} {1} менен айырмаланышы керек",
+        shouldMatchPattern: "Үлгү төмөнкүгө дал келиши керек: `/{0}/`",
+        mustBeAnInteger: "Бүтүн сан болушу керек",
+        notAValidOption: "Жараксыз параметр",
+        selectAnOption: "Параметр тандаңыз",
+        remove: "Алып салуу",
+        addValue: "Манчылык кошуу",
+        languages: "Тилдер"
     },
     "zh-CN": {
         shouldBeEqual: "{0} 应该等于 {1}",
