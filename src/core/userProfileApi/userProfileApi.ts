@@ -160,7 +160,7 @@ function getInitialState(params: {
     kcContext: KcContextLike;
     doMakeUserConfirmPassword: boolean;
 }): internal.State {
-    const { kcContext } = params;
+    const { kcContext, doMakeUserConfirmPassword } = params;
 
     const { getErrors } = createGetErrors({ kcContext });
 
@@ -290,10 +290,6 @@ function getInitialState(params: {
     }
 
     attributes.forEach(attribute => {
-        if (attribute.name === "password-confirm") {
-            attribute.annotations.inputType = "hidden";
-        }
-
         if (attribute.name === "locale") {
             assert(kcContext.locale !== undefined);
             attribute.annotations.inputType = "hidden";
@@ -392,7 +388,11 @@ function getInitialState(params: {
                     required: true,
                     readOnly: false,
                     validators: {},
-                    annotations: {},
+                    annotations: !doMakeUserConfirmPassword
+                        ? {
+                              inputType: "hidden"
+                          }
+                        : {},
                     html5DataAnnotations: {},
                     autocomplete: "new-password"
                 }
