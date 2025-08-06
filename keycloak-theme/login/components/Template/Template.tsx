@@ -210,7 +210,7 @@ export function Template(props: {
                                         onClick={() => {
                                             document.forms[
                                                 "kc-select-try-another-way-form" as never
-                                            ].submit();
+                                            ].requestSubmit();
                                             return false;
                                         }}
                                     >

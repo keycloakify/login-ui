@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useLayoutEffect } from "react";
 import { assert } from "tsafe/assert";
 import { clsx } from "@keycloakify/login-ui/tools/clsx";
 import { useKcContext } from "../../KcContext";
@@ -15,6 +15,17 @@ export function Form() {
 
     const [isFormSubmittable, setIsFormSubmittable] = useState(false);
     const [areTermsAccepted, setAreTermsAccepted] = useState(false);
+
+    useLayoutEffect(() => {
+        (window as any)["onSubmitRecaptcha"] = () => {
+            // @ts-expect-error
+            document.getElementById("kc-register-form").requestSubmit();
+        };
+
+        return () => {
+            delete (window as any)["onSubmitRecaptcha"];
+        };
+    }, []);
 
     return (
         <form
@@ -67,11 +78,7 @@ export function Form() {
                                 "g-recaptcha"
                             )}
                             data-sitekey={kcContext.recaptchaSiteKey}
-                            data-callback={() => {
-                                (
-                                    document.getElementById("kc-register-form") as HTMLFormElement
-                                ).submit();
-                            }}
+                            data-callback="onSubmitRecaptcha"
                             data-action={kcContext.recaptchaAction}
                             type="submit"
                         >

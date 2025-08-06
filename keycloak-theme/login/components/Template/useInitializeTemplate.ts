@@ -41,11 +41,14 @@ export function useInitializeTemplate() {
                   }))),
             {
                 type: "module",
-                textContent: `
-                    import { checkCookiesAndSetTimer } from "${BASE_URL}keycloak-theme/login/js/authChecker.js";
-
-                    checkCookiesAndSetTimer("${kcContext.url.ssoLoginInOtherTabsUrl}");
-                `
+                textContent: [
+                    `import { startSessionPolling, checkAuthSession } from "${BASE_URL}keycloak-theme/login/js/authChecker.js";`,
+                    ``,
+                    `startSessionPolling("${kcContext.url.ssoLoginInOtherTabsUrl}");`,
+                    kcContext.authenticationSession === undefined
+                        ? ""
+                        : `checkAuthSession("${kcContext.authenticationSession.authSessionIdHash}");`
+                ].join("\n")
             }
         ]
     });

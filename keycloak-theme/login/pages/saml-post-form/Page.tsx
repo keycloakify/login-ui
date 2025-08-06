@@ -25,7 +25,7 @@ export function Page() {
             return;
         }
 
-        htmlFormElement.submit();
+        htmlFormElement.requestSubmit();
     }, [htmlFormElement]);
     return (
         <Template headerNode={msg("saml.post-form.title")}>
