@@ -142,6 +142,11 @@ export declare namespace KcContext {
             getFirstError: (...fieldNames: string[]) => string;
         };
         properties: {};
+
+        authenticationSession?: {
+            authSessionIdHash: string;
+        };
+
         "x-keycloakify": {
             messages: Record<string, string>;
         };
