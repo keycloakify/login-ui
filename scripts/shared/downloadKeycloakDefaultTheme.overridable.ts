@@ -2,7 +2,7 @@ import { relative as pathRelative } from "path";
 import { downloadAndExtractArchive } from "keycloakify/bin/tools/downloadAndExtractArchive";
 import { join as pathJoin } from "path";
 import type { Param0 } from "tsafe";
-import * as fs from "fs/promises";
+import { objectKeys } from "tsafe/objectKeys";
 
 export const KEYCLOAK_VERSION = "25.0.4";
 
@@ -16,7 +16,7 @@ export function createOnArchiveFile() {
             return;
         }
 
-        const { writeFile } = params;
+        const { writeFile, readFile } = params;
 
         if (!fileRelativePath.startsWith("base") && !fileRelativePath.startsWith("keycloak")) {
             return;
@@ -55,18 +55,31 @@ export function createOnArchiveFile() {
             });
         }
 
-        for (const fileBasename of [
-            "authChecker.js",
-            "webauthnAuthenticate.js",
-            "webauthnRegister.js"
-        ]) {
+        for (const fileBasename of objectKeys(scripts)) {
             if (fileRelativePath !== pathJoin("base", "login", "resources", "js", fileBasename)) {
                 continue;
             }
 
             await writeFile({
                 fileRelativePath,
-                modifiedData: scripts[fileBasename]
+                modifiedData: Buffer.from(scripts[fileBasename], "utf8")
+            });
+
+            return;
+        }
+
+        patch_remaining_import_of_rfc4648: {
+            if (!fileRelativePath.startsWith(pathJoin("base", "login", "resources", "js"))) {
+                break patch_remaining_import_of_rfc4648;
+            }
+
+            let modifiedSource = (await readFile()).toString("utf8");
+
+            modifiedSource = modifiedSource.replaceAll(`from "rfc4648"`, `from "./rfc4648.js"`);
+
+            await writeFile({
+                fileRelativePath,
+                modifiedData: Buffer.from(modifiedSource, "utf8")
             });
 
             return;
