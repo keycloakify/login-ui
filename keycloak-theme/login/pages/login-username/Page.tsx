@@ -5,6 +5,7 @@ import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
 import { Template } from "../../components/Template";
+import { useScript } from "./useScript";
 
 export function Page() {
     const { kcContext } = useKcContext();
@@ -12,12 +13,25 @@ export function Page() {
 
     const { kcClsx } = useKcClsx();
 
-    const { social, realm, url, usernameHidden, login, registrationDisabled, messagesPerField } =
-        kcContext;
+    const {
+        social,
+        realm,
+        url,
+        usernameHidden,
+        login,
+        registrationDisabled,
+        messagesPerField,
+        enableWebAuthnConditionalUI,
+        authenticators
+    } = kcContext;
 
     const { msg, msgStr } = useI18n();
 
     const [isLoginButtonDisabled, setIsLoginButtonDisabled] = useState(false);
+
+    const authButtonId = "authenticateWebAuthnButton";
+
+    useScript({ authButtonId });
 
     return (
         <Template
@@ -171,6 +185,45 @@ export function Page() {
                     )}
                 </div>
             </div>
+            {enableWebAuthnConditionalUI && (
+                <>
+                    <form id="webauth" action={url.loginAction} method="post">
+                        <input type="hidden" id="clientDataJSON" name="clientDataJSON" />
+                        <input type="hidden" id="authenticatorData" name="authenticatorData" />
+                        <input type="hidden" id="signature" name="signature" />
+                        <input type="hidden" id="credentialId" name="credentialId" />
+                        <input type="hidden" id="userHandle" name="userHandle" />
+                        <input type="hidden" id="error" name="error" />
+                    </form>
+
+                    {authenticators !== undefined && Object.keys(authenticators).length !== 0 && (
+                        <>
+                            <form id="authn_select" className={kcClsx("kcFormClass")}>
+                                {authenticators.authenticators.map((authenticator, i) => (
+                                    <input
+                                        key={i}
+                                        type="hidden"
+                                        name="authn_use_chk"
+                                        readOnly
+                                        value={authenticator.credentialId}
+                                    />
+                                ))}
+                            </form>
+                        </>
+                    )}
+                    <a
+                        id={authButtonId}
+                        href="#"
+                        className={kcClsx(
+                            "kcButtonSecondaryClass",
+                            "kcButtonBlockClass",
+                            "kcMarginTopClass"
+                        )}
+                    >
+                        {msg("passkey-doAuthenticate")}
+                    </a>
+                </>
+            )}
         </Template>
     );
 }

@@ -327,6 +327,11 @@ export declare namespace KcContext {
         };
         usernameHidden?: boolean;
         social?: Login["social"];
+
+        enableWebAuthnConditionalUI?: boolean;
+        authenticators?: {
+            authenticators: WebauthnAuthenticate.WebauthnAuthenticator[];
+        };
     };
 
     export type LoginPassword = Common & {
