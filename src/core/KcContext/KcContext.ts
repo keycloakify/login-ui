@@ -59,7 +59,8 @@ export type KcContext =
     | KcContext.LoginX509Info
     | KcContext.WebauthnError
     | KcContext.LoginPasskeysConditionalAuthenticate
-    | KcContext.LoginIdpLinkConfirmOverride;
+    | KcContext.LoginIdpLinkConfirmOverride
+    | KcContext.SelectOrganization;
 
 export declare namespace KcContext {
     export type Common = {
@@ -612,6 +613,16 @@ export declare namespace KcContext {
         };
         idpDisplayName: string;
     };
+
+    export type SelectOrganization = Common & {
+        pageId: "select-organization.ftl";
+        user: {
+            organizations: {
+                alias: string;
+                name?: string;
+            }[];
+        };
+    };
 }
 
 export type PageId = KcContext["pageId"];
@@ -652,7 +663,8 @@ export const pageIds = [
     "frontchannel-logout.ftl",
     "login-recovery-authn-code-config.ftl",
     "login-recovery-authn-code-input.ftl",
-    "login-reset-otp.ftl"
+    "login-reset-otp.ftl",
+    "select-organization.ftl"
 ] as const;
 
 {

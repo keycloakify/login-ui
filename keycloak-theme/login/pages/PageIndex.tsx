@@ -44,6 +44,7 @@ const Page_login_passkeys_conditional_authenticate = lazy(
     () => import("./login-passkeys-conditional-authenticate")
 );
 const Page_login_idp_link_confirm_override = lazy(() => import("./login-idp-link-confirm-override"));
+const Page_select_organization = lazy(() => import("./select-organization"));
 
 export function PageIndex() {
     const { kcContext } = useKcContext();
@@ -124,6 +125,8 @@ export function PageIndex() {
                         return <Page_login_passkeys_conditional_authenticate />;
                     case "login-idp-link-confirm-override.ftl":
                         return <Page_login_idp_link_confirm_override />;
+                    case "select-organization.ftl":
+                        return <Page_select_organization />;
                 }
 
                 assert<Equals<typeof kcContext, never>>;

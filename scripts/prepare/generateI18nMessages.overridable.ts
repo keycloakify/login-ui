@@ -40,7 +40,8 @@ export const keycloakifyExtraMessages: Record<
         | "selectAnOption"
         | "remove"
         | "addValue"
-        | "languages",
+        | "languages"
+        | "organization.select",
         string
     >
 > = {
@@ -53,7 +54,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "Select an option",
         remove: "Remove",
         addValue: "Add value",
-        languages: "Languages"
+        languages: "Languages",
+        "organization.select": "Select an organization to proceed:"
     },
     /* spell-checker: disable */
     ar: {
@@ -65,7 +67,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "اختر خيارًا",
         remove: "إزالة",
         addValue: "أضف قيمة",
-        languages: "اللغات"
+        languages: "اللغات",
+        "organization.select": "اختر مؤسسة للمتابعة:"
     },
     ca: {
         shouldBeEqual: "{0} hauria de ser igual a {1}",
@@ -76,7 +79,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "Selecciona una opció",
         remove: "Elimina",
         addValue: "Afegeix valor",
-        languages: "Idiomes"
+        languages: "Idiomes",
+        "organization.select": "Selecciona una organització per continuar:"
     },
     cs: {
         shouldBeEqual: "{0} by měl být roven {1}",
@@ -87,7 +91,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "Vyberte možnost",
         remove: "Odstranit",
         addValue: "Přidat hodnotu",
-        languages: "Jazyky"
+        languages: "Jazyky",
+        "organization.select": "Vyberte organizaci pro pokračování:"
     },
     da: {
         shouldBeEqual: "{0} bør være lig med {1}",
@@ -98,7 +103,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "Vælg en mulighed",
         remove: "Fjern",
         addValue: "Tilføj værdi",
-        languages: "Sprog"
+        languages: "Sprog",
+        "organization.select": "Vælg en organisation for at fortsætte:"
     },
     de: {
         shouldBeEqual: "{0} sollte gleich {1} sein",
@@ -109,7 +115,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "Wählen Sie eine Option",
         remove: "Entfernen",
         addValue: "Wert hinzufügen",
-        languages: "Sprachen"
+        languages: "Sprachen",
+        "organization.select": "Wählen Sie eine Organisation, um fortzufahren:"
     },
     el: {
         shouldBeEqual: "Το {0} πρέπει να είναι ίσο με {1}",
@@ -120,7 +127,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "Επιλέξτε μια επιλογή",
         remove: "Αφαίρεση",
         addValue: "Προσθήκη τιμής",
-        languages: "Γλώσσες"
+        languages: "Γλώσσες",
+        "organization.select": "Επιλέξτε έναν οργανισμό για να συνεχίσετε:"
     },
     es: {
         shouldBeEqual: "{0} debería ser igual a {1}",
@@ -131,7 +139,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "Selecciona una opción",
         remove: "Eliminar",
         addValue: "Añadir valor",
-        languages: "Idiomas"
+        languages: "Idiomas",
+        "organization.select": "Selecciona una organización para continuar:"
     },
     fa: {
         shouldBeEqual: "{0} باید برابر باشد با {1}",
@@ -142,7 +151,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "یک گزینه انتخاب کنید",
         remove: "حذف",
         addValue: "افزودن مقدار",
-        languages: "زبان‌ها"
+        languages: "زبان‌ها",
+        "organization.select": "یک سازمان را برای ادامه انتخاب کنید:"
     },
     fi: {
         shouldBeEqual: "{0} pitäisi olla yhtä suuri kuin {1}",
@@ -153,7 +163,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "Valitse vaihtoehto",
         remove: "Poista",
         addValue: "Lisää arvo",
-        languages: "Kielet"
+        languages: "Kielet",
+        "organization.select": "Valitse organisaatio jatkaaksesi:"
     },
     fr: {
         shouldBeEqual: "{0} devrait être égal à {1}",
@@ -164,7 +175,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "Sélectionnez une option",
         remove: "Supprimer",
         addValue: "Ajouter une valeur",
-        languages: "Langues"
+        languages: "Langues",
+        "organization.select": "Sélectionnez une organisation pour continuer :"
     },
     hu: {
         shouldBeEqual: "{0} egyenlő kell legyen {1}-vel",
@@ -175,7 +187,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "Válasszon egy lehetőséget",
         remove: "Eltávolítás",
         addValue: "Érték hozzáadása",
-        languages: "Nyelvek"
+        languages: "Nyelvek",
+        "organization.select": "Válasszon egy szervezetet a folytatáshoz:"
     },
     it: {
         shouldBeEqual: "{0} dovrebbe essere uguale a {1}",
@@ -186,7 +199,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "Seleziona un'opzione",
         remove: "Rimuovi",
         addValue: "Aggiungi valore",
-        languages: "Lingue"
+        languages: "Lingue",
+        "organization.select": "Seleziona un'organizzazione per continuare:"
     },
     ja: {
         shouldBeEqual: "{0} は {1} と等しい必要があります",
@@ -197,7 +211,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "オプションを選択",
         remove: "削除",
         addValue: "値を追加",
-        languages: "言語"
+        languages: "言語",
+        "organization.select": "続行する組織を選択してください:"
     },
     lt: {
         shouldBeEqual: "{0} turėtų būti lygus {1}",
@@ -208,7 +223,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "Pasirinkite parinktį",
         remove: "Pašalinti",
         addValue: "Pridėti reikšmę",
-        languages: "Kalbos"
+        languages: "Kalbos",
+        "organization.select": "Pasirinkite organizaciją, kad galėtumėte tęsti:"
     },
     lv: {
         shouldBeEqual: "{0} jābūt vienādam ar {1}",
@@ -219,7 +235,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "Izvēlieties opciju",
         remove: "Noņemt",
         addValue: "Pievienot vērtību",
-        languages: "Valodas"
+        languages: "Valodas",
+        "organization.select": "Izvēlieties organizāciju, lai turpinātu:"
     },
     nl: {
         shouldBeEqual: "{0} moet gelijk zijn aan {1}",
@@ -230,7 +247,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "Selecteer een optie",
         remove: "Verwijderen",
         addValue: "Waarde toevoegen",
-        languages: "Talen"
+        languages: "Talen",
+        "organization.select": "Selecteer een organisatie om door te gaan:"
     },
     no: {
         shouldBeEqual: "{0} skal være lik {1}",
@@ -241,7 +259,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "Velg et alternativ",
         remove: "Fjern",
         addValue: "Legg til verdi",
-        languages: "Språk"
+        languages: "Språk",
+        "organization.select": "Velg en organisasjon for å fortsette:"
     },
     pl: {
         shouldBeEqual: "{0} powinno być równe {1}",
@@ -252,7 +271,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "Wybierz opcję",
         remove: "Usuń",
         addValue: "Dodaj wartość",
-        languages: "Języki"
+        languages: "Języki",
+        "organization.select": "Wybierz organizację, aby kontynuować:"
     },
     pt: {
         shouldBeEqual: "{0} deve ser igual a {1}",
@@ -263,7 +283,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "Selecione uma opção",
         remove: "Remover",
         addValue: "Adicionar valor",
-        languages: "Idiomas"
+        languages: "Idiomas",
+        "organization.select": "Selecione uma organização para continuar:"
     },
     "pt-BR": {
         shouldBeEqual: "{0} deve ser igual a {1}",
@@ -274,7 +295,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "Selecione uma opção",
         remove: "Remover",
         addValue: "Adicionar valor",
-        languages: "Idiomas"
+        languages: "Idiomas",
+        "organization.select": "Selecione uma organização para continuar:"
     },
     ru: {
         shouldBeEqual: "{0} должно быть равно {1}",
@@ -285,7 +307,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "Выберите вариант",
         remove: "Удалить",
         addValue: "Добавить значение",
-        languages: "Языки"
+        languages: "Языки",
+        "organization.select": "Выберите организацию, чтобы продолжить:"
     },
     sk: {
         shouldBeEqual: "{0} by mal byť rovnaký ako {1}",
@@ -296,7 +319,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "Vyberte možnosť",
         remove: "Odstrániť",
         addValue: "Pridať hodnotu",
-        languages: "Jazyky"
+        languages: "Jazyky",
+        "organization.select": "Vyberte organizáciu, aby ste pokračovali:"
     },
     sv: {
         shouldBeEqual: "{0} bör vara lika med {1}",
@@ -307,7 +331,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "Välj ett alternativ",
         remove: "Ta bort",
         addValue: "Lägg till värde",
-        languages: "Språk"
+        languages: "Språk",
+        "organization.select": "Välj en organisation för att fortsätta:"
     },
     th: {
         shouldBeEqual: "{0} ควรเท่ากับ {1}",
@@ -318,7 +343,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "เลือกตัวเลือก",
         remove: "ลบ",
         addValue: "เพิ่มค่า",
-        languages: "ภาษา"
+        languages: "ภาษา",
+        "organization.select": "เลือกองค์กรเพื่อดำเนินการต่อ:"
     },
     tr: {
         shouldBeEqual: "{0} {1} eşit olmalıdır",
@@ -329,7 +355,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "Bir seçenek seçin",
         remove: "Kaldır",
         addValue: "Değer ekle",
-        languages: "Diller"
+        languages: "Diller",
+        "organization.select": "Devam etmek için bir organizasyon seçin:"
     },
     uk: {
         shouldBeEqual: "{0} повинно бути рівним {1}",
@@ -340,7 +367,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "Виберіть опцію",
         remove: "Видалити",
         addValue: "Додати значення",
-        languages: "Мови"
+        languages: "Мови",
+        "organization.select": "Виберіть організацію, щоб продовжити:"
     },
     ka: {
         shouldBeEqual: "{0} უნდა იყოს ტოლი {1}-სთვის",
@@ -351,7 +379,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "აირჩიეთ ვარიანტი",
         remove: "წაშალეთ",
         addValue: "დაამატეთ მნიშვნელობა",
-        languages: "ენები"
+        languages: "ენები",
+        "organization.select": "აირჩიეთ ორგანიზაცია გაგრძელებისთვის:"
     },
     "zh-CN": {
         shouldBeEqual: "{0} 应该等于 {1}",
@@ -362,7 +391,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "选择一个选项",
         remove: "移除",
         addValue: "添加值",
-        languages: "语言"
+        languages: "语言",
+        "organization.select": "选择一个组织以继续:"
     },
     "zh-TW": {
         shouldBeEqual: "{0} 應該等於 {1}",
@@ -373,7 +403,8 @@ export const keycloakifyExtraMessages: Record<
         selectAnOption: "選擇一個選項",
         remove: "移除",
         addValue: "添加值",
-        languages: "語言"
+        languages: "語言",
+        "organization.select": "選擇一個組織以繼續:"
     }
     /* spell-checker: enable */
 };
