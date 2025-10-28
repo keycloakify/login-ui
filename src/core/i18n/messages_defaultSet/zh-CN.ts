@@ -455,7 +455,8 @@ const messages = {
     selectAnOption: "选择一个选项",
     remove: "移除",
     addValue: "添加值",
-    languages: "语言"
+    languages: "语言",
+    "organization.select": "选择一个组织以继续:"
 };
 
 export default messages;

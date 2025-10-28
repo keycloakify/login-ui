@@ -473,7 +473,8 @@ const messages = {
     selectAnOption: "یک گزینه انتخاب کنید",
     remove: "حذف",
     addValue: "افزودن مقدار",
-    languages: "زبان‌ها"
+    languages: "زبان‌ها",
+    "organization.select": "یک سازمان را برای ادامه انتخاب کنید:"
 };
 
 export default messages;

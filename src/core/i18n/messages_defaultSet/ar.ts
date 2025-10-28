@@ -478,7 +478,8 @@ const messages = {
     selectAnOption: "اختر خيارًا",
     remove: "إزالة",
     addValue: "أضف قيمة",
-    languages: "اللغات"
+    languages: "اللغات",
+    "organization.select": "اختر مؤسسة للمتابعة:"
 };
 
 export default messages;

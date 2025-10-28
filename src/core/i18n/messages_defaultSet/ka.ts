@@ -530,7 +530,8 @@ const messages = {
     selectAnOption: "აირჩიეთ ვარიანტი",
     remove: "წაშალეთ",
     addValue: "დაამატეთ მნიშვნელობა",
-    languages: "ენები"
+    languages: "ენები",
+    "organization.select": "აირჩიეთ ორგანიზაცია გაგრძელებისთვის:"
 };
 
 export default messages;

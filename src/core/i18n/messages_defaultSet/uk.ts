@@ -510,7 +510,8 @@ const messages = {
     selectAnOption: "Виберіть опцію",
     remove: "Видалити",
     addValue: "Додати значення",
-    languages: "Мови"
+    languages: "Мови",
+    "organization.select": "Виберіть організацію, щоб продовжити:"
 };
 
 export default messages;

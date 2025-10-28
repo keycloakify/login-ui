@@ -317,7 +317,8 @@ const messages = {
     selectAnOption: "Selecteer een optie",
     remove: "Verwijderen",
     addValue: "Waarde toevoegen",
-    languages: "Talen"
+    languages: "Talen",
+    "organization.select": "Selecteer een organisatie om door te gaan:"
 };
 
 export default messages;

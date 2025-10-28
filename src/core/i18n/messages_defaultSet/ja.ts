@@ -362,7 +362,8 @@ const messages = {
     selectAnOption: "オプションを選択",
     remove: "削除",
     addValue: "値を追加",
-    languages: "言語"
+    languages: "言語",
+    "organization.select": "続行する組織を選択してください:"
 };
 
 export default messages;

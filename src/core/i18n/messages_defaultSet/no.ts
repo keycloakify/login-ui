@@ -221,7 +221,8 @@ const messages = {
     selectAnOption: "Velg et alternativ",
     remove: "Fjern",
     addValue: "Legg til verdi",
-    languages: "Språk"
+    languages: "Språk",
+    "organization.select": "Velg en organisasjon for å fortsette:"
 };
 
 export default messages;

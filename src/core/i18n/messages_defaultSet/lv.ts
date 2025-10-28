@@ -222,7 +222,8 @@ const messages = {
     selectAnOption: "Izvēlieties opciju",
     remove: "Noņemt",
     addValue: "Pievienot vērtību",
-    languages: "Valodas"
+    languages: "Valodas",
+    "organization.select": "Izvēlieties organizāciju, lai turpinātu:"
 };
 
 export default messages;

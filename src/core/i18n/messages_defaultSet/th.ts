@@ -484,7 +484,8 @@ const messages = {
     selectAnOption: "เลือกตัวเลือก",
     remove: "ลบ",
     addValue: "เพิ่มค่า",
-    languages: "ภาษา"
+    languages: "ภาษา",
+    "organization.select": "เลือกองค์กรเพื่อดำเนินการต่อ:"
 };
 
 export default messages;

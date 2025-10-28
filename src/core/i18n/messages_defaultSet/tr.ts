@@ -299,7 +299,8 @@ const messages = {
     selectAnOption: "Bir seçenek seçin",
     remove: "Kaldır",
     addValue: "Değer ekle",
-    languages: "Diller"
+    languages: "Diller",
+    "organization.select": "Devam etmek için bir organizasyon seçin:"
 };
 
 export default messages;

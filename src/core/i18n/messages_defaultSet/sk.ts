@@ -496,7 +496,8 @@ const messages = {
     selectAnOption: "Vyberte možnosť",
     remove: "Odstrániť",
     addValue: "Pridať hodnotu",
-    languages: "Jazyky"
+    languages: "Jazyky",
+    "organization.select": "Vyberte organizáciu, aby ste pokračovali:"
 };
 
 export default messages;

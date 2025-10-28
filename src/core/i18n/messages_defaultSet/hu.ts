@@ -505,7 +505,8 @@ const messages = {
     selectAnOption: "Válasszon egy lehetőséget",
     remove: "Eltávolítás",
     addValue: "Érték hozzáadása",
-    languages: "Nyelvek"
+    languages: "Nyelvek",
+    "organization.select": "Válasszon egy szervezetet a folytatáshoz:"
 };
 
 export default messages;

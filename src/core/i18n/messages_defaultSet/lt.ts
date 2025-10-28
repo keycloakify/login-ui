@@ -226,7 +226,8 @@ const messages = {
     selectAnOption: "Pasirinkite parinktį",
     remove: "Pašalinti",
     addValue: "Pridėti reikšmę",
-    languages: "Kalbos"
+    languages: "Kalbos",
+    "organization.select": "Pasirinkite organizaciją, kad galėtumėte tęsti:"
 };
 
 export default messages;

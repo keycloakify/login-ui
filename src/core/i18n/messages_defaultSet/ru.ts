@@ -252,7 +252,8 @@ const messages = {
     selectAnOption: "Выберите вариант",
     remove: "Удалить",
     addValue: "Добавить значение",
-    languages: "Языки"
+    languages: "Языки",
+    "organization.select": "Выберите организацию, чтобы продолжить:"
 };
 
 export default messages;

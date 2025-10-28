@@ -349,7 +349,8 @@ const messages = {
     selectAnOption: "Vælg en mulighed",
     remove: "Fjern",
     addValue: "Tilføj værdi",
-    languages: "Sprog"
+    languages: "Sprog",
+    "organization.select": "Vælg en organisation for at fortsætte:"
 };
 
 export default messages;

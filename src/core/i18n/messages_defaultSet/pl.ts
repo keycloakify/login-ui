@@ -321,7 +321,8 @@ const messages = {
     selectAnOption: "Wybierz opcję",
     remove: "Usuń",
     addValue: "Dodaj wartość",
-    languages: "Języki"
+    languages: "Języki",
+    "organization.select": "Wybierz organizację, aby kontynuować:"
 };
 
 export default messages;

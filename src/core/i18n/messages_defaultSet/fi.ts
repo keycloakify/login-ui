@@ -419,7 +419,8 @@ const messages = {
     selectAnOption: "Valitse vaihtoehto",
     remove: "Poista",
     addValue: "Lisää arvo",
-    languages: "Kielet"
+    languages: "Kielet",
+    "organization.select": "Valitse organisaatio jatkaaksesi:"
 };
 
 export default messages;

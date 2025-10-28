@@ -505,7 +505,8 @@ const messages = {
     selectAnOption: "Επιλέξτε μια επιλογή",
     remove: "Αφαίρεση",
     addValue: "Προσθήκη τιμής",
-    languages: "Γλώσσες"
+    languages: "Γλώσσες",
+    "organization.select": "Επιλέξτε έναν οργανισμό για να συνεχίσετε:"
 };
 
 export default messages;

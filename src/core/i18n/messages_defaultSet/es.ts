@@ -518,7 +518,8 @@ const messages = {
     selectAnOption: "Selecciona una opción",
     remove: "Eliminar",
     addValue: "Añadir valor",
-    languages: "Idiomas"
+    languages: "Idiomas",
+    "organization.select": "Selecciona una organización para continuar:"
 };
 
 export default messages;

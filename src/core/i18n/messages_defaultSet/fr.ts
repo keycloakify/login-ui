@@ -451,7 +451,8 @@ const messages = {
     selectAnOption: "Sélectionnez une option",
     remove: "Supprimer",
     addValue: "Ajouter une valeur",
-    languages: "Langues"
+    languages: "Langues",
+    "organization.select": "Sélectionnez une organisation pour continuer :"
 };
 
 export default messages;

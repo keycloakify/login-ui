@@ -40,13 +40,7 @@ export function Page() {
     const shouldDisplayGrid = organizations.length > 3;
 
     return (
-        <Template
-            headerNode={
-                kcContext.code.success
-                    ? msg("codeSuccessTitle")
-                    : msg("codeErrorTitle", kcContext.code.error)
-            }
-        >
+        <Template headerNode={null}>
             <form
                 ref={formRef}
                 action={kcContext.url.loginAction}
