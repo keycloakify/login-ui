@@ -195,7 +195,6 @@ export function Page() {
                         <input type="hidden" id="userHandle" name="userHandle" />
                         <input type="hidden" id="error" name="error" />
                     </form>
-
                     {authenticators !== undefined && Object.keys(authenticators).length !== 0 && (
                         <>
                             <form id="authn_select" className={kcClsx("kcFormClass")}>
@@ -211,13 +210,14 @@ export function Page() {
                             </form>
                         </>
                     )}
+                    <br /> {/* We use a br here because kcMarginTopClass is not defined in login v1 */}
                     <a
                         id={authButtonId}
                         href="#"
                         className={kcClsx(
                             "kcButtonSecondaryClass",
-                            "kcButtonBlockClass",
-                            "kcMarginTopClass"
+                            "kcButtonBlockClass"
+                            //"kcMarginTopClass"
                         )}
                     >
                         {msg("passkey-doAuthenticate")}
