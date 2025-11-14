@@ -210,18 +210,13 @@ export function Page() {
                             </form>
                         </>
                     )}
-                    <br /> {/* We use a br here because kcMarginTopClass is not defined in login v1 */}
-                    <a
+                    <br /> {/* We use a br here because kcMarginTopClass is not defined in login v1 */}                
+                    <input
                         id={authButtonId}
-                        href="#"
-                        className={kcClsx(
-                            "kcButtonSecondaryClass",
-                            "kcButtonBlockClass"
-                            //"kcMarginTopClass"
-                        )}
-                    >
-                        {msg("passkey-doAuthenticate")}
-                    </a>
+                        type="button"
+                        className={kcClsx("kcButtonClass", "kcButtonDefaultClass", "kcButtonBlockClass", "kcButtonLargeClass")}
+                        value={msgStr("passkey-doAuthenticate")}
+                    />
                 </>
             )}
         </Template>
