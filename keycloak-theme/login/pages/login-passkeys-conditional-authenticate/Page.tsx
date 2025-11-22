@@ -26,9 +26,9 @@ export function Page() {
 
     const { kcClsx } = useKcClsx();
 
-    const authButtonId = "authenticateWebAuthnButton";
+    const webAuthnButtonId = "authenticateWebAuthnButton";
 
-    useScript({ authButtonId });
+    useScript({ webAuthnButtonId });
 
     return (
         <Template
@@ -213,7 +213,7 @@ export function Page() {
                             style={{ display: "none" }}
                         >
                             <input
-                                id={authButtonId}
+                                id={webAuthnButtonId}
                                 type="button"
                                 autoFocus
                                 value={msgStr("passkey-doAuthenticate")}

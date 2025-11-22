@@ -29,9 +29,9 @@ export function Page() {
 
     const [isLoginButtonDisabled, setIsLoginButtonDisabled] = useState(false);
 
-    const authButtonId = "authenticateWebAuthnButton";
+    const webAuthnButtonId = "authenticateWebAuthnButton";
 
-    useScript({ authButtonId });
+    useScript({ webAuthnButtonId });
 
     return (
         <Template
@@ -210,11 +210,16 @@ export function Page() {
                             </form>
                         </>
                     )}
-                    <br /> {/* We use a br here because kcMarginTopClass is not defined in login v1 */}                
+                    <br /> {/* We use a br here because kcMarginTopClass is not defined in login v1 */}
                     <input
-                        id={authButtonId}
+                        id={webAuthnButtonId}
                         type="button"
-                        className={kcClsx("kcButtonClass", "kcButtonDefaultClass", "kcButtonBlockClass", "kcButtonLargeClass")}
+                        className={kcClsx(
+                            "kcButtonClass",
+                            "kcButtonDefaultClass",
+                            "kcButtonBlockClass",
+                            "kcButtonLargeClass"
+                        )}
                         value={msgStr("passkey-doAuthenticate")}
                     />
                 </>

@@ -14,9 +14,9 @@ export function Page() {
 
     const { msg, msgStr } = useI18n();
 
-    const authButtonId = "authenticateWebAuthnButton";
+    const webAuthnButtonId = "authenticateWebAuthnButton";
 
-    useScript({ authButtonId });
+    useScript({ webAuthnButtonId });
 
     return (
         <Template
@@ -51,7 +51,7 @@ export function Page() {
                     "kcButtonBlockClass",
                     "kcButtonLargeClass"
                 )}
-                id={authButtonId}
+                id={webAuthnButtonId}
                 value={msgStr("doRegisterSecurityKey")}
             />
 
