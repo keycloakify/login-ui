@@ -7,8 +7,8 @@ import { BASE_URL } from "../../../kc.gen";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
 
-export function useScript(params: { authButtonId: string }) {
-    const { authButtonId } = params;
+export function useScript(params: { webAuthnButtonId: string }) {
+    const { webAuthnButtonId } = params;
 
     const { kcContext } = useKcContext();
     assert(kcContext.pageId === "webauthn-register.ftl");
@@ -22,7 +22,7 @@ export function useScript(params: { authButtonId: string }) {
                 type: "module",
                 textContent: () => `
                     import { registerByWebAuthn } from "${BASE_URL}keycloak-theme/login/js/webauthnRegister.js";
-                    const registerButton = document.getElementById('${authButtonId}');
+                    const registerButton = document.getElementById('${webAuthnButtonId}');
                     registerButton.addEventListener("click", function() {
                         const input = {
                             challenge : '${kcContext.challenge}',
@@ -55,7 +55,7 @@ export function useScript(params: { authButtonId: string }) {
 
         (async () => {
             await waitForElementMountedOnDom({
-                elementId: authButtonId
+                elementId: webAuthnButtonId
             });
 
             insertScriptTags();

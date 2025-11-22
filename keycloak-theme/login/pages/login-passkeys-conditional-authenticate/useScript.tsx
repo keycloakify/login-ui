@@ -7,8 +7,8 @@ import { BASE_URL } from "../../../kc.gen";
 import { useI18n } from "../../i18n";
 import { useKcContext } from "../../KcContext";
 
-export function useScript(params: { authButtonId: string }) {
-    const { authButtonId } = params;
+export function useScript(params: { webAuthnButtonId: string }) {
+    const { webAuthnButtonId } = params;
 
     const { kcContext } = useKcContext();
     assert(kcContext.pageId === "login-passkeys-conditional-authenticate.ftl");
@@ -24,7 +24,7 @@ export function useScript(params: { authButtonId: string }) {
                     import { authenticateByWebAuthn } from "${BASE_URL}keycloak-theme/login/js/webauthnAuthenticate.js";
                     import { initAuthenticate } from "${BASE_URL}keycloak-theme/login/js/passkeysConditionalAuth.js";
 
-                    const authButton = document.getElementById("${authButtonId}");
+                    const authButton = document.getElementById("${webAuthnButtonId}");
                     const input = {
                         isUserIdentified : ${kcContext.isUserIdentified},
                         challenge : ${JSON.stringify(kcContext.challenge)},
@@ -55,7 +55,7 @@ export function useScript(params: { authButtonId: string }) {
 
         (async () => {
             await waitForElementMountedOnDom({
-                elementId: authButtonId
+                elementId: webAuthnButtonId
             });
 
             insertScriptTags();

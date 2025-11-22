@@ -17,9 +17,9 @@ export function Page() {
 
     const { msg, msgStr, advancedMsg } = useI18n();
 
-    const authButtonId = "authenticateWebAuthnButton";
+    const webAuthnButtonId = "authenticateWebAuthnButton";
 
-    useScript({ authButtonId });
+    useScript({ webAuthnButtonId });
 
     return (
         <Template
@@ -171,7 +171,7 @@ export function Page() {
                     )}
                     <div id="kc-form-buttons" className={kcClsx("kcFormButtonsClass")}>
                         <input
-                            id={authButtonId}
+                            id={webAuthnButtonId}
                             type="button"
                             autoFocus
                             value={msgStr("webauthn-doAuthenticate")}
