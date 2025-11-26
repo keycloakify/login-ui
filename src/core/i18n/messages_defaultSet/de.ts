@@ -537,7 +537,9 @@ const messages = {
     remove: "Entfernen",
     addValue: "Wert hinzufügen",
     languages: "Sprachen",
-    "organization.select": "Wählen Sie eine Organisation, um fortzufahren:"
+    "organization.select": "Wählen Sie eine Organisation, um fortzufahren:",
+    linkIdpActionTitle: "Verknüpfe {0}",
+    linkIdpActionMessage: "Möchten Sie Ihr Konto mit {0} verknüpfen?"
 };
 
 export default messages;

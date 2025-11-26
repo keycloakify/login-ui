@@ -300,7 +300,9 @@ const messages = {
     remove: "Kaldır",
     addValue: "Değer ekle",
     languages: "Diller",
-    "organization.select": "Devam etmek için bir organizasyon seçin:"
+    "organization.select": "Devam etmek için bir organizasyon seçin:",
+    linkIdpActionTitle: "Bağlanıyor: {0}",
+    linkIdpActionMessage: "Hesabınızı {0} ile bağlamak ister misiniz?"
 };
 
 export default messages;

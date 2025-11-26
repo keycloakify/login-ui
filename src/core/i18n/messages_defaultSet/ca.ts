@@ -511,7 +511,9 @@ const messages = {
     remove: "Elimina",
     addValue: "Afegeix valor",
     languages: "Idiomes",
-    "organization.select": "Selecciona una organització per continuar:"
+    "organization.select": "Selecciona una organització per continuar:",
+    linkIdpActionTitle: "Enllaçant {0}",
+    linkIdpActionMessage: "Vols enllaçar el teu compte amb {0}?"
 };
 
 export default messages;

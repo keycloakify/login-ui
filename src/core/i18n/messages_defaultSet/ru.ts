@@ -253,7 +253,9 @@ const messages = {
     remove: "Удалить",
     addValue: "Добавить значение",
     languages: "Языки",
-    "organization.select": "Выберите организацию, чтобы продолжить:"
+    "organization.select": "Выберите организацию, чтобы продолжить:",
+    linkIdpActionTitle: "Связать с {0}",
+    linkIdpActionMessage: "Хотите связать свою учетную запись с {0}?"
 };
 
 export default messages;

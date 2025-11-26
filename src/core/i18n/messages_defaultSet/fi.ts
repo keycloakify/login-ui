@@ -420,7 +420,9 @@ const messages = {
     remove: "Poista",
     addValue: "Lisää arvo",
     languages: "Kielet",
-    "organization.select": "Valitse organisaatio jatkaaksesi:"
+    "organization.select": "Valitse organisaatio jatkaaksesi:",
+    linkIdpActionTitle: "Linkitetään {0}",
+    linkIdpActionMessage: "Haluatko yhdistää tilisi {0}:n kanssa?"
 };
 
 export default messages;

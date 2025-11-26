@@ -227,7 +227,9 @@ const messages = {
     remove: "Pašalinti",
     addValue: "Pridėti reikšmę",
     languages: "Kalbos",
-    "organization.select": "Pasirinkite organizaciją, kad galėtumėte tęsti:"
+    "organization.select": "Pasirinkite organizaciją, kad galėtumėte tęsti:",
+    linkIdpActionTitle: "Prijungiama {0}",
+    linkIdpActionMessage: "Ar norite susieti savo paskyrą su {0}?"
 };
 
 export default messages;

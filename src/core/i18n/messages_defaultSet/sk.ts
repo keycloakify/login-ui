@@ -497,7 +497,9 @@ const messages = {
     remove: "Odstrániť",
     addValue: "Pridať hodnotu",
     languages: "Jazyky",
-    "organization.select": "Vyberte organizáciu, aby ste pokračovali:"
+    "organization.select": "Vyberte organizáciu, aby ste pokračovali:",
+    linkIdpActionTitle: "Prepájanie {0}",
+    linkIdpActionMessage: "Chcete prepojiť svoj účet s {0}?"
 };
 
 export default messages;

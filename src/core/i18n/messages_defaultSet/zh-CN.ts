@@ -456,7 +456,9 @@ const messages = {
     remove: "移除",
     addValue: "添加值",
     languages: "语言",
-    "organization.select": "选择一个组织以继续:"
+    "organization.select": "选择一个组织以继续:",
+    linkIdpActionTitle: "正在关联 {0}",
+    linkIdpActionMessage: "是否将您的账户与 {0} 关联？"
 };
 
 export default messages;

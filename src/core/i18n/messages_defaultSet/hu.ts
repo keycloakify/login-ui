@@ -506,7 +506,9 @@ const messages = {
     remove: "Eltávolítás",
     addValue: "Érték hozzáadása",
     languages: "Nyelvek",
-    "organization.select": "Válasszon egy szervezetet a folytatáshoz:"
+    "organization.select": "Válasszon egy szervezetet a folytatáshoz:",
+    linkIdpActionTitle: "Összekapcsolás: {0}",
+    linkIdpActionMessage: "Össze kívánod kapcsolni a fiókodat a(z) {0} szolgáltatással?"
 };
 
 export default messages;

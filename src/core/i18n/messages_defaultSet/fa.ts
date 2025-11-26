@@ -474,7 +474,9 @@ const messages = {
     remove: "حذف",
     addValue: "افزودن مقدار",
     languages: "زبان‌ها",
-    "organization.select": "یک سازمان را برای ادامه انتخاب کنید:"
+    "organization.select": "یک سازمان را برای ادامه انتخاب کنید:",
+    linkIdpActionTitle: "در حال اتصال {0}",
+    linkIdpActionMessage: "آیا می‌خواهید حساب خود را با {0} لینک کنید؟"
 };
 
 export default messages;

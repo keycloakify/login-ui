@@ -223,7 +223,9 @@ const messages = {
     remove: "Ta bort",
     addValue: "Lägg till värde",
     languages: "Språk",
-    "organization.select": "Välj en organisation för att fortsätta:"
+    "organization.select": "Välj en organisation för att fortsätta:",
+    linkIdpActionTitle: "Länkar {0}",
+    linkIdpActionMessage: "Vill du länka ditt konto med {0}?"
 };
 
 export default messages;

@@ -531,7 +531,9 @@ const messages = {
     remove: "წაშალეთ",
     addValue: "დაამატეთ მნიშვნელობა",
     languages: "ენები",
-    "organization.select": "აირჩიეთ ორგანიზაცია გაგრძელებისთვის:"
+    "organization.select": "აირჩიეთ ორგანიზაცია გაგრძელებისთვის:",
+    linkIdpActionTitle: "კავშირის დამყარება {0}",
+    linkIdpActionMessage: "გსურთ თქვენი ანგარიშის {0}-თან დაკავშირება?"
 };
 
 export default messages;

@@ -488,7 +488,9 @@ const messages = {
     remove: "Odstranit",
     addValue: "Přidat hodnotu",
     languages: "Jazyky",
-    "organization.select": "Vyberte organizaci pro pokračování:"
+    "organization.select": "Vyberte organizaci pro pokračování:",
+    linkIdpActionTitle: "Propojení {0}",
+    linkIdpActionMessage: "Chcete propojit svůj účet s {0}?"
 };
 
 export default messages;

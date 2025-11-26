@@ -511,7 +511,9 @@ const messages = {
     remove: "Видалити",
     addValue: "Додати значення",
     languages: "Мови",
-    "organization.select": "Виберіть організацію, щоб продовжити:"
+    "organization.select": "Виберіть організацію, щоб продовжити:",
+    linkIdpActionTitle: "Зв'язування з {0}",
+    linkIdpActionMessage: "Бажаєте прив'язати свій обліковий запис до {0}?"
 };
 
 export default messages;

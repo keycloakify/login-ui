@@ -350,7 +350,9 @@ const messages = {
     remove: "Fjern",
     addValue: "Tilføj værdi",
     languages: "Sprog",
-    "organization.select": "Vælg en organisation for at fortsætte:"
+    "organization.select": "Vælg en organisation for at fortsætte:",
+    linkIdpActionTitle: "Linker {0}",
+    linkIdpActionMessage: "Vil du forbinde din konto med {0}?"
 };
 
 export default messages;

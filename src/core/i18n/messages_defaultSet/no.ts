@@ -222,7 +222,9 @@ const messages = {
     remove: "Fjern",
     addValue: "Legg til verdi",
     languages: "Språk",
-    "organization.select": "Velg en organisasjon for å fortsette:"
+    "organization.select": "Velg en organisasjon for å fortsette:",
+    linkIdpActionTitle: "Kobler til {0}",
+    linkIdpActionMessage: "Vil du koble kontoen din til {0}?"
 };
 
 export default messages;

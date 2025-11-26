@@ -223,7 +223,9 @@ const messages = {
     remove: "Noņemt",
     addValue: "Pievienot vērtību",
     languages: "Valodas",
-    "organization.select": "Izvēlieties organizāciju, lai turpinātu:"
+    "organization.select": "Izvēlieties organizāciju, lai turpinātu:",
+    linkIdpActionTitle: "Saistīšana ar {0}",
+    linkIdpActionMessage: "Vai vēlaties sasaistīt savu kontu ar {0}?"
 };
 
 export default messages;
