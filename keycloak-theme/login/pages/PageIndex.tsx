@@ -21,6 +21,7 @@ const Page_login_username = lazy(() => import("./login-username"));
 const Page_webauthn_authenticate = lazy(() => import("./webauthn-authenticate"));
 const Page_webauthn_register = lazy(() => import("./webauthn-register"));
 const Page_login_update_password = lazy(() => import("./login-update-password"));
+const Page_link_idp_action = lazy(() => import("./link-idp-action"));
 const Page_login_update_profile = lazy(() => import("./login-update-profile"));
 const Page_login_idp_link_confirm = lazy(() => import("./login-idp-link-confirm"));
 const Page_login_page_expired = lazy(() => import("./login-page-expired"));
@@ -83,6 +84,8 @@ export function PageIndex() {
                         return <Page_webauthn_register />;
                     case "login-update-password.ftl":
                         return <Page_login_update_password />;
+                    case "link-idp-action.ftl":
+                        return <Page_link_idp_action />;
                     case "login-update-profile.ftl":
                         return <Page_login_update_profile />;
                     case "login-idp-link-confirm.ftl":

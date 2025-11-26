@@ -279,6 +279,8 @@ const messages = {
     confirmLinkIdpReviewProfile: "Review profile",
     confirmLinkIdpContinue: "Add to existing account",
     confirmOverrideIdpContinue: "Yes, override link with current account",
+    linkIdpActionTitle: "Linking {0}",
+    linkIdpActionMessage: "Do you want to link your account with {0}?",
     configureTotpMessage: "You need to set up Mobile Authenticator to activate your account.",
     configureBackupCodesMessage: "You need to set up Backup Codes to activate your account.",
     updateProfileMessage: "You need to update your user profile to activate your account.",

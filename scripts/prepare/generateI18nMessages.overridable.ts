@@ -41,7 +41,9 @@ export const keycloakifyExtraMessages: Record<
         | "remove"
         | "addValue"
         | "languages"
-        | "organization.select",
+        | "organization.select"
+        | "linkIdpActionTitle"
+        | "linkIdpActionMessage",
         string
     >
 > = {
@@ -55,7 +57,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "Remove",
         addValue: "Add value",
         languages: "Languages",
-        "organization.select": "Select an organization to proceed:"
+        "organization.select": "Select an organization to proceed:",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     },
     /* spell-checker: disable */
     ar: {
@@ -68,7 +72,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "إزالة",
         addValue: "أضف قيمة",
         languages: "اللغات",
-        "organization.select": "اختر مؤسسة للمتابعة:"
+        "organization.select": "اختر مؤسسة للمتابعة:",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     },
     ca: {
         shouldBeEqual: "{0} hauria de ser igual a {1}",
@@ -80,7 +86,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "Elimina",
         addValue: "Afegeix valor",
         languages: "Idiomes",
-        "organization.select": "Selecciona una organització per continuar:"
+        "organization.select": "Selecciona una organització per continuar:",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     },
     cs: {
         shouldBeEqual: "{0} by měl být roven {1}",
@@ -92,7 +100,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "Odstranit",
         addValue: "Přidat hodnotu",
         languages: "Jazyky",
-        "organization.select": "Vyberte organizaci pro pokračování:"
+        "organization.select": "Vyberte organizaci pro pokračování:",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     },
     da: {
         shouldBeEqual: "{0} bør være lig med {1}",
@@ -104,7 +114,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "Fjern",
         addValue: "Tilføj værdi",
         languages: "Sprog",
-        "organization.select": "Vælg en organisation for at fortsætte:"
+        "organization.select": "Vælg en organisation for at fortsætte:",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     },
     de: {
         shouldBeEqual: "{0} sollte gleich {1} sein",
@@ -116,7 +128,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "Entfernen",
         addValue: "Wert hinzufügen",
         languages: "Sprachen",
-        "organization.select": "Wählen Sie eine Organisation, um fortzufahren:"
+        "organization.select": "Wählen Sie eine Organisation, um fortzufahren:",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     },
     el: {
         shouldBeEqual: "Το {0} πρέπει να είναι ίσο με {1}",
@@ -128,7 +142,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "Αφαίρεση",
         addValue: "Προσθήκη τιμής",
         languages: "Γλώσσες",
-        "organization.select": "Επιλέξτε έναν οργανισμό για να συνεχίσετε:"
+        "organization.select": "Επιλέξτε έναν οργανισμό για να συνεχίσετε:",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     },
     es: {
         shouldBeEqual: "{0} debería ser igual a {1}",
@@ -140,7 +156,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "Eliminar",
         addValue: "Añadir valor",
         languages: "Idiomas",
-        "organization.select": "Selecciona una organización para continuar:"
+        "organization.select": "Selecciona una organización para continuar:",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     },
     fa: {
         shouldBeEqual: "{0} باید برابر باشد با {1}",
@@ -152,7 +170,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "حذف",
         addValue: "افزودن مقدار",
         languages: "زبان‌ها",
-        "organization.select": "یک سازمان را برای ادامه انتخاب کنید:"
+        "organization.select": "یک سازمان را برای ادامه انتخاب کنید:",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     },
     fi: {
         shouldBeEqual: "{0} pitäisi olla yhtä suuri kuin {1}",
@@ -164,7 +184,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "Poista",
         addValue: "Lisää arvo",
         languages: "Kielet",
-        "organization.select": "Valitse organisaatio jatkaaksesi:"
+        "organization.select": "Valitse organisaatio jatkaaksesi:",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     },
     fr: {
         shouldBeEqual: "{0} devrait être égal à {1}",
@@ -176,7 +198,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "Supprimer",
         addValue: "Ajouter une valeur",
         languages: "Langues",
-        "organization.select": "Sélectionnez une organisation pour continuer :"
+        "organization.select": "Sélectionnez une organisation pour continuer :",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     },
     hu: {
         shouldBeEqual: "{0} egyenlő kell legyen {1}-vel",
@@ -188,7 +212,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "Eltávolítás",
         addValue: "Érték hozzáadása",
         languages: "Nyelvek",
-        "organization.select": "Válasszon egy szervezetet a folytatáshoz:"
+        "organization.select": "Válasszon egy szervezetet a folytatáshoz:",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     },
     it: {
         shouldBeEqual: "{0} dovrebbe essere uguale a {1}",
@@ -200,7 +226,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "Rimuovi",
         addValue: "Aggiungi valore",
         languages: "Lingue",
-        "organization.select": "Seleziona un'organizzazione per continuare:"
+        "organization.select": "Seleziona un'organizzazione per continuare:",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     },
     ja: {
         shouldBeEqual: "{0} は {1} と等しい必要があります",
@@ -212,7 +240,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "削除",
         addValue: "値を追加",
         languages: "言語",
-        "organization.select": "続行する組織を選択してください:"
+        "organization.select": "続行する組織を選択してください:",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     },
     lt: {
         shouldBeEqual: "{0} turėtų būti lygus {1}",
@@ -224,7 +254,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "Pašalinti",
         addValue: "Pridėti reikšmę",
         languages: "Kalbos",
-        "organization.select": "Pasirinkite organizaciją, kad galėtumėte tęsti:"
+        "organization.select": "Pasirinkite organizaciją, kad galėtumėte tęsti:",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     },
     lv: {
         shouldBeEqual: "{0} jābūt vienādam ar {1}",
@@ -236,7 +268,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "Noņemt",
         addValue: "Pievienot vērtību",
         languages: "Valodas",
-        "organization.select": "Izvēlieties organizāciju, lai turpinātu:"
+        "organization.select": "Izvēlieties organizāciju, lai turpinātu:",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     },
     nl: {
         shouldBeEqual: "{0} moet gelijk zijn aan {1}",
@@ -248,7 +282,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "Verwijderen",
         addValue: "Waarde toevoegen",
         languages: "Talen",
-        "organization.select": "Selecteer een organisatie om door te gaan:"
+        "organization.select": "Selecteer een organisatie om door te gaan:",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     },
     no: {
         shouldBeEqual: "{0} skal være lik {1}",
@@ -260,7 +296,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "Fjern",
         addValue: "Legg til verdi",
         languages: "Språk",
-        "organization.select": "Velg en organisasjon for å fortsette:"
+        "organization.select": "Velg en organisasjon for å fortsette:",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     },
     pl: {
         shouldBeEqual: "{0} powinno być równe {1}",
@@ -272,7 +310,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "Usuń",
         addValue: "Dodaj wartość",
         languages: "Języki",
-        "organization.select": "Wybierz organizację, aby kontynuować:"
+        "organization.select": "Wybierz organizację, aby kontynuować:",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     },
     pt: {
         shouldBeEqual: "{0} deve ser igual a {1}",
@@ -284,7 +324,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "Remover",
         addValue: "Adicionar valor",
         languages: "Idiomas",
-        "organization.select": "Selecione uma organização para continuar:"
+        "organization.select": "Selecione uma organização para continuar:",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     },
     "pt-BR": {
         shouldBeEqual: "{0} deve ser igual a {1}",
@@ -296,7 +338,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "Remover",
         addValue: "Adicionar valor",
         languages: "Idiomas",
-        "organization.select": "Selecione uma organização para continuar:"
+        "organization.select": "Selecione uma organização para continuar:",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     },
     ru: {
         shouldBeEqual: "{0} должно быть равно {1}",
@@ -308,7 +352,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "Удалить",
         addValue: "Добавить значение",
         languages: "Языки",
-        "organization.select": "Выберите организацию, чтобы продолжить:"
+        "organization.select": "Выберите организацию, чтобы продолжить:",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     },
     sk: {
         shouldBeEqual: "{0} by mal byť rovnaký ako {1}",
@@ -320,7 +366,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "Odstrániť",
         addValue: "Pridať hodnotu",
         languages: "Jazyky",
-        "organization.select": "Vyberte organizáciu, aby ste pokračovali:"
+        "organization.select": "Vyberte organizáciu, aby ste pokračovali:",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     },
     sv: {
         shouldBeEqual: "{0} bör vara lika med {1}",
@@ -332,7 +380,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "Ta bort",
         addValue: "Lägg till värde",
         languages: "Språk",
-        "organization.select": "Välj en organisation för att fortsätta:"
+        "organization.select": "Välj en organisation för att fortsätta:",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     },
     th: {
         shouldBeEqual: "{0} ควรเท่ากับ {1}",
@@ -344,7 +394,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "ลบ",
         addValue: "เพิ่มค่า",
         languages: "ภาษา",
-        "organization.select": "เลือกองค์กรเพื่อดำเนินการต่อ:"
+        "organization.select": "เลือกองค์กรเพื่อดำเนินการต่อ:",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     },
     tr: {
         shouldBeEqual: "{0} {1} eşit olmalıdır",
@@ -356,7 +408,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "Kaldır",
         addValue: "Değer ekle",
         languages: "Diller",
-        "organization.select": "Devam etmek için bir organizasyon seçin:"
+        "organization.select": "Devam etmek için bir organizasyon seçin:",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     },
     uk: {
         shouldBeEqual: "{0} повинно бути рівним {1}",
@@ -368,7 +422,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "Видалити",
         addValue: "Додати значення",
         languages: "Мови",
-        "organization.select": "Виберіть організацію, щоб продовжити:"
+        "organization.select": "Виберіть організацію, щоб продовжити:",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     },
     ka: {
         shouldBeEqual: "{0} უნდა იყოს ტოლი {1}-სთვის",
@@ -380,7 +436,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "წაშალეთ",
         addValue: "დაამატეთ მნიშვნელობა",
         languages: "ენები",
-        "organization.select": "აირჩიეთ ორგანიზაცია გაგრძელებისთვის:"
+        "organization.select": "აირჩიეთ ორგანიზაცია გაგრძელებისთვის:",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     },
     "zh-CN": {
         shouldBeEqual: "{0} 应该等于 {1}",
@@ -392,7 +450,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "移除",
         addValue: "添加值",
         languages: "语言",
-        "organization.select": "选择一个组织以继续:"
+        "organization.select": "选择一个组织以继续:",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     },
     "zh-TW": {
         shouldBeEqual: "{0} 應該等於 {1}",
@@ -404,7 +464,9 @@ export const keycloakifyExtraMessages: Record<
         remove: "移除",
         addValue: "添加值",
         languages: "語言",
-        "organization.select": "選擇一個組織以繼續:"
+        "organization.select": "選擇一個組織以繼續:",
+        linkIdpActionTitle: "Linking {0}",
+        linkIdpActionMessage: "Do you want to link your account with {0}?"
     }
     /* spell-checker: enable */
 };
