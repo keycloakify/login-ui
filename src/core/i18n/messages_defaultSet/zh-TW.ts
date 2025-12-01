@@ -467,7 +467,8 @@ const messages = {
     languages: "語言",
     "organization.select": "選擇一個組織以繼續:",
     linkIdpActionTitle: "正在連結 {0}",
-    linkIdpActionMessage: "是否要將您的帳戶與 {0} 連結？"
+    linkIdpActionMessage: "是否要將您的帳戶與 {0} 連結？",
+    "passkey-doAuthenticate": "使用通行金鑰登入"
 };
 
 export default messages;

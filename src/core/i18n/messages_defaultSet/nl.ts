@@ -320,7 +320,8 @@ const messages = {
     languages: "Talen",
     "organization.select": "Selecteer een organisatie om door te gaan:",
     linkIdpActionTitle: "Koppelen met {0}",
-    linkIdpActionMessage: "Wil je je account koppelen aan {0}?"
+    linkIdpActionMessage: "Wil je je account koppelen aan {0}?",
+    "passkey-doAuthenticate": "Aanmelden met passkey"
 };
 
 export default messages;

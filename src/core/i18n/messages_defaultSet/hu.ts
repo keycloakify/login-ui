@@ -508,7 +508,8 @@ const messages = {
     languages: "Nyelvek",
     "organization.select": "Válasszon egy szervezetet a folytatáshoz:",
     linkIdpActionTitle: "Összekapcsolás: {0}",
-    linkIdpActionMessage: "Össze kívánod kapcsolni a fiókodat a(z) {0} szolgáltatással?"
+    linkIdpActionMessage: "Össze kívánod kapcsolni a fiókodat a(z) {0} szolgáltatással?",
+    "passkey-doAuthenticate": "Bejelentkezés passkey-jel"
 };
 
 export default messages;

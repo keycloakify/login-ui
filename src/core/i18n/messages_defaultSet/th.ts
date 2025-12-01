@@ -487,7 +487,8 @@ const messages = {
     languages: "ภาษา",
     "organization.select": "เลือกองค์กรเพื่อดำเนินการต่อ:",
     linkIdpActionTitle: "กำลังเชื่อมต่อ {0}",
-    linkIdpActionMessage: "คุณต้องการเชื่อมบัญชีของคุณกับ {0} หรือไม่?"
+    linkIdpActionMessage: "คุณต้องการเชื่อมบัญชีของคุณกับ {0} หรือไม่?",
+    "passkey-doAuthenticate": "ลงชื่อเข้าใช้ด้วย Passkey"
 };
 
 export default messages;

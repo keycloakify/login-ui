@@ -422,7 +422,8 @@ const messages = {
     languages: "Kielet",
     "organization.select": "Valitse organisaatio jatkaaksesi:",
     linkIdpActionTitle: "Linkitetään {0}",
-    linkIdpActionMessage: "Haluatko yhdistää tilisi {0}:n kanssa?"
+    linkIdpActionMessage: "Haluatko yhdistää tilisi {0}:n kanssa?",
+    "passkey-doAuthenticate": "Kirjaudu sisään passkeyllä"
 };
 
 export default messages;

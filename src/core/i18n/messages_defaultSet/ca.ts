@@ -513,7 +513,8 @@ const messages = {
     languages: "Idiomes",
     "organization.select": "Selecciona una organització per continuar:",
     linkIdpActionTitle: "Enllaçant {0}",
-    linkIdpActionMessage: "Vols enllaçar el teu compte amb {0}?"
+    linkIdpActionMessage: "Vols enllaçar el teu compte amb {0}?",
+    "passkey-doAuthenticate": "Inicia sessió amb Passkey"
 };
 
 export default messages;

@@ -255,7 +255,8 @@ const messages = {
     languages: "Языки",
     "organization.select": "Выберите организацию, чтобы продолжить:",
     linkIdpActionTitle: "Связать с {0}",
-    linkIdpActionMessage: "Хотите связать свою учетную запись с {0}?"
+    linkIdpActionMessage: "Хотите связать свою учетную запись с {0}?",
+    "passkey-doAuthenticate": "Войти с помощью Passkey"
 };
 
 export default messages;

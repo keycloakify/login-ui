@@ -454,7 +454,8 @@ const messages = {
     languages: "Langues",
     "organization.select": "Sélectionnez une organisation pour continuer :",
     linkIdpActionTitle: "Association à {0}",
-    linkIdpActionMessage: "Voulez-vous lier votre compte à {0} ?"
+    linkIdpActionMessage: "Voulez-vous lier votre compte à {0} ?",
+    "passkey-doAuthenticate": "Se connecter avec une Passkey"
 };
 
 export default messages;

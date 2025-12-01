@@ -225,7 +225,8 @@ const messages = {
     languages: "Valodas",
     "organization.select": "Izvēlieties organizāciju, lai turpinātu:",
     linkIdpActionTitle: "Saistīšana ar {0}",
-    linkIdpActionMessage: "Vai vēlaties sasaistīt savu kontu ar {0}?"
+    linkIdpActionMessage: "Vai vēlaties sasaistīt savu kontu ar {0}?",
+    "passkey-doAuthenticate": "Pieteikties ar piekļuves atslēgu"
 };
 
 export default messages;

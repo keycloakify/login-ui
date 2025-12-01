@@ -508,7 +508,8 @@ const messages = {
     languages: "Γλώσσες",
     "organization.select": "Επιλέξτε έναν οργανισμό για να συνεχίσετε:",
     linkIdpActionTitle: "Σύνδεση {0}",
-    linkIdpActionMessage: "Θέλετε να συνδέσετε τον λογαριασμό σας με {0};"
+    linkIdpActionMessage: "Θέλετε να συνδέσετε τον λογαριασμό σας με {0};",
+    "passkey-doAuthenticate": "Σύνδεση με κλειδί πρόσβασης"
 };
 
 export default messages;

@@ -499,7 +499,8 @@ const messages = {
     languages: "Jazyky",
     "organization.select": "Vyberte organizáciu, aby ste pokračovali:",
     linkIdpActionTitle: "Prepájanie {0}",
-    linkIdpActionMessage: "Chcete prepojiť svoj účet s {0}?"
+    linkIdpActionMessage: "Chcete prepojiť svoj účet s {0}?",
+    "passkey-doAuthenticate": "Prihlásiť sa pomocou prístupového kľúča"
 };
 
 export default messages;

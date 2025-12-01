@@ -481,7 +481,8 @@ const messages = {
     languages: "اللغات",
     "organization.select": "اختر مؤسسة للمتابعة:",
     linkIdpActionTitle: "ربط {0}",
-    linkIdpActionMessage: "هل تريد ربط حسابك مع {0}؟"
+    linkIdpActionMessage: "هل تريد ربط حسابك مع {0}؟",
+    "passkey-doAuthenticate": "تسجيل الدخول باستخدام مفتاح المرور"
 };
 
 export default messages;

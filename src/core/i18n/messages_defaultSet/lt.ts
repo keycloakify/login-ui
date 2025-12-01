@@ -229,7 +229,8 @@ const messages = {
     languages: "Kalbos",
     "organization.select": "Pasirinkite organizaciją, kad galėtumėte tęsti:",
     linkIdpActionTitle: "Prijungiama {0}",
-    linkIdpActionMessage: "Ar norite susieti savo paskyrą su {0}?"
+    linkIdpActionMessage: "Ar norite susieti savo paskyrą su {0}?",
+    "passkey-doAuthenticate": "Prisijunkite naudodami prieigos raktą"
 };
 
 export default messages;

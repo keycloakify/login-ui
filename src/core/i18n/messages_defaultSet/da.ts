@@ -352,7 +352,8 @@ const messages = {
     languages: "Sprog",
     "organization.select": "Vælg en organisation for at fortsætte:",
     linkIdpActionTitle: "Linker {0}",
-    linkIdpActionMessage: "Vil du forbinde din konto med {0}?"
+    linkIdpActionMessage: "Vil du forbinde din konto med {0}?",
+    "passkey-doAuthenticate": "Log ind med adgangsnøgle"
 };
 
 export default messages;

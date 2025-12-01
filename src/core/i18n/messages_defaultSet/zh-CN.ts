@@ -458,7 +458,8 @@ const messages = {
     languages: "语言",
     "organization.select": "选择一个组织以继续:",
     linkIdpActionTitle: "正在关联 {0}",
-    linkIdpActionMessage: "是否将您的账户与 {0} 关联？"
+    linkIdpActionMessage: "是否将您的账户与 {0} 关联？",
+    "passkey-doAuthenticate": "使用通行密钥登录"
 };
 
 export default messages;

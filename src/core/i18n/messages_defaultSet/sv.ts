@@ -225,7 +225,8 @@ const messages = {
     languages: "Språk",
     "organization.select": "Välj en organisation för att fortsätta:",
     linkIdpActionTitle: "Länkar {0}",
-    linkIdpActionMessage: "Vill du länka ditt konto med {0}?"
+    linkIdpActionMessage: "Vill du länka ditt konto med {0}?",
+    "passkey-doAuthenticate": "Logga in med passnyckel"
 };
 
 export default messages;

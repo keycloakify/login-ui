@@ -43,7 +43,8 @@ export const keycloakifyExtraMessages: Record<
         | "languages"
         | "organization.select"
         | "linkIdpActionTitle"
-        | "linkIdpActionMessage",
+        | "linkIdpActionMessage"
+        | "passkey-doAuthenticate",
         string
     >
 > = {
@@ -59,7 +60,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "Languages",
         "organization.select": "Select an organization to proceed:",
         linkIdpActionTitle: "Linking {0}",
-        linkIdpActionMessage: "Do you want to link your account with {0}?"
+        linkIdpActionMessage: "Do you want to link your account with {0}?",
+        "passkey-doAuthenticate": "Sign in with Passkey"
     },
     /* spell-checker: disable */
     ar: {
@@ -74,7 +76,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "اللغات",
         "organization.select": "اختر مؤسسة للمتابعة:",
         linkIdpActionTitle: "ربط {0}",
-        linkIdpActionMessage: "هل تريد ربط حسابك مع {0}؟"
+        linkIdpActionMessage: "هل تريد ربط حسابك مع {0}؟",
+        "passkey-doAuthenticate": "تسجيل الدخول باستخدام مفتاح المرور"
     },
     ca: {
         shouldBeEqual: "{0} hauria de ser igual a {1}",
@@ -88,7 +91,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "Idiomes",
         "organization.select": "Selecciona una organització per continuar:",
         linkIdpActionTitle: "Enllaçant {0}",
-        linkIdpActionMessage: "Vols enllaçar el teu compte amb {0}?"
+        linkIdpActionMessage: "Vols enllaçar el teu compte amb {0}?",
+        "passkey-doAuthenticate": "Inicia sessió amb Passkey"
     },
     cs: {
         shouldBeEqual: "{0} by měl být roven {1}",
@@ -102,7 +106,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "Jazyky",
         "organization.select": "Vyberte organizaci pro pokračování:",
         linkIdpActionTitle: "Propojení {0}",
-        linkIdpActionMessage: "Chcete propojit svůj účet s {0}?"
+        linkIdpActionMessage: "Chcete propojit svůj účet s {0}?",
+        "passkey-doAuthenticate": "Přihlásit se pomocí přístupového klíče"
     },
     da: {
         shouldBeEqual: "{0} bør være lig med {1}",
@@ -116,7 +121,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "Sprog",
         "organization.select": "Vælg en organisation for at fortsætte:",
         linkIdpActionTitle: "Linker {0}",
-        linkIdpActionMessage: "Vil du forbinde din konto med {0}?"
+        linkIdpActionMessage: "Vil du forbinde din konto med {0}?",
+        "passkey-doAuthenticate": "Log ind med adgangsnøgle"
     },
     de: {
         shouldBeEqual: "{0} sollte gleich {1} sein",
@@ -130,7 +136,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "Sprachen",
         "organization.select": "Wählen Sie eine Organisation, um fortzufahren:",
         linkIdpActionTitle: "Verknüpfe {0}",
-        linkIdpActionMessage: "Möchten Sie Ihr Konto mit {0} verknüpfen?"
+        linkIdpActionMessage: "Möchten Sie Ihr Konto mit {0} verknüpfen?",
+        "passkey-doAuthenticate": "Mit Passkey anmelden"
     },
     el: {
         shouldBeEqual: "Το {0} πρέπει να είναι ίσο με {1}",
@@ -144,7 +151,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "Γλώσσες",
         "organization.select": "Επιλέξτε έναν οργανισμό για να συνεχίσετε:",
         linkIdpActionTitle: "Σύνδεση {0}",
-        linkIdpActionMessage: "Θέλετε να συνδέσετε τον λογαριασμό σας με {0};"
+        linkIdpActionMessage: "Θέλετε να συνδέσετε τον λογαριασμό σας με {0};",
+        "passkey-doAuthenticate": "Σύνδεση με κλειδί πρόσβασης"
     },
     es: {
         shouldBeEqual: "{0} debería ser igual a {1}",
@@ -158,7 +166,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "Idiomas",
         "organization.select": "Selecciona una organización para continuar:",
         linkIdpActionTitle: "Vinculando {0}",
-        linkIdpActionMessage: "¿Quieres vincular tu cuenta con {0}?"
+        linkIdpActionMessage: "¿Quieres vincular tu cuenta con {0}?",
+        "passkey-doAuthenticate": "Iniciar sesión con Passkey"
     },
     fa: {
         shouldBeEqual: "{0} باید برابر باشد با {1}",
@@ -172,7 +181,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "زبان‌ها",
         "organization.select": "یک سازمان را برای ادامه انتخاب کنید:",
         linkIdpActionTitle: "در حال اتصال {0}",
-        linkIdpActionMessage: "آیا می‌خواهید حساب خود را با {0} لینک کنید؟"
+        linkIdpActionMessage: "آیا می‌خواهید حساب خود را با {0} لینک کنید؟",
+        "passkey-doAuthenticate": "ورود با کلید عبور"
     },
     fi: {
         shouldBeEqual: "{0} pitäisi olla yhtä suuri kuin {1}",
@@ -186,7 +196,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "Kielet",
         "organization.select": "Valitse organisaatio jatkaaksesi:",
         linkIdpActionTitle: "Linkitetään {0}",
-        linkIdpActionMessage: "Haluatko yhdistää tilisi {0}:n kanssa?"
+        linkIdpActionMessage: "Haluatko yhdistää tilisi {0}:n kanssa?",
+        "passkey-doAuthenticate": "Kirjaudu sisään passkeyllä"
     },
     fr: {
         shouldBeEqual: "{0} devrait être égal à {1}",
@@ -200,7 +211,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "Langues",
         "organization.select": "Sélectionnez une organisation pour continuer :",
         linkIdpActionTitle: "Association à {0}",
-        linkIdpActionMessage: "Voulez-vous lier votre compte à {0} ?"
+        linkIdpActionMessage: "Voulez-vous lier votre compte à {0} ?",
+        "passkey-doAuthenticate": "Se connecter avec une Passkey"
     },
     hu: {
         shouldBeEqual: "{0} egyenlő kell legyen {1}-vel",
@@ -214,7 +226,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "Nyelvek",
         "organization.select": "Válasszon egy szervezetet a folytatáshoz:",
         linkIdpActionTitle: "Összekapcsolás: {0}",
-        linkIdpActionMessage: "Össze kívánod kapcsolni a fiókodat a(z) {0} szolgáltatással?"
+        linkIdpActionMessage: "Össze kívánod kapcsolni a fiókodat a(z) {0} szolgáltatással?",
+        "passkey-doAuthenticate": "Bejelentkezés passkey-jel"
     },
     it: {
         shouldBeEqual: "{0} dovrebbe essere uguale a {1}",
@@ -228,7 +241,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "Lingue",
         "organization.select": "Seleziona un'organizzazione per continuare:",
         linkIdpActionTitle: "Collegamento a {0}",
-        linkIdpActionMessage: "Vuoi collegare il tuo account con {0}?"
+        linkIdpActionMessage: "Vuoi collegare il tuo account con {0}?",
+        "passkey-doAuthenticate": "Accedi con Passkey"
     },
     ja: {
         shouldBeEqual: "{0} は {1} と等しい必要があります",
@@ -242,7 +256,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "言語",
         "organization.select": "続行する組織を選択してください:",
         linkIdpActionTitle: "{0} をリンク",
-        linkIdpActionMessage: "アカウントを{0}にリンクしますか？"
+        linkIdpActionMessage: "アカウントを{0}にリンクしますか？",
+        "passkey-doAuthenticate": "パスキーでサインイン"
     },
     lt: {
         shouldBeEqual: "{0} turėtų būti lygus {1}",
@@ -256,7 +271,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "Kalbos",
         "organization.select": "Pasirinkite organizaciją, kad galėtumėte tęsti:",
         linkIdpActionTitle: "Prijungiama {0}",
-        linkIdpActionMessage: "Ar norite susieti savo paskyrą su {0}?"
+        linkIdpActionMessage: "Ar norite susieti savo paskyrą su {0}?",
+        "passkey-doAuthenticate": "Prisijunkite naudodami prieigos raktą"
     },
     lv: {
         shouldBeEqual: "{0} jābūt vienādam ar {1}",
@@ -270,7 +286,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "Valodas",
         "organization.select": "Izvēlieties organizāciju, lai turpinātu:",
         linkIdpActionTitle: "Saistīšana ar {0}",
-        linkIdpActionMessage: "Vai vēlaties sasaistīt savu kontu ar {0}?"
+        linkIdpActionMessage: "Vai vēlaties sasaistīt savu kontu ar {0}?",
+        "passkey-doAuthenticate": "Pieteikties ar piekļuves atslēgu"
     },
     nl: {
         shouldBeEqual: "{0} moet gelijk zijn aan {1}",
@@ -284,7 +301,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "Talen",
         "organization.select": "Selecteer een organisatie om door te gaan:",
         linkIdpActionTitle: "Koppelen met {0}",
-        linkIdpActionMessage: "Wil je je account koppelen aan {0}?"
+        linkIdpActionMessage: "Wil je je account koppelen aan {0}?",
+        "passkey-doAuthenticate": "Aanmelden met passkey"
     },
     no: {
         shouldBeEqual: "{0} skal være lik {1}",
@@ -298,7 +316,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "Språk",
         "organization.select": "Velg en organisasjon for å fortsette:",
         linkIdpActionTitle: "Kobler til {0}",
-        linkIdpActionMessage: "Vil du koble kontoen din til {0}?"
+        linkIdpActionMessage: "Vil du koble kontoen din til {0}?",
+        "passkey-doAuthenticate": "Logg inn med passnøkkel"
     },
     pl: {
         shouldBeEqual: "{0} powinno być równe {1}",
@@ -312,7 +331,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "Języki",
         "organization.select": "Wybierz organizację, aby kontynuować:",
         linkIdpActionTitle: "Łączenie z {0}",
-        linkIdpActionMessage: "Czy chcesz połączyć swoje konto z {0}?"
+        linkIdpActionMessage: "Czy chcesz połączyć swoje konto z {0}?",
+        "passkey-doAuthenticate": "Zaloguj się za pomocą klucza dostępu"
     },
     pt: {
         shouldBeEqual: "{0} deve ser igual a {1}",
@@ -326,7 +346,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "Idiomas",
         "organization.select": "Selecione uma organização para continuar:",
         linkIdpActionTitle: "Associando {0}",
-        linkIdpActionMessage: "Deseja associar sua conta a {0}?"
+        linkIdpActionMessage: "Deseja associar sua conta a {0}?",
+        "passkey-doAuthenticate": "Iniciar sessão com chave de acesso"
     },
     "pt-BR": {
         shouldBeEqual: "{0} deve ser igual a {1}",
@@ -340,7 +361,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "Idiomas",
         "organization.select": "Selecione uma organização para continuar:",
         linkIdpActionTitle: "Associando {0}",
-        linkIdpActionMessage: "Deseja vincular sua conta ao {0}?"
+        linkIdpActionMessage: "Deseja vincular sua conta ao {0}?",
+        "passkey-doAuthenticate": "Entrar com chave de acesso"
     },
     ru: {
         shouldBeEqual: "{0} должно быть равно {1}",
@@ -354,7 +376,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "Языки",
         "organization.select": "Выберите организацию, чтобы продолжить:",
         linkIdpActionTitle: "Связать с {0}",
-        linkIdpActionMessage: "Хотите связать свою учетную запись с {0}?"
+        linkIdpActionMessage: "Хотите связать свою учетную запись с {0}?",
+        "passkey-doAuthenticate": "Войти с помощью Passkey"
     },
     sk: {
         shouldBeEqual: "{0} by mal byť rovnaký ako {1}",
@@ -368,7 +391,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "Jazyky",
         "organization.select": "Vyberte organizáciu, aby ste pokračovali:",
         linkIdpActionTitle: "Prepájanie {0}",
-        linkIdpActionMessage: "Chcete prepojiť svoj účet s {0}?"
+        linkIdpActionMessage: "Chcete prepojiť svoj účet s {0}?",
+        "passkey-doAuthenticate": "Prihlásiť sa pomocou prístupového kľúča"
     },
     sv: {
         shouldBeEqual: "{0} bör vara lika med {1}",
@@ -382,7 +406,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "Språk",
         "organization.select": "Välj en organisation för att fortsätta:",
         linkIdpActionTitle: "Länkar {0}",
-        linkIdpActionMessage: "Vill du länka ditt konto med {0}?"
+        linkIdpActionMessage: "Vill du länka ditt konto med {0}?",
+        "passkey-doAuthenticate": "Logga in med passnyckel"
     },
     th: {
         shouldBeEqual: "{0} ควรเท่ากับ {1}",
@@ -396,7 +421,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "ภาษา",
         "organization.select": "เลือกองค์กรเพื่อดำเนินการต่อ:",
         linkIdpActionTitle: "กำลังเชื่อมต่อ {0}",
-        linkIdpActionMessage: "คุณต้องการเชื่อมบัญชีของคุณกับ {0} หรือไม่?"
+        linkIdpActionMessage: "คุณต้องการเชื่อมบัญชีของคุณกับ {0} หรือไม่?",
+        "passkey-doAuthenticate": "ลงชื่อเข้าใช้ด้วย Passkey"
     },
     tr: {
         shouldBeEqual: "{0} {1} eşit olmalıdır",
@@ -410,7 +436,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "Diller",
         "organization.select": "Devam etmek için bir organizasyon seçin:",
         linkIdpActionTitle: "Bağlanıyor: {0}",
-        linkIdpActionMessage: "Hesabınızı {0} ile bağlamak ister misiniz?"
+        linkIdpActionMessage: "Hesabınızı {0} ile bağlamak ister misiniz?",
+        "passkey-doAuthenticate": "Geçiş anahtarıyla oturum aç"
     },
     uk: {
         shouldBeEqual: "{0} повинно бути рівним {1}",
@@ -424,7 +451,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "Мови",
         "organization.select": "Виберіть організацію, щоб продовжити:",
         linkIdpActionTitle: "Зв'язування з {0}",
-        linkIdpActionMessage: "Бажаєте прив'язати свій обліковий запис до {0}?"
+        linkIdpActionMessage: "Бажаєте прив'язати свій обліковий запис до {0}?",
+        "passkey-doAuthenticate": "Увійти за допомогою ключа доступу"
     },
     ka: {
         shouldBeEqual: "{0} უნდა იყოს ტოლი {1}-სთვის",
@@ -438,7 +466,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "ენები",
         "organization.select": "აირჩიეთ ორგანიზაცია გაგრძელებისთვის:",
         linkIdpActionTitle: "კავშირის დამყარება {0}",
-        linkIdpActionMessage: "გსურთ თქვენი ანგარიშის {0}-თან დაკავშირება?"
+        linkIdpActionMessage: "გსურთ თქვენი ანგარიშის {0}-თან დაკავშირება?",
+        "passkey-doAuthenticate": "Passkey-ით შესვლა"
     },
     "zh-CN": {
         shouldBeEqual: "{0} 应该等于 {1}",
@@ -452,7 +481,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "语言",
         "organization.select": "选择一个组织以继续:",
         linkIdpActionTitle: "正在关联 {0}",
-        linkIdpActionMessage: "是否将您的账户与 {0} 关联？"
+        linkIdpActionMessage: "是否将您的账户与 {0} 关联？",
+        "passkey-doAuthenticate": "使用通行密钥登录"
     },
     "zh-TW": {
         shouldBeEqual: "{0} 應該等於 {1}",
@@ -466,7 +496,8 @@ export const keycloakifyExtraMessages: Record<
         languages: "語言",
         "organization.select": "選擇一個組織以繼續:",
         linkIdpActionTitle: "正在連結 {0}",
-        linkIdpActionMessage: "是否要將您的帳戶與 {0} 連結？"
+        linkIdpActionMessage: "是否要將您的帳戶與 {0} 連結？",
+        "passkey-doAuthenticate": "使用通行金鑰登入"
     }
     /* spell-checker: enable */
 };

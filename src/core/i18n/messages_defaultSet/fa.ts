@@ -476,7 +476,8 @@ const messages = {
     languages: "زبان‌ها",
     "organization.select": "یک سازمان را برای ادامه انتخاب کنید:",
     linkIdpActionTitle: "در حال اتصال {0}",
-    linkIdpActionMessage: "آیا می‌خواهید حساب خود را با {0} لینک کنید؟"
+    linkIdpActionMessage: "آیا می‌خواهید حساب خود را با {0} لینک کنید؟",
+    "passkey-doAuthenticate": "ورود با کلید عبور"
 };
 
 export default messages;

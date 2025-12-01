@@ -513,7 +513,8 @@ const messages = {
     languages: "Мови",
     "organization.select": "Виберіть організацію, щоб продовжити:",
     linkIdpActionTitle: "Зв'язування з {0}",
-    linkIdpActionMessage: "Бажаєте прив'язати свій обліковий запис до {0}?"
+    linkIdpActionMessage: "Бажаєте прив'язати свій обліковий запис до {0}?",
+    "passkey-doAuthenticate": "Увійти за допомогою ключа доступу"
 };
 
 export default messages;

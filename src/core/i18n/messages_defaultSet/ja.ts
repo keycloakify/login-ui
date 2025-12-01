@@ -365,7 +365,8 @@ const messages = {
     languages: "言語",
     "organization.select": "続行する組織を選択してください:",
     linkIdpActionTitle: "{0} をリンク",
-    linkIdpActionMessage: "アカウントを{0}にリンクしますか？"
+    linkIdpActionMessage: "アカウントを{0}にリンクしますか？",
+    "passkey-doAuthenticate": "パスキーでサインイン"
 };
 
 export default messages;
