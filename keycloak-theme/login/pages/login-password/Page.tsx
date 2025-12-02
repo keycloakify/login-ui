@@ -73,15 +73,19 @@ export function Page() {
                             )}
                         </div>
                         <div className={kcClsx("kcFormGroupClass", "kcFormSettingClass")}>
-                            <div id="kc-form-options" />
-                            <div className={kcClsx("kcFormOptionsWrapperClass")}>
-                                {kcContext.realm.resetPasswordAllowed && (
-                                    <span>
-                                        <a tabIndex={5} href={kcContext.url.loginResetCredentialsUrl}>
-                                            {msg("doForgotPassword")}
-                                        </a>
-                                    </span>
-                                )}
+                            <div id="kc-form-options">
+                                <div className={kcClsx("kcFormOptionsWrapperClass")}>
+                                    {kcContext.realm.resetPasswordAllowed && (
+                                        <span>
+                                            <a
+                                                tabIndex={5}
+                                                href={kcContext.url.loginResetCredentialsUrl}
+                                            >
+                                                {msg("doForgotPassword")}
+                                            </a>
+                                        </span>
+                                    )}
+                                </div>
                             </div>
                         </div>
                         <div id="kc-form-buttons" className={kcClsx("kcFormGroupClass")}>
