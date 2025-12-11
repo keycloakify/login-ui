@@ -55,7 +55,7 @@ export function Page() {
                             shouldDisplayGrid && "kcFormSocialAccountListGridClass"
                         )}
                     >
-                        {kcContext.organizations.map(({ alias, name }) => (
+                        {organizations.map(({ alias, name }) => (
                             <li key={alias}>
                                 <button
                                     id={`organization-${alias}`}
