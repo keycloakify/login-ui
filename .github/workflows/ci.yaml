@@ -7,6 +7,10 @@ on:
     branches:
       - main
 
+permissions:
+  id-token: write
+  contents: write
+
 jobs:
 
   test_format:
@@ -78,7 +82,8 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         registry-url: https://registry.npmjs.org/
-    - uses: bahmutov/npm-install@v1
+    - run: npm install -g npm@latest
+    - run: yarn install --frozen-lockfile
     - run: npm run build
     - name: Publishing on NPM
       run: |
@@ -98,6 +103,5 @@ jobs:
         fi
         npm publish $EXTRA_ARGS
       env:
-        NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         VERSION: ${{ needs.check_if_version_upgraded.outputs.to_version }}
         IS_PRE_RELEASE: ${{ needs.check_if_version_upgraded.outputs.is_pre_release }}
