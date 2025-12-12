@@ -16,7 +16,11 @@ export function Page() {
             headerNode={
                 <span
                     dangerouslySetInnerHTML={{
-                        __html: kcSanitize(kcContext.messageHeader ?? kcContext.message.summary)
+                        __html: kcSanitize(
+                            kcContext.messageHeader
+                                ? advancedMsgStr(kcContext.messageHeader)
+                                : kcContext.message.summary
+                        )
                     }}
                 />
             }
