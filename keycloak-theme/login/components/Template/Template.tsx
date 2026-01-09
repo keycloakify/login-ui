@@ -38,7 +38,8 @@ export function Template(props: {
     const { kcClsx } = useKcClsx();
 
     useEffect(() => {
-        document.title = documentTitle ?? msgStr("loginTitle", kcContext.realm.displayName);
+        document.title =
+            documentTitle ?? msgStr("loginTitle", kcContext.realm.displayName || kcContext.realm.name);
     }, []);
 
     useSetClassName({
@@ -61,7 +62,7 @@ export function Template(props: {
         <div className={kcClsx("kcLoginClass")}>
             <div id="kc-header" className={kcClsx("kcHeaderClass")}>
                 <div id="kc-header-wrapper" className={kcClsx("kcHeaderWrapperClass")}>
-                    {msg("loginTitleHtml", kcContext.realm.displayNameHtml)}
+                    {msg("loginTitleHtml", kcContext.realm.displayNameHtml || kcContext.realm.name)}
                 </div>
             </div>
             <div className={kcClsx("kcFormCardClass")}>
