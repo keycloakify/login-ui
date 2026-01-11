@@ -208,10 +208,12 @@ export function Template(props: {
                                     <a
                                         href="#"
                                         id="try-another-way"
-                                        onClick={() => {
+                                        onClick={event => {
+                                            event.preventDefault();
                                             document.forms[
                                                 "kc-select-try-another-way-form" as never
                                             ].requestSubmit();
+
                                             return false;
                                         }}
                                     >
