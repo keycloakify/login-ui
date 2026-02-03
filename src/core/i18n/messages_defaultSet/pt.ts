@@ -172,7 +172,7 @@ const messages = {
     emailLinkIdp3: "para reenviar o e-mail.",
     emailLinkIdp4: "Se já verificou o e-mail em outro navegador",
     emailLinkIdp5: "para continuar.",
-    backToLogin: "&laquo; Voltar ao Login",
+    backToLogin: "« Voltar ao Login",
     emailInstruction:
         "Insira o seu nome de utilizador ou endereço de e-mail e enviaremos instruções sobre como definir uma nova palavra-passe.",
     emailInstructionUsername:
@@ -216,8 +216,10 @@ const messages = {
     invalidPasswordMessage: "Palavra-passe inválida.",
     invalidEmailMessage: "Endereço de e-mail inválido.",
     accountDisabledMessage: "Conta desativada, por favor, contacte um administrador.",
-    accountTemporarilyDisabledMessage:
-        "Conta temporariamente indisponível, por favor, contacte um administrador ou tente novamente mais tarde.",
+    accountTemporarilyDisabledMessage: "Nome de utilizador ou palavra-passe inválida.",
+    accountPermanentlyDisabledMessage: "Nome de utilizador ou palavra-passe inválida.",
+    accountTemporarilyDisabledMessageTotp: "Código de uso único inválido.",
+    accountPermanentlyDisabledMessageTotp: "Código de uso único inválido.",
     expiredCodeMessage: "Tempo de login expirado. Por favor, faça login novamente.",
     expiredActionMessage: "Ação expirada. Por favor, continue com o login agora.",
     expiredActionTokenNoSessionMessage: "Ação expirada.",
@@ -378,7 +380,7 @@ const messages = {
         "Confirme a vinculação da conta {0} do provedor de identidade {1} à sua conta.",
     confirmEmailAddressVerification: "Confirme a validade do endereço de e-mail {0}.",
     confirmExecutionOfActions: "Execute a(s) seguinte(s) ação(ões)",
-    backToApplication: "&laquo; Voltar para a aplicação",
+    backToApplication: "« Voltar para a aplicação",
     missingParameterMessage: "Parâmetros ausentes: {0}",
     clientNotFoundMessage: "Cliente não encontrado.",
     clientDisabledMessage: "Cliente desativado.",
@@ -388,7 +390,7 @@ const messages = {
         "Já está autenticado como outro utilizador '{0}' nesta sessão. Por favor, finalize a sessão primeiro.",
     brokerLinkingSessionExpired:
         "A vinculção de conta do provedor de identidade foi solicitado, mas a sessão atual não é mais válida.",
-    proceedWithAction: "&raquo; Clique aqui para continuar",
+    proceedWithAction: "» Clique aqui para continuar",
     acrNotFulfilled: "Requisitos de autenticação não cumpridos",
     "requiredAction.CONFIGURE_TOTP": "Configurar Autenticação de Dois Fatores",
     "requiredAction.TERMS_AND_CONDITIONS": "Termos e Condições",
@@ -433,8 +435,8 @@ const messages = {
     "auth-username-password-form-display-name": "Nome de utilizador e palavra-passe",
     "auth-username-password-form-help-text":
         "Faça o login insirindo o seu nome de utilizador e palavra-passe.",
-    "auth-recovery-authn-code-form-display-name": "Código de Autenticação de Recuperação",
-    "auth-recovery-authn-code-form-help-text":
+    "recovery-authn-codes-display-name": "Código de Autenticação de Recuperação",
+    "recovery-authn-codes-help-text":
         "Insira um código de autenticação de recuperação de uma lista gerada anteriormente.",
     "auth-recovery-code-info-message": "Insira o código de recuperação especificado.",
     "auth-recovery-code-prompt": "Código de recuperação #{0}",
@@ -475,9 +477,9 @@ const messages = {
     "webauthn-error-different-user":
         "O primeiro utilizador autenticado não corresponde àquele autenticado pela Chave de Segurança.",
     "webauthn-error-auth-verification":
-        "O resultado da autenticação da Chave de Segurança é inválido.<br /> {0}",
+        "O resultado da autenticação da Chave de Segurança é inválido. {0}",
     "webauthn-error-register-verification":
-        "O resultado do registo da Chave de Segurança é inválido.<br /> {0}",
+        "O resultado do registo da Chave de Segurança é inválido. {0}",
     "webauthn-error-user-not-found": "Utilizador desconhecido autenticado pela Chave de Segurança.",
     "identity-provider-redirector": "Conecte-se com outro Provedor de Identidade",
     "identity-provider-login-label": "Ou entre com",

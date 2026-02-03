@@ -146,7 +146,7 @@ const messages = {
     emailLinkIdp3: "saadaksesi uuden sähköpostiviestin.",
     emailLinkIdp4: "Jos olet jo vahvistanut sähköpostisi toisella selaimella,",
     emailLinkIdp5: "jatkaaksesi.",
-    backToLogin: "&laquo; Takaisin kirjautumiseen",
+    backToLogin: "« Takaisin kirjautumiseen",
     emailInstruction:
         "Syötä käyttäjätunnuksesi tai sähköpostiosoitteesi niin lähetämme sinulle ohjeet salasanan palauttamista varten.",
     emailInstructionUsername:
@@ -190,8 +190,10 @@ const messages = {
     invalidPasswordMessage: "Väärä salasana.",
     invalidEmailMessage: "Virheellinen sähköpostiosoite.",
     accountDisabledMessage: "Tili on poistettu käytöstä, ota yhteyttä järjestelmänvalvojaan.",
-    accountTemporarilyDisabledMessage:
-        "Tili on väliaikaisesti poissa käytöstä, ota yhteyttä järjestelmänvalvojaan tai yritä myöhemmin uudelleen.",
+    accountTemporarilyDisabledMessage: "Virheellinen käyttäjätunnus tai salasana.",
+    accountPermanentlyDisabledMessage: "Virheellinen käyttäjätunnus tai salasana.",
+    accountTemporarilyDisabledMessageTotp: "Väärä todentaja-koodi.",
+    accountPermanentlyDisabledMessageTotp: "Väärä todentaja-koodi.",
     expiredCodeMessage: "Kirjautuminen kesti liian kauan. Ole hyvä ja kirjaudu uudestaan.",
     expiredActionMessage: "Toiminto kesti liian kauan. Ole hyvä ja jatka kirjautumiseen.",
     expiredActionTokenNoSessionMessage: "Toiminto vanhentui.",
@@ -331,7 +333,7 @@ const messages = {
     confirmAccountLinking: "Vahvista tilin {0} linkitys, henkilöllisyyden tarjoajalta {1}, tiliisi.",
     confirmEmailAddressVerification: "Vahvista sähköpostiosoitteen {0} voimassaolo.",
     confirmExecutionOfActions: "Suorita seuraavat toiminnot",
-    backToApplication: "&laquo; Takaisin sovellukseen",
+    backToApplication: "« Takaisin sovellukseen",
     missingParameterMessage: "Puuttuva parametri: {0}",
     clientNotFoundMessage: "Asiakasta ei löytynyt.",
     clientDisabledMessage: "Asiakas ei ole käytössä.",
@@ -340,7 +342,7 @@ const messages = {
     differentUserAuthenticated:
         "Olet kirjautunut sisään tilillä '{0}'. Ole hyvä ja kirjaudu ulos ensin.",
     brokerLinkingSessionExpired: "Pyysit tilin yhdistämistä mutta sessio on vanhentunut.",
-    proceedWithAction: "&raquo; Klikkaa tästä jatkaaksesi",
+    proceedWithAction: "» Klikkaa tästä jatkaaksesi",
     "requiredAction.CONFIGURE_TOTP": "Konfiguroi OTP",
     "requiredAction.TERMS_AND_CONDITIONS": "Käyttöehdot",
     "requiredAction.UPDATE_PASSWORD": "Päivitä salasana",
@@ -390,13 +392,12 @@ const messages = {
         '"WebAuthn" ei ole tuettu tällä selaimella. Kokeile jotain toista tai ota yhteyttä järjestelmänvalvojaan.',
     "webauthn-doAuthenticate": "Kirjaudu sisään Turva-avaimella",
     "webauthn-error-title": "Turva-avain virhe",
-    "webauthn-error-registration": "Turva-avaimen rekisteröinti epäonnistui.<br/> {0}",
-    "webauthn-error-api-get": "Tunnistautuminen Turva-avaimella epäonnistui.<br/> {0}",
+    "webauthn-error-registration": "Turva-avaimen rekisteröinti epäonnistui. {0}",
+    "webauthn-error-api-get": "Tunnistautuminen Turva-avaimella epäonnistui. {0}",
     "webauthn-error-different-user":
         "Ensiksi tunnistautunut käyttäjä ei ole sama kuin Turva-avaimella tunnistaunut.",
-    "webauthn-error-auth-verification": "Turva-avain -tunnistautumisen tulos on virheellinen.<br/> {0}",
-    "webauthn-error-register-verification":
-        "Turva-avaimen rekisteröinnin tulos on virheellinen.<br/> {0}",
+    "webauthn-error-auth-verification": "Turva-avain -tunnistautumisen tulos on virheellinen. {0}",
+    "webauthn-error-register-verification": "Turva-avaimen rekisteröinnin tulos on virheellinen. {0}",
     "webauthn-error-user-not-found": "Tuntematon käyttäjä tunnistautui Turva-avaimella.",
     "identity-provider-redirector": "Yhdistä käyttämällä toista henkilöllisyyden tarjoajaa",
     "identity-provider-login-label": "Tai kirjaudu jollain näistä:",

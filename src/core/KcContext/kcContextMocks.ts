@@ -120,7 +120,7 @@ export const kcContextCommonMock: KcContext.Common = {
                 ["en", "English"],
                 ["it", "Italiano"],
                 ["fr", "Français"],
-                ["zh-CN", "中文简体"],
+                ["zh-Hans", "中文简体"],
                 ["es", "Español"],
                 ["cs", "Čeština"],
                 ["ja", "日本語"],
@@ -130,17 +130,25 @@ export const kcContextCommonMock: KcContext.Common = {
                 ["nl", "Nederlands"],
                 ["tr", "Türkçe"],
                 ["ar", "العربية"],
+                ["az", "Azərbaycan"],
                 ["da", "Dansk"],
                 ["el", "Ελληνικά"],
+                ["eu", "Euskara"],
                 ["fa", "فارسی"],
                 ["fi", "Suomi"],
+                ["hr", "Hrvatski"],
                 ["hu", "Magyar"],
                 ["ka", "ქართული"],
+                ["kk", "Қазақша"],
+                ["ko", "한국어"],
+                ["ky", "Кыргызча"],
                 ["lv", "Latviešu"],
                 ["pt", "Português"],
+                ["ro", "Română"],
+                ["sl", "Slovenščina"],
                 ["th", "ไทย"],
                 ["uk", "Українська"],
-                ["zh-TW", "中文繁體"]
+                ["zh-Hant", "中文繁體"]
                 /* spell-checker: enable */
             ] as const
         ).map(([languageTag, label]) => {

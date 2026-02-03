@@ -1,5 +1,6 @@
 export const languageTags = [
     "ar",
+    "az",
     "ca",
     "cs",
     "da",
@@ -7,13 +8,18 @@ export const languageTags = [
     "el",
     "en",
     "es",
+    "eu",
     "fa",
     "fi",
     "fr",
+    "hr",
     "hu",
     "it",
     "ja",
     "ka",
+    "kk",
+    "ko",
+    "ky",
     "lt",
     "lv",
     "nl",
@@ -21,14 +27,16 @@ export const languageTags = [
     "pl",
     "pt",
     "pt-BR",
+    "ro",
     "ru",
     "sk",
+    "sl",
     "sv",
     "th",
     "tr",
     "uk",
-    "zh-CN",
-    "zh-TW"
+    "zh-Hans",
+    "zh-Hant"
 ] as const;
 
 export type LanguageTag = (typeof languageTags)[number];

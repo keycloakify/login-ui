@@ -168,7 +168,7 @@ const messages = {
     emailLinkIdp3: "для повторного відправлення листа.",
     emailLinkIdp4: "Якщо ви вже підтвердили електронну адресу в іншому браузері",
     emailLinkIdp5: "для продовження.",
-    backToLogin: "&laquo; Назад до входу",
+    backToLogin: "« Назад до входу",
     emailInstruction:
         "Введіть своє ім'я користувача або адресу електронної пошти, і ми надішлемо Вам інструкції щодо створення нового пароля.",
     emailInstructionUsername:
@@ -212,8 +212,10 @@ const messages = {
     invalidPasswordMessage: "Невірний пароль.",
     invalidEmailMessage: "Невірна адреса електронної пошти.",
     accountDisabledMessage: "Обліковий запис заблоковано, зверніться до адміністратора.",
-    accountTemporarilyDisabledMessage:
-        "Обліковий запис тимчасово заблоковано; зверніться до адміністратора або повторіть спробу пізніше.",
+    accountTemporarilyDisabledMessage: "Невірне ім'я користувача або пароль.",
+    accountPermanentlyDisabledMessage: "Невірне ім'я користувача або пароль.",
+    accountTemporarilyDisabledMessageTotp: "Невірний код автентифікатора.",
+    accountPermanentlyDisabledMessageTotp: "Невірний код автентифікатора.",
     expiredCodeMessage: "Час очікування входу закінчився. Увійдіть знову.",
     expiredActionMessage: "Термін дії закінчився. Будь ласка, увійдіть знову.",
     expiredActionTokenNoSessionMessage: "Термін дії закінчився.",
@@ -380,7 +382,7 @@ const messages = {
         "Підтвердити зв'язування облікового запису {0} провайдера облікових записів {1} з вашим обліковим записом.",
     confirmEmailAddressVerification: "Підтвердити адресу електронної пошти {0}.",
     confirmExecutionOfActions: "Виконайте наступні дії",
-    backToApplication: "&laquo; Назад до застосунку",
+    backToApplication: "« Назад до застосунку",
     missingParameterMessage: "Відсутні параметри: {0}",
     clientNotFoundMessage: "Клієнта не знайдено.",
     clientDisabledMessage: "Клієнта вимкнено.",
@@ -390,7 +392,7 @@ const messages = {
         "Ви вже аутентифіковані як інший користувач '{0}' у цій сесії. Спочатку вийдіть.",
     brokerLinkingSessionExpired:
         "Запитано зв'язування облікового запису брокера, але поточна сесія більше недійсна.",
-    proceedWithAction: "&raquo; Натисніть тут, щоб продовжити",
+    proceedWithAction: "» Натисніть тут, щоб продовжити",
     acrNotFulfilled: "Вимоги автентифікації не виконано",
     "requiredAction.CONFIGURE_TOTP": "Налаштувати OTP",
     "requiredAction.TERMS_AND_CONDITIONS": "Положення та умови",
@@ -434,8 +436,8 @@ const messages = {
     "auth-username-form-help-text": "Почніть вхід, ввівши своє ім'я користувача",
     "auth-username-password-form-display-name": "Ім'я користувача та пароль",
     "auth-username-password-form-help-text": "Увійдіть, ввівши своє ім'я користувача та пароль.",
-    "auth-recovery-authn-code-form-display-name": "Код відновлення автентифікації",
-    "auth-recovery-authn-code-form-help-text":
+    "recovery-authn-codes-display-name": "Код відновлення автентифікації",
+    "recovery-authn-codes-help-text":
         "Введіть код відновлення автентифікації з попередньо створеного списку.",
     "auth-recovery-code-info-message": "Введіть код відновлення.",
     "auth-recovery-code-prompt": "Код відновлення #{0}",
@@ -470,12 +472,12 @@ const messages = {
     "webauthn-doAuthenticate": "Увійти за допомогою ключа безпеки",
     "webauthn-createdAt-label": "Створено",
     "webauthn-error-title": "Помилка ключа безпеки",
-    "webauthn-error-registration": "Не вдалося зареєструвати ваш ключ безпеки.<br/> {0}",
-    "webauthn-error-api-get": "Помилка автентифікації за допомогою ключа безпеки.<br/> {0}",
+    "webauthn-error-registration": "Не вдалося зареєструвати ваш ключ безпеки. {0}",
+    "webauthn-error-api-get": "Помилка автентифікації за допомогою ключа безпеки. {0}",
     "webauthn-error-different-user":
         "Перший автентифікований користувач не є тим, хто автентифікований ключем безпеки.",
-    "webauthn-error-auth-verification": "Результат автентифікації ключа безпеки невірний.<br/> {0}",
-    "webauthn-error-register-verification": "Результат реєстрації ключа безпеки невірний.<br/> {0}",
+    "webauthn-error-auth-verification": "Результат автентифікації ключа безпеки невірний. {0}",
+    "webauthn-error-register-verification": "Результат реєстрації ключа безпеки невірний. {0}",
     "webauthn-error-user-not-found": "Невідомий користувач автентифікований за допомогою ключа безпеки.",
     "identity-provider-redirector": "Підключіться до іншого провайдера облікових записів",
     "identity-provider-login-label": "Або увійдіть за допомогою",

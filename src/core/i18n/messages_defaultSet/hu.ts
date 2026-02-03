@@ -171,7 +171,7 @@ const messages = {
     emailLinkIdp3: "az ellenőrző kód ismételt kiküldéséhez.",
     emailLinkIdp4: "Ha egy másik böngészőben már jóváhagyta az e-mail címét",
     emailLinkIdp5: "a folytatáshoz.",
-    backToLogin: "&laquo; Vissza a belépéshez",
+    backToLogin: "« Vissza a belépéshez",
     emailInstruction:
         "Adja meg a felhasználónevét vagy e-mail címét, hogy az új jelszó beállításához szükséges tudnivalókat elküldhessük Önnek.",
     emailInstructionUsername:
@@ -216,8 +216,10 @@ const messages = {
     invalidEmailMessage: "Érvénytelen e-mail cím.",
     accountDisabledMessage:
         "Felhasználói fiókja inaktív, kérem, vegye fel a kapcsolatot az alkalmazás adminisztrátorával.",
-    accountTemporarilyDisabledMessage:
-        "Felhasználói fiókja átmenetileg inaktív, kérem, vegye fel a kapcsolatot az alkalmazás adminisztrátorával, vagy próbálkozzon később.",
+    accountTemporarilyDisabledMessage: "Érvénytelen felhasználónév vagy jelszó.",
+    accountPermanentlyDisabledMessage: "Érvénytelen felhasználónév vagy jelszó.",
+    accountTemporarilyDisabledMessageTotp: "Érvénytelen hitelesítő kód.",
+    accountPermanentlyDisabledMessageTotp: "Érvénytelen hitelesítő kód.",
     expiredCodeMessage: "Belépési időtúllépés, kérem, lépjen be újra.",
     expiredActionMessage: "A művelet érvényességi ideje lejárt. Kérem, lépjen be újra.",
     expiredActionTokenNoSessionMessage: "A művelet érvényességi ideje lejárt.",
@@ -374,7 +376,7 @@ const messages = {
         "Erősítse meg a(z) {0} személyazonosság-kezelő {1} fiókjának összekötését a felhasználói fiókjával.",
     confirmEmailAddressVerification: "Erősítse meg a(z) {0} e-mail cím érvényességét.",
     confirmExecutionOfActions: "Hajtsa végre a következő művelet(ek)et",
-    backToApplication: "&laquo; Vissza az alkalmazásba",
+    backToApplication: "« Vissza az alkalmazásba",
     missingParameterMessage: "Hiányzó paraméterek: {0}",
     clientNotFoundMessage: "A kliens nem található.",
     clientDisabledMessage: "A kliens inaktív.",
@@ -384,7 +386,7 @@ const messages = {
         "Ebben a munkamenetben már korábban belépett '{0}' felhasználónévvel. Kérem, előbb lépjen ki a munkamenetből.",
     brokerLinkingSessionExpired:
         "Ügynök fiók összekötést kezdeményezett, de az aktuális munkamenete már érvénytelen.",
-    proceedWithAction: "&raquo; Kattintson ide a folytatáshoz",
+    proceedWithAction: "» Kattintson ide a folytatáshoz",
     acrNotFulfilled: "A hitelesítési követelmények nem teljesültek",
     "requiredAction.CONFIGURE_TOTP": "Egyszer használatos jelszó (OTP) beállítása",
     "requiredAction.TERMS_AND_CONDITIONS": "Felhasználási feltételek",
@@ -428,9 +430,8 @@ const messages = {
     "auth-username-form-help-text": "Kezdje meg a belépést a felhasználónevének megadásával",
     "auth-username-password-form-display-name": "Felhasználónév és jelszó",
     "auth-username-password-form-help-text": "Lépjen be a felhasználóneve és jelszava megadásával.",
-    "auth-recovery-authn-code-form-display-name": "Biztonsági hitelesítő kód",
-    "auth-recovery-authn-code-form-help-text":
-        "Írjon be egy biztonsági kódot a korábban generáltak közül.",
+    "recovery-authn-codes-display-name": "Biztonsági hitelesítő kód",
+    "recovery-authn-codes-help-text": "Írjon be egy biztonsági kódot a korábban generáltak közül.",
     "auth-recovery-code-info-message": "Írja be a használni kívánt biztonsági kódot",
     "auth-recovery-code-prompt": "Biztonsági kód #{0}",
     "auth-recovery-code-header": "Bejelentkezés egy biztonsági kód segítségével",

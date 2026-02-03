@@ -70,8 +70,7 @@ const messages = {
     country: "Land",
     emailVerified: "E-postadresse bekreftet",
     gssDelegationCredential: "GSS legitimasjons-delegering",
-    loginTotpStep1:
-        'Installer <a href="https://freeotp.github.io/" target="_blank">FreeOTP</a> eller Google Authenticator på din mobiltelefon. Begge applikasjoner er tilgjengelige på <a href="https://play.google.com">Google Play</a> og Apple App Store.',
+    loginTotpStep1: "Installer en av følgende applikasjoner på mobilen din:",
     loginTotpStep2: "Åpne applikasjonen og skann strekkoden eller skriv inn koden",
     loginTotpStep3: "Skriv inn engangskoden fra applikasjonen og klikk send inn for å fullføre",
     loginOtpOneTime: "Engangskode",
@@ -86,7 +85,7 @@ const messages = {
         "En e-post med instruksjoner for å koble {0} konto med din {2} konto har blitt sendt til deg.",
     emailLinkIdp2: "Ikke mottatt en bekreftelseskode i e-posten vi sendte til deg?",
     emailLinkIdp3: "for å sende e-post på nytt.",
-    backToLogin: "&laquo; Tilbake til innlogging",
+    backToLogin: "« Tilbake til innlogging",
     emailInstruction:
         "Skriv inn e-postadressen din og vi vil sende deg instruksjoner for hvordan du oppretter et nytt passord.",
     copyCodeInstruction: "Vennligst kopier denne koden og lim den inn i applikasjonen din:",
@@ -119,8 +118,10 @@ const messages = {
     invalidUserMessage: "Ugyldig brukernavn eller passord.",
     invalidEmailMessage: "Ugyldig e-postadresse.",
     accountDisabledMessage: "Konto er deaktivert, kontakt administrator.",
-    accountTemporarilyDisabledMessage:
-        "Konto er midlertidig deaktivert, kontakt administrator eller prøv på nytt senere.",
+    accountTemporarilyDisabledMessage: "Ugyldig brukernavn eller passord.",
+    accountPermanentlyDisabledMessage: "Ugyldig brukernavn eller passord.",
+    accountTemporarilyDisabledMessageTotp: "Ugyldig engangskode.",
+    accountPermanentlyDisabledMessageTotp: "Ugyldig engangskode.",
     expiredCodeMessage: "Login ble tidsavbrutt. Vennligst logg inn på nytt.",
     missingFirstNameMessage: "Vennligst oppgi fornavn.",
     missingLastNameMessage: "Vennligst oppgi etternavn.",
@@ -207,7 +208,7 @@ const messages = {
     emailVerifiedMessage: "Din e-postadresse har blitt verifisert.",
     staleEmailVerificationLink:
         "Lenken du klikket er utgått og er ikke lenger gyldig. Har du kanskje allerede bekreftet e-postadressen din?",
-    backToApplication: "&laquo; Tilbake til applikasjonen",
+    backToApplication: "« Tilbake til applikasjonen",
     missingParameterMessage: "Manglende parameter: {0}",
     clientNotFoundMessage: "Klient ikke funnet.",
     clientDisabledMessage: "Klient deaktivert.",

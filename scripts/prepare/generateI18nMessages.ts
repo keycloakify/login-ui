@@ -58,11 +58,19 @@ export async function generateI18nMessages() {
     }
 
     const languages = Object.keys(messages);
-
+    const differences = {
+        inLanguagesButNotInExtra: languages.filter(
+            lang => !Object.keys(keycloakifyExtraMessages).includes(lang)
+        ),
+        inExtraButNotInLanguages: Object.keys(keycloakifyExtraMessages).filter(
+            lang => !languages.includes(lang)
+        )
+    };
     assert(
         same(languages, Object.keys(keycloakifyExtraMessages), {
             takeIntoAccountArraysOrdering: false
-        })
+        }),
+        `Languages mismatch found:\n- Missing in keycloakifyExtraMessages: ${JSON.stringify(differences.inLanguagesButNotInExtra)}\n- Extra in keycloakifyExtraMessages: ${JSON.stringify(differences.inExtraButNotInLanguages)}`
     );
 
     deepAssign({

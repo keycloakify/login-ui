@@ -1,20 +1,27 @@
 export const THEME_NAME = "login";
 
 export const keycloakifyExtraMessages: Record<
-    | "en"
     | "ar"
+    | "az"
     | "ca"
     | "cs"
     | "da"
     | "de"
     | "el"
+    | "en"
     | "es"
+    | "eu"
     | "fa"
     | "fi"
     | "fr"
+    | "hr"
     | "hu"
     | "it"
     | "ja"
+    | "ka"
+    | "kk"
+    | "ko"
+    | "ky"
     | "lt"
     | "lv"
     | "nl"
@@ -22,15 +29,16 @@ export const keycloakifyExtraMessages: Record<
     | "pl"
     | "pt"
     | "pt-BR"
+    | "ro"
     | "ru"
     | "sk"
+    | "sl"
     | "sv"
     | "th"
     | "tr"
     | "uk"
-    | "ka"
-    | "zh-CN"
-    | "zh-TW",
+    | "zh-Hans"
+    | "zh-Hant",
     Record<
         | "shouldBeEqual"
         | "shouldBeDifferent"
@@ -78,6 +86,21 @@ export const keycloakifyExtraMessages: Record<
         linkIdpActionTitle: "ربط {0}",
         linkIdpActionMessage: "هل تريد ربط حسابك مع {0}؟",
         "passkey-doAuthenticate": "تسجيل الدخول باستخدام مفتاح المرور"
+    },
+    az: {
+        shouldBeEqual: "{0} {1}-ə bərabər olmalıdır",
+        shouldBeDifferent: "{0} {1}-dən fərqli olmalıdır",
+        shouldMatchPattern: "Şablon uyğun olmalıdır: `/{0}/`",
+        mustBeAnInteger: "Tam ədəd olmalıdır",
+        notAValidOption: "Etibarlı variant deyil",
+        selectAnOption: "Variant seçin",
+        remove: "Sil",
+        addValue: "Dəyər əlavə et",
+        languages: "Dillər",
+        "organization.select": "Davam etmək üçün təşkilat seçin:",
+        linkIdpActionTitle: "{0} ilə əlaqələndirmə",
+        linkIdpActionMessage: "Hesabınızı {0} ilə əlaqələndirmək istəyirsiniz?",
+        "passkey-doAuthenticate": "Passkey ilə daxil ol"
     },
     ca: {
         shouldBeEqual: "{0} hauria de ser igual a {1}",
@@ -169,6 +192,21 @@ export const keycloakifyExtraMessages: Record<
         linkIdpActionMessage: "¿Quieres vincular tu cuenta con {0}?",
         "passkey-doAuthenticate": "Iniciar sesión con Passkey"
     },
+    eu: {
+        shouldBeEqual: "{0} {1} berdina izan behar da",
+        shouldBeDifferent: "{0} {1} desberdina izan behar da",
+        shouldMatchPattern: "Ereduak bat etorri behar du: `/{0}/`",
+        mustBeAnInteger: "Zenbaki osoa izan behar da",
+        notAValidOption: "Ez da baliozko aukera",
+        selectAnOption: "Hautatu aukera bat",
+        remove: "Kendu",
+        addValue: "Gehitu balioa",
+        languages: "Hizkuntzak",
+        "organization.select": "Hautatu erakunde bat jarraitzeko:",
+        linkIdpActionTitle: "{0} lotzen",
+        linkIdpActionMessage: "Zure kontua {0} ekin lotu nahi duzu?",
+        "passkey-doAuthenticate": "Saioa hasi Passkey-rekin"
+    },
     fa: {
         shouldBeEqual: "{0} باید برابر باشد با {1}",
         shouldBeDifferent: "{0} باید متفاوت باشد از {1}",
@@ -213,6 +251,21 @@ export const keycloakifyExtraMessages: Record<
         linkIdpActionTitle: "Association à {0}",
         linkIdpActionMessage: "Voulez-vous lier votre compte à {0} ?",
         "passkey-doAuthenticate": "Se connecter avec une Passkey"
+    },
+    hr: {
+        shouldBeEqual: "{0} bi trebao biti jednak {1}",
+        shouldBeDifferent: "{0} bi trebao biti različit od {1}",
+        shouldMatchPattern: "Uzorak bi trebao odgovarati: `/{0}/`",
+        mustBeAnInteger: "Mora biti cijeli broj",
+        notAValidOption: "Nije valjana opcija",
+        selectAnOption: "Odaberite opciju",
+        remove: "Ukloni",
+        addValue: "Dodaj vrijednost",
+        languages: "Jezici",
+        "organization.select": "Odaberite organizaciju za nastavak:",
+        linkIdpActionTitle: "Povezivanje s {0}",
+        linkIdpActionMessage: "Želite li povezati svoj račun s {0}?",
+        "passkey-doAuthenticate": "Prijavite se pomoću pristupnog ključa"
     },
     hu: {
         shouldBeEqual: "{0} egyenlő kell legyen {1}-vel",
@@ -364,6 +417,21 @@ export const keycloakifyExtraMessages: Record<
         linkIdpActionMessage: "Deseja vincular sua conta ao {0}?",
         "passkey-doAuthenticate": "Entrar com chave de acesso"
     },
+    ro: {
+        shouldBeEqual: "{0} ar trebui să fie egal cu {1}",
+        shouldBeDifferent: "{0} ar trebui să fie diferit de {1}",
+        shouldMatchPattern: "Modelul ar trebui să se potrivească: `/{0}/`",
+        mustBeAnInteger: "Trebuie să fie un număr întreg",
+        notAValidOption: "Nu este o opțiune validă",
+        selectAnOption: "Selectați o opțiune",
+        remove: "Elimină",
+        addValue: "Adaugă valoare",
+        languages: "Limbi",
+        "organization.select": "Selectați o organizație pentru a continua:",
+        linkIdpActionTitle: "Asociere cu {0}",
+        linkIdpActionMessage: "Doriți să vă asociați contul cu {0}?",
+        "passkey-doAuthenticate": "Autentificare cu cheie de acces"
+    },
     ru: {
         shouldBeEqual: "{0} должно быть равно {1}",
         shouldBeDifferent: "{0} должно отличаться от {1}",
@@ -393,6 +461,21 @@ export const keycloakifyExtraMessages: Record<
         linkIdpActionTitle: "Prepájanie {0}",
         linkIdpActionMessage: "Chcete prepojiť svoj účet s {0}?",
         "passkey-doAuthenticate": "Prihlásiť sa pomocou prístupového kľúča"
+    },
+    sl: {
+        shouldBeEqual: "{0} bi moral biti enak {1}",
+        shouldBeDifferent: "{0} bi moral biti različen od {1}",
+        shouldMatchPattern: "Vzorec se mora ujemati: `/{0}/`",
+        mustBeAnInteger: "Mora biti celo število",
+        notAValidOption: "Ni veljavna možnost",
+        selectAnOption: "Izberite možnost",
+        remove: "Odstrani",
+        addValue: "Dodaj vrednost",
+        languages: "Jeziki",
+        "organization.select": "Izberite organizacijo za nadaljevanje:",
+        linkIdpActionTitle: "Povezovanje {0}",
+        linkIdpActionMessage: "Ali želite povezati svoj račun z {0}?",
+        "passkey-doAuthenticate": "Prijava s ključem za dostop"
     },
     sv: {
         shouldBeEqual: "{0} bör vara lika med {1}",
@@ -469,7 +552,52 @@ export const keycloakifyExtraMessages: Record<
         linkIdpActionMessage: "გსურთ თქვენი ანგარიშის {0}-თან დაკავშირება?",
         "passkey-doAuthenticate": "Passkey-ით შესვლა"
     },
-    "zh-CN": {
+    kk: {
+        shouldBeEqual: "{0} {1}-ге тең болуы керек",
+        shouldBeDifferent: "{0} {1}-ден өзгеше болуы керек",
+        shouldMatchPattern: "Үлгі сәйкес келуі керек: `/{0}/`",
+        mustBeAnInteger: "Бүтін сан болуы керек",
+        notAValidOption: "Жарамды нұсқа емес",
+        selectAnOption: "Нұсқаны таңдаңыз",
+        remove: "Жою",
+        addValue: "Мән қосу",
+        languages: "Тілдер",
+        "organization.select": "Жалғастыру үшін ұйымды таңдаңыз:",
+        linkIdpActionTitle: "{0} байланыстыру",
+        linkIdpActionMessage: "Тіркелгіңізді {0} байланыстырғыңыз келе ме?",
+        "passkey-doAuthenticate": "Passkey арқылы кіру"
+    },
+    ko: {
+        shouldBeEqual: "{0}은(는) {1}과(와) 같아야 합니다",
+        shouldBeDifferent: "{0}은(는) {1}과(와) 달라야 합니다",
+        shouldMatchPattern: "패턴이 일치해야 합니다: `/{0}/`",
+        mustBeAnInteger: "정수여야 합니다",
+        notAValidOption: "유효한 옵션이 아닙니다",
+        selectAnOption: "옵션을 선택하세요",
+        remove: "제거",
+        addValue: "값 추가",
+        languages: "언어",
+        "organization.select": "계속하려면 조직을 선택하세요:",
+        linkIdpActionTitle: "{0} 연결",
+        linkIdpActionMessage: "계정을 {0}에 연결하시겠습니까?",
+        "passkey-doAuthenticate": "패스키로 로그인"
+    },
+    ky: {
+        shouldBeEqual: "{0} {1} менен барабар болушу керек",
+        shouldBeDifferent: "{0} {1} менен айырмаланышы керек",
+        shouldMatchPattern: "Үлгү дал келиши керек: `/{0}/`",
+        mustBeAnInteger: "Бүтүн сан болушу керек",
+        notAValidOption: "Жарактуу вариант эмес",
+        selectAnOption: "Вариантты тандаңыз",
+        remove: "Өчүрүү",
+        addValue: "Маани кошуу",
+        languages: "Тилдер",
+        "organization.select": "Улантуу үчүн уюмду тандаңыз:",
+        linkIdpActionTitle: "{0} байланыштыруу",
+        linkIdpActionMessage: "Аккаунтуңузду {0} менен байланыштыргыңыз келеби?",
+        "passkey-doAuthenticate": "Passkey менен кирүү"
+    },
+    "zh-Hans": {
         shouldBeEqual: "{0} 应该等于 {1}",
         shouldBeDifferent: "{0} 应该不同于 {1}",
         shouldMatchPattern: "模式应匹配: `/{0}/`",
@@ -484,7 +612,7 @@ export const keycloakifyExtraMessages: Record<
         linkIdpActionMessage: "是否将您的账户与 {0} 关联？",
         "passkey-doAuthenticate": "使用通行密钥登录"
     },
-    "zh-TW": {
+    "zh-Hant": {
         shouldBeEqual: "{0} 應該等於 {1}",
         shouldBeDifferent: "{0} 應該不同於 {1}",
         shouldMatchPattern: "模式應匹配: `/{0}/`",

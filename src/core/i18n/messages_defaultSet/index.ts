@@ -9,6 +9,8 @@ export async function fetchMessages_defaultSet(currentLanguageTag: string) {
                 return en;
             case "ar":
                 return import("./ar");
+            case "az":
+                return import("./az");
             case "ca":
                 return import("./ca");
             case "cs":
@@ -21,12 +23,16 @@ export async function fetchMessages_defaultSet(currentLanguageTag: string) {
                 return import("./el");
             case "es":
                 return import("./es");
+            case "eu":
+                return import("./eu");
             case "fa":
                 return import("./fa");
             case "fi":
                 return import("./fi");
             case "fr":
                 return import("./fr");
+            case "hr":
+                return import("./hr");
             case "hu":
                 return import("./hu");
             case "it":
@@ -35,6 +41,12 @@ export async function fetchMessages_defaultSet(currentLanguageTag: string) {
                 return import("./ja");
             case "ka":
                 return import("./ka");
+            case "kk":
+                return import("./kk");
+            case "ko":
+                return import("./ko");
+            case "ky":
+                return import("./ky");
             case "lt":
                 return import("./lt");
             case "lv":
@@ -49,10 +61,14 @@ export async function fetchMessages_defaultSet(currentLanguageTag: string) {
                 return import("./pt");
             case "pt-BR":
                 return import("./pt-BR");
+            case "ro":
+                return import("./ro");
             case "ru":
                 return import("./ru");
             case "sk":
                 return import("./sk");
+            case "sl":
+                return import("./sl");
             case "sv":
                 return import("./sv");
             case "th":
@@ -61,10 +77,10 @@ export async function fetchMessages_defaultSet(currentLanguageTag: string) {
                 return import("./tr");
             case "uk":
                 return import("./uk");
-            case "zh-CN":
-                return import("./zh-CN");
-            case "zh-TW":
-                return import("./zh-TW");
+            case "zh-Hans":
+                return import("./zh-Hans");
+            case "zh-Hant":
+                return import("./zh-Hant");
             default:
                 return { default: {} };
         }

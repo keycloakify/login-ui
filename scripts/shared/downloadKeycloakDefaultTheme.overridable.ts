@@ -4,7 +4,7 @@ import { join as pathJoin } from "path";
 import type { Param0 } from "tsafe";
 import { objectKeys } from "tsafe/objectKeys";
 
-export const KEYCLOAK_VERSION = "25.0.4";
+export const KEYCLOAK_VERSION = "26.5.2";
 
 export function createOnArchiveFile() {
     let kcNodeModulesKeepFilePaths: Set<string> | undefined = undefined;
