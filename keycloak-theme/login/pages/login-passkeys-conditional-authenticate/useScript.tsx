@@ -16,7 +16,7 @@ export function useScript(params: { webAuthnButtonId: string }) {
     const { msgStr, isFetchingTranslations } = useI18n();
 
     const { insertScriptTags } = useInsertScriptTags({
-        effectId: "LoginRecoveryAuthnCodeConfig",
+        effectId: "LoginPasskeysConditionalAuthenticate",
         scriptTags: [
             {
                 type: "module",
@@ -37,11 +37,24 @@ export function useScript(params: { webAuthnButtonId: string }) {
                             ...input,
                             errmsg : ${JSON.stringify(msgStr("webauthn-unsupported-browser-text"))}
                         });
-                    });
+                    }, { once: true });
 
                     initAuthenticate({
                         ...input,
                         errmsg : ${JSON.stringify(msgStr("passkey-unsupported-browser-text"))}
+                    }, available => {
+                        const loginForm = document.getElementById("kc-form-login");
+                        const passkeyButton = document.getElementById("kc-form-passkey-button");
+
+                        if (!loginForm || !passkeyButton) {
+                            return;
+                        }
+
+                        if (available) {
+                            loginForm.style.display = "block";
+                        } else {
+                            passkeyButton.style.display = "block";
+                        }
                     });
                 `
             }

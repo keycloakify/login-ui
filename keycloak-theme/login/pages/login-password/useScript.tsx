@@ -37,7 +37,7 @@ export function useScript(params: { webAuthnButtonId: string }) {
                             ...input,
                             errmsg : ${JSON.stringify(msgStr("webauthn-unsupported-browser-text"))}
                         });
-                    });
+                    }, { once: true });
 
                     initAuthenticate({
                         ...input,
@@ -49,7 +49,7 @@ export function useScript(params: { webAuthnButtonId: string }) {
     });
 
     useEffect(() => {
-        if (isFetchingTranslations) {
+        if (isFetchingTranslations || kcContext.enableWebAuthnConditionalUI !== true) {
             return;
         }
 
