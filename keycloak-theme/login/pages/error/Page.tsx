@@ -17,9 +17,7 @@ export function Page() {
                     className="instruction"
                     dangerouslySetInnerHTML={{ __html: kcSanitize(kcContext.message.summary) }}
                 />
-                {!kcContext.skipLink &&
-                    kcContext.client !== undefined &&
-                    kcContext.client.baseUrl !== undefined && (
+                {!kcContext.skipLink && !!kcContext.client?.baseUrl && (
                         <p>
                             <a id="backToApplication" href={kcContext.client.baseUrl}>
                                 {msg("backToApplication")}
