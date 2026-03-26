@@ -1,16 +1,14 @@
 import { assert } from "tsafe/assert";
-import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
+import { ActionGroup, Button } from "../../components/Buttons";
 import { Template } from "../../components/Template";
 
 export function Page() {
     const { kcContext } = useKcContext();
     assert(kcContext.pageId === "delete-account-confirm.ftl");
 
-    const { kcClsx } = useKcClsx();
-
-    const { msg, msgStr } = useI18n();
+    const { msg } = useI18n();
 
     return (
         <Template headerNode={msg("deleteAccountConfirm")}>
@@ -31,28 +29,22 @@ export function Page() {
                     <li>{msg("errasingData")}</li>
                 </ul>
                 <p className="delete-account-text">{msg("finalDeletionConfirmation")}</p>
-                <div id="kc-form-buttons">
-                    <input
-                        className={kcClsx("kcButtonClass", "kcButtonPrimaryClass", "kcButtonLargeClass")}
+                <ActionGroup horizontal>
+                    <Button
+                        classKeys={["kcButtonPrimaryClass"]}
                         type="submit"
-                        value={msgStr("doConfirmDelete")}
+                        label="doConfirmDelete"
                     />
                     {kcContext.triggered_from_aia && (
-                        <button
-                            className={kcClsx(
-                                "kcButtonClass",
-                                "kcButtonDefaultClass",
-                                "kcButtonLargeClass"
-                            )}
-                            style={{ marginLeft: "calc(100% - 220px)" }}
+                        <Button
+                            classKeys={["kcButtonSecondaryClass"]}
                             type="submit"
                             name="cancel-aia"
                             value="true"
-                        >
-                            {msgStr("doCancel")}
-                        </button>
+                            label="doCancel"
+                        />
                     )}
-                </div>
+                </ActionGroup>
             </form>
         </Template>
     );

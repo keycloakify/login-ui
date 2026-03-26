@@ -5,6 +5,7 @@ import { kcSanitize } from "@keycloakify/login-ui/kcSanitize";
 
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
+import { LoginButton } from "../../components/Buttons";
 import { Template } from "../../components/Template";
 
 export function Page() {
@@ -13,7 +14,7 @@ export function Page() {
 
     const { kcClsx } = useKcClsx();
 
-    const { msg, msgStr } = useI18n();
+    const { msg } = useI18n();
 
     const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -99,26 +100,7 @@ export function Page() {
                     </div>
                 </div>
 
-                <div className={kcClsx("kcFormGroupClass")}>
-                    <div id="kc-form-options" className={kcClsx("kcFormOptionsClass")}>
-                        <div className={kcClsx("kcFormOptionsWrapperClass")}></div>
-                    </div>
-                    <div id="kc-form-buttons" className={kcClsx("kcFormButtonsClass")}>
-                        <input
-                            className={kcClsx(
-                                "kcButtonClass",
-                                "kcButtonPrimaryClass",
-                                "kcButtonBlockClass",
-                                "kcButtonLargeClass"
-                            )}
-                            name="login"
-                            id="kc-login"
-                            type="submit"
-                            value={msgStr("doLogIn")}
-                            disabled={isSubmitting}
-                        />
-                    </div>
-                </div>
+                <LoginButton disabled={isSubmitting} />
             </form>
         </Template>
     );

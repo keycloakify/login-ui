@@ -4,6 +4,7 @@ import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
 import { useScript } from "./useScript";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
+import { ActionGroup, Button } from "../../components/Buttons";
 import { Template } from "../../components/Template";
 import { LogoutOtherSessions } from "../../components/LogoutOtherSessions";
 
@@ -120,47 +121,35 @@ export function Page() {
 
                 <LogoutOtherSessions />
 
-                {isAppInitiatedAction ? (
-                    <>
-                        <input
+                <ActionGroup>
+                    {isAppInitiatedAction ? (
+                        <>
+                            <Button
+                                type="submit"
+                                classKeys={["kcButtonPrimaryClass"]}
+                                id="saveRecoveryAuthnCodesBtn"
+                                label="recovery-codes-action-complete"
+                                disabled
+                            />
+                            <Button
+                                type="submit"
+                                classKeys={["kcButtonSecondaryClass"]}
+                                id="cancelRecoveryAuthnCodesBtn"
+                                name="cancel-aia"
+                                value="true"
+                                label="recovery-codes-action-cancel"
+                            />
+                        </>
+                    ) : (
+                        <Button
                             type="submit"
-                            className={kcClsx(
-                                "kcButtonClass",
-                                "kcButtonPrimaryClass",
-                                "kcButtonLargeClass"
-                            )}
+                            classKeys={["kcButtonPrimaryClass"]}
                             id="saveRecoveryAuthnCodesBtn"
-                            value={msgStr("recovery-codes-action-complete")}
+                            label="recovery-codes-action-complete"
                             disabled
                         />
-                        <button
-                            type="submit"
-                            className={kcClsx(
-                                "kcButtonClass",
-                                "kcButtonDefaultClass",
-                                "kcButtonLargeClass"
-                            )}
-                            id="cancelRecoveryAuthnCodesBtn"
-                            name="cancel-aia"
-                            value="true"
-                        >
-                            {msg("recovery-codes-action-cancel")}
-                        </button>
-                    </>
-                ) : (
-                    <input
-                        type="submit"
-                        className={kcClsx(
-                            "kcButtonClass",
-                            "kcButtonPrimaryClass",
-                            "kcButtonBlockClass",
-                            "kcButtonLargeClass"
-                        )}
-                        id="saveRecoveryAuthnCodesBtn"
-                        value={msgStr("recovery-codes-action-complete")}
-                        disabled
-                    />
-                )}
+                    )}
+                </ActionGroup>
             </form>
         </Template>
     );

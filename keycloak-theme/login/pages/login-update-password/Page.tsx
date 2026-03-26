@@ -5,6 +5,7 @@ import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
 import { Template } from "../../components/Template";
 import { PasswordWrapper } from "../../components/PasswordWrapper";
+import { ActionGroup, Button } from "../../components/Buttons";
 import { LogoutOtherSessions } from "../../components/LogoutOtherSessions";
 
 export function Page() {
@@ -13,7 +14,7 @@ export function Page() {
 
     const { kcClsx } = useKcClsx();
 
-    const { msg, msgStr } = useI18n();
+    const { msg } = useI18n();
 
     const { url, messagesPerField, isAppInitiatedAction } = kcContext;
 
@@ -99,32 +100,23 @@ export function Page() {
                 </div>
                 <div className={kcClsx("kcFormGroupClass")}>
                     <LogoutOtherSessions />
-                    <div id="kc-form-buttons" className={kcClsx("kcFormButtonsClass")}>
-                        <input
-                            className={kcClsx(
-                                "kcButtonClass",
-                                "kcButtonPrimaryClass",
-                                !isAppInitiatedAction && "kcButtonBlockClass",
-                                "kcButtonLargeClass"
-                            )}
+
+                    <ActionGroup horizontal={isAppInitiatedAction} className={kcClsx("kcFormButtonsClass")}>
+                        <Button
+                            classKeys={["kcButtonPrimaryClass"]}
                             type="submit"
-                            value={msgStr("doSubmit")}
+                            label="doSubmit"
                         />
                         {isAppInitiatedAction && (
-                            <button
-                                className={kcClsx(
-                                    "kcButtonClass",
-                                    "kcButtonDefaultClass",
-                                    "kcButtonLargeClass"
-                                )}
+                            <Button
+                                classKeys={["kcButtonSecondaryClass"]}
                                 type="submit"
                                 name="cancel-aia"
                                 value="true"
-                            >
-                                {msg("doCancel")}
-                            </button>
+                                label="doCancel"
+                            />
                         )}
-                    </div>
+                    </ActionGroup>
                 </div>
             </form>
         </Template>

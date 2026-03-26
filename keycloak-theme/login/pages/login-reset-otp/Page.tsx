@@ -3,6 +3,7 @@ import { Fragment } from "react";
 import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
+import { ActionGroup, Button } from "../../components/Buttons";
 import { Template } from "../../components/Template";
 
 export function Page() {
@@ -13,7 +14,7 @@ export function Page() {
 
     const { url, messagesPerField, configuredOtpCredentials } = kcContext;
 
-    const { msg, msgStr } = useI18n();
+    const { msg } = useI18n();
 
     return (
         <Template displayMessage={!messagesPerField.existsError("totp")} headerNode={msg("doLogIn")}>
@@ -58,21 +59,14 @@ export function Page() {
                                 </label>
                             </Fragment>
                         ))}
-                        <div className={kcClsx("kcFormGroupClass")}>
-                            <div id="kc-form-buttons" className={kcClsx("kcFormButtonsClass")}>
-                                <input
-                                    id="kc-otp-reset-form-submit"
-                                    className={kcClsx(
-                                        "kcButtonClass",
-                                        "kcButtonPrimaryClass",
-                                        "kcButtonBlockClass",
-                                        "kcButtonLargeClass"
-                                    )}
-                                    type="submit"
-                                    value={msgStr("doSubmit")}
-                                />
-                            </div>
-                        </div>
+                        <ActionGroup>
+                            <Button
+                                id="kc-otp-reset-form-submit"
+                                classKeys={["kcButtonPrimaryClass"]}
+                                type="submit"
+                                label="doSubmit"
+                            />
+                        </ActionGroup>
                     </div>
                 </div>
             </form>

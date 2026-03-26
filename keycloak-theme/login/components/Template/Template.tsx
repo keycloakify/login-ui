@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { useEffect } from "react";
 import { clsx } from "@keycloakify/login-ui/tools/clsx";
 import { kcSanitize } from "@keycloakify/login-ui/kcSanitize";
-import { useSetClassName } from "@keycloakify/login-ui/tools/useSetClassName";
+import { useSetClassName } from "@keycloakify/login-ui/tools/useSetClassname";
 import { useInitializeTemplate } from "./useInitializeTemplate";
 import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
 import { useI18n } from "../../i18n";

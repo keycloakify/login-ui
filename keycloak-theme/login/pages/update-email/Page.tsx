@@ -5,6 +5,7 @@ import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
 import { Template } from "../../components/Template";
 import { UserProfileFormFields } from "../../components/UserProfileFormFields";
+import { ActionGroup, Button } from "../../components/Buttons";
 import { LogoutOtherSessions } from "../../components/LogoutOtherSessions";
 
 export function Page() {
@@ -13,7 +14,7 @@ export function Page() {
 
     const { kcClsx } = useKcClsx();
 
-    const { msg, msgStr } = useI18n();
+    const { msg } = useI18n();
 
     const [isFormSubmittable, setIsFormSubmittable] = useState(false);
 
@@ -40,33 +41,23 @@ export function Page() {
 
                     <LogoutOtherSessions />
 
-                    <div id="kc-form-buttons" className={kcClsx("kcFormButtonsClass")}>
-                        <input
+                    <ActionGroup className={kcClsx("kcFormButtonsClass")}>
+                        <Button
                             disabled={!isFormSubmittable}
-                            className={kcClsx(
-                                "kcButtonClass",
-                                "kcButtonPrimaryClass",
-                                !isAppInitiatedAction && "kcButtonBlockClass",
-                                "kcButtonLargeClass"
-                            )}
+                            classKeys={["kcButtonPrimaryClass"]}
                             type="submit"
-                            value={msgStr("doSubmit")}
+                            label="doSubmit"
                         />
                         {isAppInitiatedAction && (
-                            <button
-                                className={kcClsx(
-                                    "kcButtonClass",
-                                    "kcButtonDefaultClass",
-                                    "kcButtonLargeClass"
-                                )}
+                            <Button
+                                classKeys={["kcButtonSecondaryClass"]}
                                 type="submit"
                                 name="cancel-aia"
                                 value="true"
-                            >
-                                {msg("doCancel")}
-                            </button>
+                                label="doCancel"
+                            />
                         )}
-                    </div>
+                    </ActionGroup>
                 </div>
             </form>
         </Template>

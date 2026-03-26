@@ -2,6 +2,7 @@ import { assert } from "tsafe/assert";
 import { useScript } from "./useScript";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
+import { ActionGroup, Button } from "../../components/Buttons";
 import { Template } from "../../components/Template";
 import { LogoutOtherSessions } from "../../components/LogoutOtherSessions";
 import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
@@ -12,9 +13,9 @@ export function Page() {
 
     const { kcClsx } = useKcClsx();
 
-    const { msg, msgStr } = useI18n();
+    const { msg } = useI18n();
 
-    const webAuthnButtonId = "authenticateWebAuthnButton";
+    const webAuthnButtonId = "registerWebAuthn";
 
     useScript({ webAuthnButtonId });
 
@@ -43,18 +44,14 @@ export function Page() {
                     <LogoutOtherSessions />
                 </div>
             </form>
-            <input
-                type="submit"
-                className={kcClsx(
-                    "kcButtonClass",
-                    "kcButtonPrimaryClass",
-                    "kcButtonBlockClass",
-                    "kcButtonLargeClass"
-                )}
-                id={webAuthnButtonId}
-                value={msgStr("doRegisterSecurityKey")}
-            />
-
+            <ActionGroup>
+                <Button
+                    type="submit"
+                    classKeys={["kcButtonPrimaryClass"]}
+                    id={webAuthnButtonId}
+                    label="doRegisterSecurityKey"
+                />
+            </ActionGroup>
             {!kcContext.isSetRetry && kcContext.isAppInitiatedAction && (
                 <form
                     action={kcContext.url.loginAction}
@@ -62,22 +59,18 @@ export function Page() {
                     id="kc-webauthn-settings-form"
                     method="post"
                 >
-                    <button
+                    <Button
                         type="submit"
-                        className={kcClsx(
-                            "kcButtonClass",
-                            "kcButtonDefaultClass",
-                            "kcButtonBlockClass",
-                            "kcButtonLargeClass"
-                        )}
+                        classKeys={["kcButtonDefaultClass", "kcButtonBlockClass"
+                        ]}
                         id="cancelWebAuthnAIA"
                         name="cancel-aia"
                         value="true"
-                    >
-                        {msg("doCancel")}
-                    </button>
+                        label="doCancel"
+                    />
                 </form>
             )}
+
         </Template>
     );
 }

@@ -2,6 +2,7 @@ import { assert } from "tsafe/assert";
 import { useState } from "react";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
+import { ActionGroup, Button } from "../../components/Buttons";
 import { Template } from "../../components/Template";
 import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
 import { UserProfileFormFields } from "../../components/UserProfileFormFields";
@@ -12,7 +13,7 @@ export function Page() {
 
     const { kcClsx } = useKcClsx();
 
-    const { msg, msgStr } = useI18n();
+    const { msg } = useI18n();
 
     const [isFomSubmittable, setIsFomSubmittable] = useState(false);
 
@@ -29,24 +30,14 @@ export function Page() {
                 method="post"
             >
                 <UserProfileFormFields onIsFormSubmittableValueChange={setIsFomSubmittable} />
-                <div className={kcClsx("kcFormGroupClass")}>
-                    <div id="kc-form-options" className={kcClsx("kcFormOptionsClass")}>
-                        <div className={kcClsx("kcFormOptionsWrapperClass")} />
-                    </div>
-                    <div id="kc-form-buttons" className={kcClsx("kcFormButtonsClass")}>
-                        <input
-                            className={kcClsx(
-                                "kcButtonClass",
-                                "kcButtonPrimaryClass",
-                                "kcButtonBlockClass",
-                                "kcButtonLargeClass"
-                            )}
-                            type="submit"
-                            value={msgStr("doSubmit")}
-                            disabled={!isFomSubmittable}
-                        />
-                    </div>
-                </div>
+                <ActionGroup>
+                    <Button
+                        classKeys={["kcButtonPrimaryClass"]}
+                        type="submit"
+                        disabled={!isFomSubmittable}
+                        label="doSubmit"
+                    />
+                </ActionGroup>
             </form>
         </Template>
     );

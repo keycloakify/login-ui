@@ -4,6 +4,7 @@ import { clsx } from "@keycloakify/login-ui/tools/clsx";
 import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
+import { LoginButton } from "../../components/Buttons";
 import { Template } from "../../components/Template";
 import { useScript } from "./useScript";
 
@@ -169,22 +170,7 @@ export function Page() {
                                 </div>
                             </div>
 
-                            <div id="kc-form-buttons" className={kcClsx("kcFormGroupClass")}>
-                                <input
-                                    tabIndex={4}
-                                    disabled={isLoginButtonDisabled}
-                                    className={kcClsx(
-                                        "kcButtonClass",
-                                        "kcButtonPrimaryClass",
-                                        "kcButtonBlockClass",
-                                        "kcButtonLargeClass"
-                                    )}
-                                    name="login"
-                                    id="kc-login"
-                                    type="submit"
-                                    value={msgStr("doLogIn")}
-                                />
-                            </div>
+                            <LoginButton tabIndex={4} disabled={isLoginButtonDisabled} />
                         </form>
                     )}
                 </div>

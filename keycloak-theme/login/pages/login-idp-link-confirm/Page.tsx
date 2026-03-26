@@ -2,6 +2,7 @@ import { assert } from "tsafe/assert";
 import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
+import { ActionGroup, Button } from "../../components/Buttons";
 import { Template } from "../../components/Template";
 
 export function Page() {
@@ -15,36 +16,26 @@ export function Page() {
     return (
         <Template headerNode={msg("confirmLinkIdpTitle")}>
             <form id="kc-register-form" action={kcContext.url.loginAction} method="post">
-                <div className={kcClsx("kcFormGroupClass")}>
-                    <button
+                <ActionGroup>
+                    <Button
                         type="submit"
-                        className={kcClsx(
-                            "kcButtonClass",
-                            "kcButtonDefaultClass",
-                            "kcButtonBlockClass",
-                            "kcButtonLargeClass"
-                        )}
+                        classKeys={["kcButtonDefaultClass"]}
                         name="submitAction"
                         id="updateProfile"
                         value="updateProfile"
                     >
                         {msg("confirmLinkIdpReviewProfile")}
-                    </button>
-                    <button
+                    </Button>
+                    <Button
                         type="submit"
-                        className={kcClsx(
-                            "kcButtonClass",
-                            "kcButtonDefaultClass",
-                            "kcButtonBlockClass",
-                            "kcButtonLargeClass"
-                        )}
+                        className={kcClsx("kcButtonSecondaryClass")}
                         name="submitAction"
                         id="linkAccount"
                         value="linkAccount"
                     >
                         {msg("confirmLinkIdpContinue", kcContext.idpAlias)}
-                    </button>
-                </div>
+                    </Button>
+                </ActionGroup>
             </form>
         </Template>
     );

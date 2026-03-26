@@ -2,13 +2,14 @@ import { assert } from "tsafe/assert";
 import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
+import { ActionGroup, Button } from "../../components/Buttons";
 import { Template } from "../../components/Template";
 
 export function Page() {
     const { kcContext } = useKcContext();
     assert(kcContext.pageId === "login-oauth2-device-verify-user-code.ftl");
 
-    const { msg, msgStr } = useI18n();
+    const { msg } = useI18n();
 
     const { kcClsx } = useKcClsx();
 
@@ -39,25 +40,13 @@ export function Page() {
                     </div>
                 </div>
 
-                <div className={kcClsx("kcFormGroupClass")}>
-                    <div id="kc-form-options" className={kcClsx("kcFormOptionsClass")}>
-                        <div className={kcClsx("kcFormOptionsWrapperClass")}></div>
-                    </div>
-
-                    <div id="kc-form-buttons" className={kcClsx("kcFormButtonsClass")}>
-                        <div className={kcClsx("kcFormButtonsWrapperClass")}>
-                            <input
-                                className={kcClsx(
-                                    "kcButtonClass",
-                                    "kcButtonPrimaryClass",
-                                    "kcButtonLargeClass"
-                                )}
-                                type="submit"
-                                value={msgStr("doSubmit")}
-                            />
-                        </div>
-                    </div>
-                </div>
+                <ActionGroup>
+                    <Button
+                        classKeys={["kcButtonPrimaryClass"]}
+                        type="submit"
+                        label="doSubmit"
+                    />
+                </ActionGroup>
             </form>
         </Template>
     );

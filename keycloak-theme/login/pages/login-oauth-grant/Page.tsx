@@ -1,6 +1,6 @@
 import { assert } from "tsafe/assert";
-import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
 import { useI18n } from "../../i18n";
+import { ActionGroup, Button } from "../../components/Buttons";
 import { Template } from "../../components/Template";
 import { useKcContext } from "../../KcContext";
 
@@ -8,9 +8,7 @@ export function Page() {
     const { kcContext } = useKcContext();
     assert(kcContext.pageId === "login-oauth-grant.ftl");
 
-    const { msg, msgStr, advancedMsg, advancedMsgStr } = useI18n();
-
-    const { kcClsx } = useKcClsx();
+    const { msg, advancedMsg, advancedMsgStr } = useI18n();
 
     return (
         <Template
@@ -80,38 +78,22 @@ export function Page() {
 
                 <form className="form-actions" action={kcContext.url.oauthAction} method="POST">
                     <input type="hidden" name="code" value={kcContext.oauth.code} />
-                    <div className={kcClsx("kcFormGroupClass")}>
-                        <div id="kc-form-options">
-                            <div className={kcClsx("kcFormOptionsWrapperClass")}></div>
-                        </div>
-
-                        <div id="kc-form-buttons">
-                            <div className={kcClsx("kcFormButtonsWrapperClass")}>
-                                <input
-                                    className={kcClsx(
-                                        "kcButtonClass",
-                                        "kcButtonPrimaryClass",
-                                        "kcButtonLargeClass"
-                                    )}
-                                    name="accept"
-                                    id="kc-login"
-                                    type="submit"
-                                    value={msgStr("doYes")}
-                                />
-                                <input
-                                    className={kcClsx(
-                                        "kcButtonClass",
-                                        "kcButtonDefaultClass",
-                                        "kcButtonLargeClass"
-                                    )}
-                                    name="cancel"
-                                    id="kc-cancel"
-                                    type="submit"
-                                    value={msgStr("doNo")}
-                                />
-                            </div>
-                        </div>
-                    </div>
+                    <ActionGroup horizontal>
+                        <Button
+                            classKeys={["kcButtonPrimaryClass"]}
+                            name="accept"
+                            id="kc-login"
+                            type="submit"
+                            label="doYes"
+                        />
+                        <Button
+                            classKeys={["kcButtonSecondaryClass"]}
+                            name="cancel"
+                            id="kc-cancel"
+                            type="submit"
+                            label="doNo"
+                        />
+                    </ActionGroup>
                 </form>
                 <div className="clearfix"></div>
             </div>
