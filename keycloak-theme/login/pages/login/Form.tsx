@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { assert } from "tsafe/assert";
+import { LoginButton } from "../../components/Buttons";
 import { PasswordWrapper } from "../../components/PasswordWrapper";
 import { useI18n } from "../../i18n";
 import { useKcContext } from "../../KcContext";
@@ -147,28 +148,13 @@ export function Form() {
                                 </div>
                             </div>
 
-                            <div id="kc-form-buttons" className={kcClsx("kcFormGroupClass")}>
-                                <input
-                                    type="hidden"
-                                    id="id-hidden-input"
-                                    name="credentialId"
-                                    value={kcContext.auth.selectedCredential}
-                                />
-                                <input
-                                    tabIndex={7}
-                                    disabled={isLoginButtonDisabled}
-                                    className={kcClsx(
-                                        "kcButtonClass",
-                                        "kcButtonPrimaryClass",
-                                        "kcButtonBlockClass",
-                                        "kcButtonLargeClass"
-                                    )}
-                                    name="login"
-                                    id="kc-login"
-                                    type="submit"
-                                    value={msgStr("doLogIn")}
-                                />
-                            </div>
+                            <input
+                                type="hidden"
+                                id="id-hidden-input"
+                                name="credentialId"
+                                value={kcContext.auth.selectedCredential}
+                            />
+                            <LoginButton tabIndex={7} disabled={isLoginButtonDisabled} />
                         </form>
                     )}
                 </div>

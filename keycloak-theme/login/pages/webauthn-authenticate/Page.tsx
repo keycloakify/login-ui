@@ -5,6 +5,7 @@ import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
 import { useScript } from "./useScript";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
+import { ActionGroup, Button } from "../../components/Buttons";
 import { Template } from "../../components/Template";
 
 export function Page() {
@@ -15,7 +16,7 @@ export function Page() {
 
     const { url, realm, registrationDisabled, authenticators, shouldDisplayAuthenticators } = kcContext;
 
-    const { msg, msgStr, advancedMsg } = useI18n();
+    const { msg, advancedMsg } = useI18n();
 
     const webAuthnButtonId = "authenticateWebAuthnButton";
 
@@ -112,34 +113,34 @@ export function Page() {
                                                     </div>
                                                     {authenticator.transports.displayNameProperties
                                                         ?.length && (
-                                                        <div
-                                                            id={`kc-webauthn-authenticator-transport-${i}`}
-                                                            className={kcClsx(
-                                                                "kcSelectAuthListItemDescriptionClass"
-                                                            )}
-                                                        >
-                                                            {authenticator.transports.displayNameProperties
-                                                                .map((displayNameProperty, i, arr) => ({
-                                                                    displayNameProperty,
-                                                                    hasNext: i !== arr.length - 1
-                                                                }))
-                                                                .map(
-                                                                    ({
-                                                                        displayNameProperty,
-                                                                        hasNext
-                                                                    }) => (
-                                                                        <Fragment
-                                                                            key={displayNameProperty}
-                                                                        >
-                                                                            {advancedMsg(
-                                                                                displayNameProperty
-                                                                            )}
-                                                                            {hasNext && <span>, </span>}
-                                                                        </Fragment>
-                                                                    )
+                                                            <div
+                                                                id={`kc-webauthn-authenticator-transport-${i}`}
+                                                                className={kcClsx(
+                                                                    "kcSelectAuthListItemDescriptionClass"
                                                                 )}
-                                                        </div>
-                                                    )}
+                                                            >
+                                                                {authenticator.transports.displayNameProperties
+                                                                    .map((displayNameProperty, i, arr) => ({
+                                                                        displayNameProperty,
+                                                                        hasNext: i !== arr.length - 1
+                                                                    }))
+                                                                    .map(
+                                                                        ({
+                                                                            displayNameProperty,
+                                                                            hasNext
+                                                                        }) => (
+                                                                            <Fragment
+                                                                                key={displayNameProperty}
+                                                                            >
+                                                                                {advancedMsg(
+                                                                                    displayNameProperty
+                                                                                )}
+                                                                                {hasNext && <span>, </span>}
+                                                                            </Fragment>
+                                                                        )
+                                                                    )}
+                                                            </div>
+                                                        )}
                                                     <div
                                                         className={kcClsx(
                                                             "kcSelectAuthListItemDescriptionClass"
@@ -169,20 +170,14 @@ export function Page() {
                             )}
                         </>
                     )}
-                    <div id="kc-form-buttons" className={kcClsx("kcFormButtonsClass")}>
-                        <input
+                    <ActionGroup >
+                        <Button
                             id={webAuthnButtonId}
-                            type="button"
                             autoFocus
-                            value={msgStr("webauthn-doAuthenticate")}
-                            className={kcClsx(
-                                "kcButtonClass",
-                                "kcButtonPrimaryClass",
-                                "kcButtonBlockClass",
-                                "kcButtonLargeClass"
-                            )}
+                            label="webauthn-doAuthenticate"
+                            classKeys={["kcButtonPrimaryClass"]}
                         />
-                    </div>
+                    </ActionGroup>
                 </div>
             </div>
         </Template>

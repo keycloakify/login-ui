@@ -2,6 +2,7 @@ import { assert } from "tsafe/assert";
 import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
+import { ActionGroup, Button } from "../../components/Buttons";
 import { Template } from "../../components/Template";
 
 export function Page() {
@@ -10,7 +11,7 @@ export function Page() {
 
     const { kcClsx } = useKcClsx();
 
-    const { msg, msgStr } = useI18n();
+    const { msg } = useI18n();
 
     return (
         <Template
@@ -21,32 +22,22 @@ export function Page() {
                 {msg("linkIdpActionMessage", kcContext.idpDisplayName)}
             </div>
             <form className={kcClsx("kcFormClass")} action={kcContext.url.loginAction} method="post">
-                <div className={kcClsx("kcFormGroupClass")}>
-                    <div id="kc-form-buttons" className={kcClsx("kcFormButtonsClass")}>
-                        <input
-                            className={kcClsx(
-                                "kcButtonClass",
-                                "kcButtonPrimaryClass",
-                                "kcButtonLargeClass"
-                            )}
-                            name="continue"
-                            id="kc-continue"
-                            type="submit"
-                            value={msgStr("doContinue")}
-                        />
-                        <input
-                            className={kcClsx(
-                                "kcButtonClass",
-                                "kcButtonDefaultClass",
-                                "kcButtonLargeClass"
-                            )}
-                            name="cancel-aia"
-                            id="kc-cancel"
-                            type="submit"
-                            value={msgStr("doCancel")}
-                        />
-                    </div>
-                </div>
+                <ActionGroup>
+                    <Button
+                        classKeys={["kcButtonPrimaryClass"]}
+                        name="continue"
+                        id="kc-continue"
+                        type="submit"
+                        label="doContinue"
+                    />
+                    <Button
+                        classKeys={["kcButtonSecondaryClass"]}
+                        name="cancel-aia"
+                        id="kc-cancel"
+                        type="submit"
+                        label="doCancel"
+                    />
+                </ActionGroup>
             </form>
             <div className="clearfix" />
         </Template>

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
+import { ActionGroup, Button } from "../../components/Buttons";
 import { Template } from "../../components/Template";
 import { UserProfileFormFields } from "../../components/UserProfileFormFields";
 
@@ -14,7 +15,7 @@ export function Page() {
 
     const { messagesPerField, url, isAppInitiatedAction } = kcContext;
 
-    const { msg, msgStr } = useI18n();
+    const { msg } = useI18n();
 
     const [isFormSubmittable, setIsFormSubmittable] = useState(false);
 
@@ -31,39 +32,25 @@ export function Page() {
                 method="post"
             >
                 <UserProfileFormFields onIsFormSubmittableValueChange={setIsFormSubmittable} />
-                <div className={kcClsx("kcFormGroupClass")}>
-                    <div id="kc-form-options" className={kcClsx("kcFormOptionsClass")}>
-                        <div className={kcClsx("kcFormOptionsWrapperClass")} />
-                    </div>
-                    <div id="kc-form-buttons" className={kcClsx("kcFormButtonsClass")}>
-                        <input
-                            disabled={!isFormSubmittable}
-                            className={kcClsx(
-                                "kcButtonClass",
-                                "kcButtonPrimaryClass",
-                                !isAppInitiatedAction && "kcButtonBlockClass",
-                                "kcButtonLargeClass"
-                            )}
+                <ActionGroup>
+                    <Button
+                        disabled={!isFormSubmittable}
+                        classKeys={["kcButtonPrimaryClass"]}
+                        type="submit"
+                        label="doSubmit"
+                    />
+                    {isAppInitiatedAction && (
+                        <Button
+                            classKeys={["kcButtonSecondaryClass"]}
                             type="submit"
-                            value={msgStr("doSubmit")}
+                            name="cancel-aia"
+                            value="true"
+                            label="doCancel"
+                            formNoValidate
+
                         />
-                        {isAppInitiatedAction && (
-                            <button
-                                className={kcClsx(
-                                    "kcButtonClass",
-                                    "kcButtonDefaultClass",
-                                    "kcButtonLargeClass"
-                                )}
-                                type="submit"
-                                name="cancel-aia"
-                                value="true"
-                                formNoValidate
-                            >
-                                {msg("doCancel")}
-                            </button>
-                        )}
-                    </div>
-                </div>
+                    )}
+                </ActionGroup>
             </form>
         </Template>
     );

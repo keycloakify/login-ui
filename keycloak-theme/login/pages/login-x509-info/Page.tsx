@@ -2,6 +2,7 @@ import { assert } from "tsafe/assert";
 import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
+import { ActionGroup, Button } from "../../components/Buttons";
 import { Template } from "../../components/Template";
 
 export function Page() {
@@ -12,7 +13,7 @@ export function Page() {
 
     const { url, x509 } = kcContext;
 
-    const { msg, msgStr } = useI18n();
+    const { msg } = useI18n();
 
     return (
         <Template headerNode={msg("doLogIn")}>
@@ -58,39 +59,24 @@ export function Page() {
                         </>
                     )}
                 </div>
-                <div className={kcClsx("kcFormGroupClass")}>
-                    <div id="kc-form-options" className={kcClsx("kcFormOptionsClass")}>
-                        <div className={kcClsx("kcFormOptionsWrapperClass")} />
-                    </div>
-                    <div id="kc-form-buttons" className={kcClsx("kcFormButtonsClass")}>
-                        <div className={kcClsx("kcFormButtonsWrapperClass")}>
-                            <input
-                                className={kcClsx(
-                                    "kcButtonClass",
-                                    "kcButtonPrimaryClass",
-                                    "kcButtonLargeClass"
-                                )}
-                                name="login"
-                                id="kc-login"
-                                type="submit"
-                                value={msgStr("doContinue")}
-                            />
-                            {x509.formData.isUserEnabled && (
-                                <input
-                                    className={kcClsx(
-                                        "kcButtonClass",
-                                        "kcButtonDefaultClass",
-                                        "kcButtonLargeClass"
-                                    )}
-                                    name="cancel"
-                                    id="kc-cancel"
-                                    type="submit"
-                                    value={msgStr("doIgnore")}
-                                />
-                            )}
-                        </div>
-                    </div>
-                </div>
+                <ActionGroup>
+                    <Button
+                        classKeys={["kcButtonPrimaryClass"]}
+                        name="login"
+                        id="kc-login"
+                        type="submit"
+                        label="doContinue"
+                    />
+                    {x509.formData.isUserEnabled && (
+                        <Button
+                            classKeys={["kcButtonSecondaryClass"]}
+                            name="cancel"
+                            id="kc-cancel"
+                            type="submit"
+                            label="doIgnore"
+                        />
+                    )}
+                </ActionGroup>
             </form>
         </Template>
     );

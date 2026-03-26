@@ -2,6 +2,7 @@ import { kcSanitize } from "@keycloakify/login-ui/kcSanitize";
 import { assert } from "tsafe/assert";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
+import { ActionGroup, Button, ButtonLink } from "../../components/Buttons";
 import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
 
 export function Form() {
@@ -10,7 +11,7 @@ export function Form() {
 
     const { kcClsx } = useKcClsx();
 
-    const { msg, msgStr } = useI18n();
+    const { msg } = useI18n();
 
     return (
         <form
@@ -25,8 +26,8 @@ export function Form() {
                         {!kcContext.realm.loginWithEmailAllowed
                             ? msg("username")
                             : !kcContext.realm.registrationEmailAsUsername
-                              ? msg("usernameOrEmail")
-                              : msg("email")}
+                                ? msg("usernameOrEmail")
+                                : msg("email")}
                     </label>
                 </div>
                 <div className={kcClsx("kcInputWrapperClass")}>
@@ -51,28 +52,18 @@ export function Form() {
                     )}
                 </div>
             </div>
-            <div className={kcClsx("kcFormGroupClass", "kcFormSettingClass")}>
-                <div id="kc-form-options" className={kcClsx("kcFormOptionsClass")}>
-                    <div className={kcClsx("kcFormOptionsWrapperClass")}>
-                        <span>
-                            <a href={kcContext.url.loginUrl}>{msg("backToLogin")}</a>
-                        </span>
-                    </div>
-                </div>
-
-                <div id="kc-form-buttons" className={kcClsx("kcFormButtonsClass")}>
-                    <input
-                        className={kcClsx(
-                            "kcButtonClass",
-                            "kcButtonPrimaryClass",
-                            "kcButtonBlockClass",
-                            "kcButtonLargeClass"
-                        )}
-                        type="submit"
-                        value={msgStr("doSubmit")}
-                    />
-                </div>
-            </div>
+            <ActionGroup>
+                <Button
+                    classKeys={["kcButtonPrimaryClass"]}
+                    type="submit"
+                    label="doSubmit"
+                />
+                <ButtonLink
+                    href={kcContext.url.loginUrl}
+                    classKeys={["kcButtonSecondaryClass"]}
+                    label="backToLogin"
+                />
+            </ActionGroup>
         </form>
     );
 }

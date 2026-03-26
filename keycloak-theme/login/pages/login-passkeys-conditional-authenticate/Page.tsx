@@ -5,6 +5,7 @@ import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
 import { useScript } from "./useScript";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
+import { Button } from "../../components/Buttons";
 import { Template } from "../../components/Template";
 
 export function Page() {
@@ -22,7 +23,7 @@ export function Page() {
         realm
     } = kcContext;
 
-    const { msg, msgStr, advancedMsg } = useI18n();
+    const { msg, advancedMsg } = useI18n();
 
     const { kcClsx } = useKcClsx();
 
@@ -112,7 +113,7 @@ export function Page() {
                                                 </div>
                                                 {authenticator.transports !== undefined &&
                                                     authenticator.transports.displayNameProperties !==
-                                                        undefined &&
+                                                    undefined &&
                                                     authenticator.transports.displayNameProperties
                                                         .length !== 0 && (
                                                         <div
@@ -171,9 +172,10 @@ export function Page() {
                                 style={{ display: "none" }}
                                 onSubmit={event => {
                                     try {
-                                        // @ts-expect-error: Ok
                                         event.target.login.disabled = true;
-                                    } catch {}
+                                    } catch {
+                                        // do nothing
+                                    }
 
                                     return true;
                                 }}
@@ -212,17 +214,12 @@ export function Page() {
                             className={kcClsx("kcFormButtonsClass")}
                             style={{ display: "none" }}
                         >
-                            <input
+                            <Button
                                 id={webAuthnButtonId}
-                                type="button"
                                 autoFocus
-                                value={msgStr("passkey-doAuthenticate")}
-                                className={kcClsx(
-                                    "kcButtonClass",
-                                    "kcButtonPrimaryClass",
-                                    "kcButtonBlockClass",
-                                    "kcButtonLargeClass"
-                                )}
+                                label="passkey-doAuthenticate"
+                                classKeys={["kcButtonPrimaryClass"]}
+
                             />
                         </div>
                     </div>

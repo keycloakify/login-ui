@@ -3,6 +3,7 @@ import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
 import { kcSanitize } from "@keycloakify/login-ui/kcSanitize";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
+import { LoginButton } from "../../components/Buttons";
 import { Template } from "../../components/Template";
 
 export function Page() {
@@ -13,7 +14,7 @@ export function Page() {
 
     const { url, messagesPerField, recoveryAuthnCodesInputBean } = kcContext;
 
-    const { msg, msgStr } = useI18n();
+    const { msg } = useI18n();
 
     return (
         <Template
@@ -59,25 +60,7 @@ export function Page() {
                     </div>
                 </div>
 
-                <div className={kcClsx("kcFormGroupClass")}>
-                    <div id="kc-form-options" className={kcClsx("kcFormOptionsWrapperClass")}>
-                        <div className={kcClsx("kcFormOptionsWrapperClass")} />
-                    </div>
-                    <div id="kc-form-buttons" className={kcClsx("kcFormButtonsClass")}>
-                        <input
-                            className={kcClsx(
-                                "kcButtonClass",
-                                "kcButtonPrimaryClass",
-                                "kcButtonBlockClass",
-                                "kcButtonLargeClass"
-                            )}
-                            name="login"
-                            id="kc-login"
-                            type="submit"
-                            value={msgStr("doLogIn")}
-                        />
-                    </div>
-                </div>
+                <LoginButton />
             </form>
         </Template>
     );

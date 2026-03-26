@@ -1,14 +1,12 @@
 import { assert } from "tsafe/assert";
-import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
 import { useI18n } from "../../i18n";
+import { ActionGroup, Button } from "../../components/Buttons";
 import { Template } from "../../components/Template";
 import { useKcContext } from "../../KcContext";
 
 export function Page() {
     const { kcContext } = useKcContext();
     assert(kcContext.pageId === "login-idp-link-confirm-override.ftl");
-
-    const { kcClsx } = useKcClsx();
 
     const { msg } = useI18n();
 
@@ -20,21 +18,17 @@ export function Page() {
                     {msg("doClickHere")}
                 </a>
                 <br />
-                <br />
-                <button
-                    type="submit"
-                    className={kcClsx(
-                        "kcButtonClass",
-                        "kcButtonDefaultClass",
-                        "kcButtonBlockClass",
-                        "kcButtonLargeClass"
-                    )}
-                    name="submitAction"
-                    id="confirmOverride"
-                    value="confirmOverride"
-                >
-                    {msg("confirmOverrideIdpContinue", kcContext.idpDisplayName)}
-                </button>
+                <ActionGroup>
+                    <Button
+                        type="submit"
+                        classKeys={["kcButtonDefaultClass"]}
+                        name="submitAction"
+                        id="confirmOverride"
+                        value="confirmOverride"
+                    >
+                        {msg("confirmOverrideIdpContinue", kcContext.idpDisplayName)}
+                    </Button>
+                </ActionGroup>
             </form>
         </Template>
     );

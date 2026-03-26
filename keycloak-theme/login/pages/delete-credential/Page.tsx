@@ -1,16 +1,14 @@
 import { assert } from "tsafe/assert";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
+import { ActionGroup, Button } from "../../components/Buttons";
 import { Template } from "../../components/Template";
-import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
 
 export function Page() {
     const { kcContext } = useKcContext();
     assert(kcContext.pageId === "delete-credential.ftl");
 
-    const { msgStr, msg } = useI18n();
-
-    const { kcClsx } = useKcClsx();
+    const { msg } = useI18n();
 
     return (
         <Template
@@ -19,20 +17,22 @@ export function Page() {
         >
             <div id="kc-delete-text">{msg("deleteCredentialMessage", kcContext.credentialLabel)}</div>
             <form className="form-actions" action={kcContext.url.loginAction} method="POST">
-                <input
-                    className={kcClsx("kcButtonClass", "kcButtonPrimaryClass", "kcButtonLargeClass")}
-                    name="accept"
-                    id="kc-accept"
-                    type="submit"
-                    value={msgStr("doConfirmDelete")}
-                />
-                <input
-                    className={kcClsx("kcButtonClass", "kcButtonDefaultClass", "kcButtonLargeClass")}
-                    name="cancel-aia"
-                    value={msgStr("doCancel")}
-                    id="kc-decline"
-                    type="submit"
-                />
+                <ActionGroup horizontal>
+                    <Button
+                        classKeys={["kcButtonPrimaryClass"]}
+                        name="accept"
+                        id="kc-accept"
+                        type="submit"
+                        label="doConfirmDelete"
+                    />
+                    <Button
+                        classKeys={["kcButtonSecondaryClass"]}
+                        name="cancel-aia"
+                        label="doCancel"
+                        id="kc-decline"
+                        type="submit"
+                    />
+                </ActionGroup>
             </form>
             <div className="clearfix" />
         </Template>

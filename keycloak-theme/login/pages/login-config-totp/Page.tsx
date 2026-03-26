@@ -3,6 +3,7 @@ import { kcSanitize } from "@keycloakify/login-ui/kcSanitize";
 import { useKcContext } from "../../KcContext";
 import { useI18n } from "../../i18n";
 import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
+import { ActionGroup, Button } from "../../components/Buttons";
 import { Template } from "../../components/Template";
 import { LogoutOtherSessions } from "../../components/LogoutOtherSessions";
 
@@ -10,7 +11,7 @@ export function Page() {
     const { kcContext } = useKcContext();
     assert(kcContext.pageId === "login-config-totp.ftl");
 
-    const { msg, msgStr, advancedMsg } = useI18n();
+    const { msg, advancedMsg } = useI18n();
 
     const { kcClsx } = useKcClsx();
 
@@ -173,45 +174,33 @@ export function Page() {
                         <LogoutOtherSessions />
                     </div>
 
-                    {kcContext.isAppInitiatedAction ? (
-                        <>
-                            <input
+                    <ActionGroup>
+                        {kcContext.isAppInitiatedAction ? (
+                            <>
+                                <Button
+                                    type="submit"
+                                    classKeys={["kcButtonPrimaryClass"]}
+                                    id="saveTOTPBtn"
+                                    label="doSubmit"
+                                />
+                                <Button
+                                    type="submit"
+                                    classKeys={["kcButtonSecondaryClass"]}
+                                    id="cancelTOTPBtn"
+                                    name="cancel-aia"
+                                    label="doCancel"
+                                    value="true"
+                                />
+                            </>
+                        ) : (
+                            <Button
                                 type="submit"
-                                className={kcClsx(
-                                    "kcButtonClass",
-                                    "kcButtonPrimaryClass",
-                                    "kcButtonLargeClass"
-                                )}
+                                classKeys={["kcButtonPrimaryClass"]}
                                 id="saveTOTPBtn"
-                                value={msgStr("doSubmit")}
+                                label="doSubmit"
                             />
-                            <button
-                                type="submit"
-                                className={kcClsx(
-                                    "kcButtonClass",
-                                    "kcButtonDefaultClass",
-                                    "kcButtonLargeClass",
-                                    "kcButtonLargeClass"
-                                )}
-                                id="cancelTOTPBtn"
-                                name="cancel-aia"
-                                value="true"
-                            >
-                                {msg("doCancel")}
-                            </button>
-                        </>
-                    ) : (
-                        <input
-                            type="submit"
-                            className={kcClsx(
-                                "kcButtonClass",
-                                "kcButtonPrimaryClass",
-                                "kcButtonLargeClass"
-                            )}
-                            id="saveTOTPBtn"
-                            value={msgStr("doSubmit")}
-                        />
-                    )}
+                        )}
+                    </ActionGroup>
                 </form>
             </>
         </Template>

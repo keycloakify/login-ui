@@ -1,9 +1,8 @@
 import { useState, useLayoutEffect } from "react";
 import { assert } from "tsafe/assert";
-import { clsx } from "@keycloakify/login-ui/tools/clsx";
 import { useKcContext } from "../../KcContext";
-import { useI18n } from "../../i18n";
 import { useKcClsx } from "@keycloakify/login-ui/useKcClsx";
+import { ActionGroup, Button, ButtonLink } from "../../components/Buttons";
 import { UserProfileFormFields } from "../../components/UserProfileFormFields";
 import { TermsAcceptance } from "./TermsAcceptance";
 
@@ -11,7 +10,6 @@ export function Form() {
     const { kcContext } = useKcContext();
     assert(kcContext.pageId === "register.ftl");
     const { kcClsx } = useKcClsx();
-    const { msg, msgStr } = useI18n();
 
     const [isFormSubmittable, setIsFormSubmittable] = useState(false);
     const [areTermsAccepted, setAreTermsAccepted] = useState(false);
@@ -54,56 +52,35 @@ export function Form() {
                         </div>
                     </div>
                 )}
-            <div className={kcClsx("kcFormGroupClass")}>
-                <div id="kc-form-options" className={kcClsx("kcFormOptionsClass")}>
-                    <div className={kcClsx("kcFormOptionsWrapperClass")}>
-                        <span>
-                            <a href={kcContext.url.loginUrl}>{msg("backToLogin")}</a>
-                        </span>
-                    </div>
-                </div>
-
-                {kcContext.recaptchaRequired &&
+            {kcContext.recaptchaRequired &&
                 !kcContext.recaptchaVisible &&
                 kcContext.recaptchaAction !== undefined ? (
-                    <div id="kc-form-buttons" className={kcClsx("kcFormButtonsClass")}>
-                        <button
-                            className={clsx(
-                                kcClsx(
-                                    "kcButtonClass",
-                                    "kcButtonPrimaryClass",
-                                    "kcButtonBlockClass",
-                                    "kcButtonLargeClass"
-                                ),
-                                "g-recaptcha"
-                            )}
-                            data-sitekey={kcContext.recaptchaSiteKey}
-                            data-callback="onSubmitRecaptcha"
-                            data-action={kcContext.recaptchaAction}
-                            type="submit"
-                        >
-                            {msg("doRegister")}
-                        </button>
-                    </div>
-                ) : (
-                    <div id="kc-form-buttons" className={kcClsx("kcFormButtonsClass")}>
-                        <input
-                            disabled={
-                                !isFormSubmittable ||
-                                (kcContext.termsAcceptanceRequired && !areTermsAccepted)
-                            }
-                            className={kcClsx(
-                                "kcButtonClass",
-                                "kcButtonPrimaryClass",
-                                "kcButtonBlockClass",
-                                "kcButtonLargeClass"
-                            )}
-                            type="submit"
-                            value={msgStr("doRegister")}
-                        />
-                    </div>
-                )}
-            </div>
+                <ActionGroup>
+                    <Button
+                        classKeys={["kcButtonPrimaryClass"]}
+                        className="g-recaptcha"
+                        data-sitekey={kcContext.recaptchaSiteKey}
+                        data-callback="onSubmitRecaptcha"
+                        data-action={kcContext.recaptchaAction}
+                        type="submit"
+                        label="doRegister"
+                    />
+                    <ButtonLink href={kcContext.url.loginUrl} label="backToLogin" classKeys={["kcButtonSecondaryClass"]} />
+                </ActionGroup>
+            ) : (
+                <ActionGroup>
+                    <Button
+                        disabled={
+                            !isFormSubmittable ||
+                            (kcContext.termsAcceptanceRequired && !areTermsAccepted)
+                        }
+                        classKeys={["kcButtonPrimaryClass"]}
+                        type="submit"
+                        label="doRegister"
+                    />
+                    <ButtonLink href={kcContext.url.loginUrl} label="backToLogin" classKeys={["kcButtonSecondaryClass"]} />
+                </ActionGroup>
+            )}
         </form>
     );
 }
