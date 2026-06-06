@@ -18,12 +18,12 @@ export function Page() {
                     dangerouslySetInnerHTML={{ __html: kcSanitize(kcContext.message.summary) }}
                 />
                 {!kcContext.skipLink && !!kcContext.client?.baseUrl && (
-                        <p>
-                            <a id="backToApplication" href={kcContext.client.baseUrl}>
-                                {msg("backToApplication")}
-                            </a>
-                        </p>
-                    )}
+                    <p>
+                        <a id="backToApplication" href={kcContext.client.baseUrl}>
+                            {msg("backToApplication")}
+                        </a>
+                    </p>
+                )}
             </div>
         </Template>
     );
