@@ -16,7 +16,6 @@ export function LogoutOtherSessions() {
                             id="logout-sessions"
                             name="logout-sessions"
                             value="on"
-                            defaultChecked={true}
                         />
                         {msg("logoutOtherSessions")}
                     </label>
