@@ -11,12 +11,7 @@ export function LogoutOtherSessions() {
             <div className={kcClsx("kcFormOptionsWrapperClass")}>
                 <div className="checkbox">
                     <label>
-                        <input
-                            type="checkbox"
-                            id="logout-sessions"
-                            name="logout-sessions"
-                            value="on"
-                        />
+                        <input type="checkbox" id="logout-sessions" name="logout-sessions" value="on" />
                         {msg("logoutOtherSessions")}
                     </label>
                 </div>
